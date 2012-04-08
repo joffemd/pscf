@@ -1,0 +1,141 @@
+%{
+#include "yacc.tab.h"
+#include "this.h"
+
+static bool debug;
+
+void reset_lex ()
+{
+    YY_FLUSH_BUFFER;
+}
+
+%}
+
+%x IDX 
+
+%%
+
+[ ]*	;
+
+\[	{if (debug) printf ("A c [%c]\n", *yytext); BEGIN IDX; return *yytext;}
+<IDX>]	{if (debug) printf ("A c [%c]\n", *yytext); BEGIN 0; return *yytext;}
+\(	{if (debug) printf ("B c [%c]\n", *yytext); return *yytext;}
+\)	{if (debug) printf ("B c [%c]\n", *yytext); return *yytext;}
+\?	{if (debug) printf ("C c [%c]\n", *yytext); return Qm;}
+\:	{if (debug) printf ("C c [%c]\n", *yytext); return Colon;}
+\<	{if (debug) printf ("D r [%c]\n", *yytext); return Lt;}
+\<\=	{if (debug) printf ("D r [%c]\n", *yytext); return Le;}
+\>	{if (debug) printf ("D r [%c]\n", *yytext); return Gt;}
+\>\=	{if (debug) printf ("D r [%c]\n", *yytext); return Ge;}
+
+\"\"	{if (debug) printf ("- e [%s]\n", yytext); return Empty;}
+
+\\n	{if (debug) printf ("- e [%s]\n", yytext); return End;}
+
+
+<IDX>- {
+    yylval.c = *yytext; 
+    if (debug) printf ("II op [%c]\n", yylval.c);
+    return Minus;
+}
+<IDX>[0-9]+ {
+    yylval.d = atoi(yytext); 
+    if (debug) printf ("FI int [%d]\n", yylval.d);
+    return Idx;
+}
+
+[0-9]*\.[0-9]+E-[0-9]+ {
+    yylval.r = atof(yytext); 
+    if (debug) printf ("E real [%f]\n", yylval.r);
+    return RealConstant;
+}
+
+[0-9]*\.[0-9]+ {
+    yylval.r = atof(yytext); 
+    if (debug) printf ("E real [%f]\n", yylval.r);
+    return RealConstant;
+}
+
+-[0-9]*\.[0-9]+E-[0-9]+ {
+    yylval.r = atof(yytext); 
+    if (debug) printf ("E real [%f]\n", yylval.r);
+    return RealConstant;
+}
+
+-[0-9]*\.[0-9]+ {
+    yylval.r = atof(yytext); 
+    if (debug) printf ("E real [%f]\n", yylval.r);
+    return RealConstant;
+}
+
+-[0-9]+ {
+    if (debug) printf ("F2 int [%s]\n", yytext);
+    char* toreal;
+    rw_strcpy (&toreal, yytext, ".");
+    yylval.r = atof(toreal); 
+    free (toreal);
+    return IntegerConstant;
+}
+
+[0-9]+ {
+    if (debug) printf ("F2 int [%s]\n", yytext);
+    char* toreal;
+    rw_strcpy (&toreal, yytext, ".");
+    yylval.r = atof(toreal); 
+    free (toreal);
+    return IntegerConstant;
+}
+
+[A-Za-xz_][A-Za-z_0-9]* {
+
+    rw_strcpy (&yylval.s, yytext); 
+    if (debug) printf ("G var [%s]\n", yylval.s);
+    return Var;
+}
+
+[A-Za-z_][A-Za-z_0-9]+ {
+    rw_strcpy (&yylval.s, yytext); 
+    if (debug) printf ("H var [%s]\n", yylval.s);
+    return Var;
+}
+
+[+] {
+    yylval.c = *yytext; 
+    if (debug) printf ("I op [%c]\n", yylval.c);
+    return Plus;
+}
+[-] {
+    yylval.c = *yytext; 
+    if (debug) printf ("I op [%c]\n", yylval.c);
+    return Minus;
+}
+[*] {
+    yylval.c = *yytext; 
+    if (debug) printf ("I op [%c]\n", yylval.c);
+    return Times;
+}
+[/] {
+    yylval.c = *yytext; 
+    if (debug) printf ("I op [%c]\n", yylval.c);
+    return Divide;
+}
+
+<IDX>[y] {
+    yylval.c = *yytext; 
+    if (debug) printf ("J y [%c]\n", yylval.c);
+    return yylval.c;
+}
+
+y {
+    yylval.c = *yytext; 
+    if (debug) printf ("J y [%c]\n", yylval.c);
+    return yylval.c;
+}
+
+. {
+    yylval.c = *yytext; 
+    printf ("BAD [%c]\n", *yytext);
+    return Bad;
+}
+
+%%

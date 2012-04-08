@@ -1,0 +1,172 @@
+set lib_dot_a = lib.a
+set compile = g++ 
+set cc_def = -I. 
+set ar_opts = -r
+set cc_options = "-O3 -Wall -Wextra"
+set cc_options = "-g -Wall -Wextra"
+set ranlib = ""
+set cc_options = ($cc_options $cc_def)
+
+alias add_if_absent\
+'set S = `echo $list | grep -w $item`;  if ($#S == 0) set list = ($list $item)'
+
+onintr no_change
+
+# see if a total (re)compile needs to be done because lib.a is missing
+if ! (-e $lib_dot_a) then
+    echo doing a total compile because $lib_dot_a does not exist
+    set total_recompile
+
+# or see if the contents of the includes directory has been changed 
+# the problem is that include files may have been deleted - run the
+# C preprocessor on all the source files, and add any complaining ones
+# to the 'to be done' list and start again
+
+else if ($1 == Includes) then
+    echo the Includes sub-directory has been reconfigured -
+    echo patience whilst files are checked for side effects
+    foreach c_file (*.c)
+	echo -n "."
+    end
+    echo ""
+
+    set list = ($argv[2-]);  foreach item (*.c)
+	cc -E -IIncludes $cc_def $item >& /dev/null
+	if ($status == 0) then
+	    echo -n "."
+	else
+	    echo -n '*'
+	    add_if_absent 
+	endif
+    end
+    echo ""
+
+#   restart if necessary
+    if ($#argv > 1) then
+	echo re-starting make operation;  echo ""
+	exec csh -f Compile_lib $list
+    else
+	onintr -
+	eval $ranlib
+	exit
+    endif
+
+# if any include files have been changed see which include and source files
+# are affected
+else if ($1 =~ Includes/*) then
+    echo doing a selective compile because include files have been changed
+
+# determine the mix of include and source files
+    @ n = 1;  foreach file ($argv[2-])
+	if ($file !~ Includes/*) break
+	@ n++
+    end
+
+# deal with c files
+    echo include files changed:  $argv[-$n]:gt
+    set search_text = \"$1:t\";  foreach include ($argv[2-$n])
+	set search_text = $search_text'|'\"$include:t\"
+    end
+
+    set safe_search_text = `echo $search_text | sed s/+/\\\\+/g`
+
+    echo -n "affected files: "
+    set affected_c_list = `egrep -l $safe_search_text *.c`
+
+    if ($status != 0) then
+	echo "(none)"
+    else
+	echo $affected_c_list
+    endif
+
+    echo -n "affected include files: "
+    set affected_i_list = `egrep -l $safe_search_text Includes/*`
+    if ($status != 0) then
+	echo "(none)"
+    else
+	echo $affected_i_list
+	echo ""
+    endif
+
+    @ nn = $n + 1;  set list = ($argv[$nn-]);  foreach item ($affected_c_list)
+	add_if_absent 
+    end
+
+    set list = ($affected_i_list $list)
+    if ($#list > 0) then
+	echo re-starting make operation
+	echo ""
+	exec csh -f Compile_lib $list
+    else
+	onintr -
+	eval $ranlib
+	exit
+    endif
+endif
+
+if ($?total_recompile) set argv = *.c
+
+set file_count = 0;  set file_total = $#argv
+
+if ($file_total > 0) echo "$compile ${cc_options}:"
+foreach file ($argv)
+    if (! $?error) then
+	@ file_count++
+	if ($file_total > 1) then
+	    echo $file_count/$file_total compiling $file
+	else
+	    echo "compiling $file (only)"
+	endif
+	$compile -c -IIncludes $cc_options $file
+	set compile_status = $status
+	if ($compile_status == 0) then
+	    if ! ($?compiled_list) then
+		set compiled_list = $file
+	    else
+		set compiled_list = ($compiled_list $file)
+	    endif
+	else if ($compile_status == 100) then
+	    if (-e $file:r.o) /bin/rm -f $file:r.o
+	    goto no_change
+	else
+	    set error
+	    if (-e $file:r.o) /bin/rm -f $file:r.o
+	    set touch_list = $file
+	endif
+    else
+	set touch_list = ($touch_list $file)
+    endif
+end
+
+onintr -
+
+if ($?compiled_list) then
+    if (-e $lib_dot_a) then
+	echo updating $lib_dot_a
+    else
+	echo creating $lib_dot_a
+    endif
+
+    set compiled_list = ($compiled_list:gr)
+    set list;  foreach file ($compiled_list)
+	set list = ($list $file.o)
+    end
+    ar $ar_opts $lib_dot_a $list;  /bin/rm -f $list
+    eval $ranlib
+endif
+
+# touch any remaining files in reverse order
+if ($?touch_list) then
+    sleep 2;  set i = $#touch_list;  
+    while ($i > 0)
+	touch $touch_list[$i];  @ i--
+    end
+endif
+
+exit
+
+no_change:
+echo ""
+echo "**** make interrupted - no change has been made to $lib_dot_a ****"
+echo ""
+exit 1

@@ -1,0 +1,1 @@
+g++ -o ../../bin/errmap lib.a ../utils/lib.a

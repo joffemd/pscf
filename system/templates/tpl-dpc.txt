@@ -1,0 +1,261 @@
+#include <boost/random.hpp>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+static const char* rating_equivalent (const int, const double);
+
+boost::lagged_fibonacci1279 rng (time(0));
+
+int main(int argc, char** argv)
+{
+    puts ("");
+    puts ("generation of analysis results starting...");
+
+    bool show_projection_details = argc > 1 && (*argv[1] == 'Y');
+
+    int fy[$n-years$+1];
+
+    $declarations$
+
+    double min_metric1[$n-years$+1];
+    double max_metric1[$n-years$+1];
+
+    for(int y=0;y<$n-years$+1;y++) 
+    {
+	min_metric1[y] = 0x7fffffff;
+	max_metric1[y] = -0x7fffffff;
+    }
+
+    // ratios
+    double ratios[5][$n-years$+1];
+
+    double defaultprob[$n-years$+1];				// default probability for the current trial
+    double cumdefaultprob[$n-years$+1];				// cumulative default probability for the current trial - must be capped at 1
+    double simulationdefaultprob[$n-years$+1];		// default probability for the entire simulation - an average of all trial default probabilities
+    double simulationcumdefaultprob[$n-years$+1];	// cunulative default probability for the entire simulation - an average of all trial cumulative default probabilities
+	
+    for(int y=0;y<$n-years$+1;y++) 
+	simulationcumdefaultprob[y] = simulationdefaultprob[y] = 0;
+
+    // create output files and write header lines
+    FILE* fr=fopen("results.tab","w");
+    FILE* fp=fopen("projection.tab","w");
+
+    fprintf(fr,"PSCF Fiscal Projection\n");
+    fprintf(fr,"Government Entity\t%s\n", "\"$government-entity$\"");
+    fprintf(fr,"Model Description\t%s\n", "\"$model-description$\"");
+    fprintf(fr,"Currency Units in\t%s\n", "\"$currency-units-in$\"");
+    fprintf(fr,"Trials\t%s\n", "\"$trials$\"");
+    fprintf(fr,"Run Date/Time\t%s\n", "\"$run-date-time$\"");
+    fprintf(fr,"\n");
+
+    if (show_projection_details)
+    {
+	fprintf(fp,"PSCF Fiscal Projection\n");
+	fprintf(fp,"Government Entity\t%s\n", "\"$government-entity$\"");
+	fprintf(fp,"Model Description\t%s\n", "\"$model-description$\"");
+	fprintf(fp,"Currency Units in\t%s\n", "\"$currency-units-in$\"");
+	fprintf(fp,"Trials\t%s\n", "\"$trials$\"");
+	fprintf(fp,"Run Date/Time\t%s\n", "\"$run-date-time$\"");
+	fprintf(fp,"\n");
+
+	fprintf(fp,"Fiscal Year\t");
+
+	fprintf(fp,"$headers$");
+
+	fprintf(fp,"\t%s", "$metrics-1-description$");
+	fprintf(fp,"\t%s", "$metrics-2-description$");
+	fprintf(fp,"\t%s", "$metrics-3-description$");
+	fprintf(fp,"\t%s", "$metrics-4-description$");
+	fprintf(fp,"\t%s", "$metrics-5-description$");
+    
+	fprintf(fp,"\t%s Flag\tCumulative %s Flag\n\n",
+	    "$threshold-label$", "$threshold-label$");
+    }
+
+    // run the projection maxtrials times
+    for(int trialcnt=1;trialcnt<=$number-of-trials$;trialcnt++)
+    {
+        // initialize period 0 values
+        fy[0] = $initial-year$;
+        
+        $period-0-values$
+
+        // Ratios
+	ratios[0][0] = $threshold-expression-1[0]$;
+	ratios[1][0] = $threshold-expression-2[0]$;
+	ratios[2][0] = $threshold-expression-3[0]$;
+	ratios[3][0] = $threshold-expression-4[0]$;
+	ratios[4][0] = $threshold-expression-5[0]$;
+
+	min_metric1[0] = max_metric1[0] = ratios[0][0];
+
+	cumdefaultprob[0] = 0;
+
+	// user-supplied code
+	{
+	int y = 0;
+	$default-probability-code$
+	}
+
+	cumdefaultprob[0] += defaultprob[0]; 
+	if(cumdefaultprob[0] > 1) cumdefaultprob[0] = 1;
+
+	$unirandom-declarations$
+
+	$normrandom-declarations$
+
+	$cauchyrandom-declarations$
+
+        for(int y=1;y<$n-years$+1;y++)
+        {
+	    $unirandom-assignments$
+
+	    $normrandom-assignments$
+
+	    $cauchyrandom-assignments$
+
+            fy[y] = fy[y-1] + 1;
+
+            $assignments$
+
+            // Ratios
+	    ratios[0][y] = $threshold-expression-1[y]$;
+	    ratios[1][y] = $threshold-expression-2[y]$;
+	    ratios[2][y] = $threshold-expression-3[y]$;
+	    ratios[3][y] = $threshold-expression-4[y]$;
+	    ratios[4][y] = $threshold-expression-5[y]$;
+
+	    cumdefaultprob[y] = cumdefaultprob[y-1];
+
+	    // user-supplied code
+	    $default-probability-code$
+
+	    simulationdefaultprob[y] += defaultprob[y];
+	    cumdefaultprob[y] += defaultprob[y];
+	    if (cumdefaultprob[y] > 1) cumdefaultprob[y] = 1;
+	    simulationcumdefaultprob[y] += cumdefaultprob[y];
+
+	    $adjustments$
+
+	    if (ratios[0][y] > max_metric1[y]) max_metric1[y] = ratios[0][y];
+	    if (ratios[0][y] < min_metric1[y]) min_metric1[y] = ratios[0][y];
+        }
+
+	if (show_projection_details)
+	{
+	    fprintf(fp,"Trial %8.0d\n\n",trialcnt);
+
+	    for(int y=0;y<$n-years$+1;y++)
+	    {
+		fprintf(fp,"%5.0d\t",fy[y]);
+
+		if(y>0)
+		{
+		    $print-random-values$
+		}
+		else 
+		{
+		    $print-y0-random-values$
+		}
+
+		$output$
+
+		fprintf(fp,"\t");
+
+		if(y>0)
+		{
+		    fprintf(fp,"%5.4f\t",ratios[0][y]);
+		    fprintf(fp,"%5.4f\t",ratios[1][y]);
+		    fprintf(fp,"%5.4f\t",ratios[2][y]);
+		    fprintf(fp,"%5.4f\t",ratios[3][y]);
+		    fprintf(fp,"%5.4f\t",ratios[4][y]);
+		}
+		else
+		{
+		    if ($print-ratios(1)$)
+			fprintf(fp,"%5.4f\t",ratios[0][0]);
+		    else
+			fprintf(fp,"%s\t","");
+
+		    if ($print-ratios(2)$)
+			fprintf(fp,"%5.4f\t",ratios[1][0]);
+		    else
+			fprintf(fp,"%s\t","");
+
+		    if ($print-ratios(3)$)
+			fprintf(fp,"%5.4f\t",ratios[2][0]);
+		    else
+			fprintf(fp,"%s\t","");
+
+		    if ($print-ratios(4)$)
+			fprintf(fp,"%5.4f\t",ratios[3][0]);
+		    else
+			fprintf(fp,"%s\t","");
+
+		    if ($print-ratios(5)$)
+			fprintf(fp,"%5.4f\t",ratios[4][0]);
+		    else
+			fprintf(fp,"%s\t","");
+		}
+
+		fprintf(fp,"%5.4f\t",defaultprob[y]);
+		fprintf(fp,"%5.4f",cumdefaultprob[y]);
+
+
+		fprintf(fp,"\n");
+	    }
+
+	    fprintf(fp,"\n\n");
+	}
+    }
+
+    fprintf(fr,"Year\t$threshold-label$ Probability\tCumulative $threshold-label$ Probablilty\tRating Equivalent");
+
+    fprintf(fr,"\t\t%s\t%s\n", "Minimum $metrics-1-description$", "Maximum $metrics-1-description$");
+
+    for(int y=0;y<$n-years$+1;y++)
+    {
+	fprintf(fr,"%d\t",fy[y]);
+        fprintf(fr,"%5.4f\t", double(simulationdefaultprob[y]) / $number-of-trials$);
+        fprintf(fr,"%5.4f\t", double(simulationcumdefaultprob[y]) / $number-of-trials$);
+	double rating = double(simulationcumdefaultprob[y]) / $number-of-trials$;
+        fprintf(fr,"%s", rating_equivalent(y,rating));
+	
+        fprintf(fr,"\t\t%5.4f\t%5.4f\n", min_metric1[y], max_metric1[y]); 
+    }
+
+    puts ("");
+
+    if (show_projection_details)
+	puts ("generation finished: files 'results.tab' & 'projection.tab' created");
+    else
+	puts ("generation finished: file 'results.tab' created");
+    puts ("");
+    
+    return 0;
+}
+
+/* -------------------------------------------------- */
+
+static const char* rating_equivalent (const int year, const double rating_value)
+{
+    if (year == 0) return "N/A";
+
+    static const char* rating[$n-ratings$] = {$ratings$};
+
+    static double rating_grid[$n-years$][$n-ratings$] =
+    {
+	$rating-grid$
+    };
+
+    double* year_rating = rating_grid[year-1];
+
+    for (int i = 0;  i < $n-ratings$;  i++)
+        if (rating_value <= year_rating[i])
+	    return rating[i];
+
+    return "???";
+}

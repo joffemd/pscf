@@ -1,0 +1,4 @@
+lib.pc : *.c
+	g++ -g -c -Wall -Wextra -D_WINDOWS -IIncludes $?
+	ar r lib.pc *.o
+	rm *.o

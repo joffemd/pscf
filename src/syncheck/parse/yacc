@@ -1,0 +1,58 @@
+%{
+#include <stdio.h>
+
+int yylex ();
+void yyerror (const char*);
+
+void add_var_i (const char*, const int);
+void add_var_y (const char*);
+void add_var_y_i (const char*, const int);
+%}
+
+%union
+{
+    int d;
+    double r;
+    char c;
+    char *s;
+};
+
+%token     RealConstant Sp Empty End Bad
+%token <s> Var
+%token <r> IntegerConstant 
+%token <d> Idx 
+
+%left Plus Minus Times Divide Lt Le Gt Ge Lb Rb Qm Colon
+
+%start line
+
+%% 
+
+/* -------------------------------------------------- */
+
+line:		expression End
+
+expression:	'(' expression ')'
+		| indexed_var
+		| expression Plus expression
+		| expression Minus expression
+		| expression Times expression
+		| expression Divide expression
+		| expression Lt expression
+		| expression Le expression
+		| expression Gt expression
+		| expression Ge expression
+		| IntegerConstant
+		| RealConstant
+		| 'y'
+		| Empty
+		| expression Qm expression Colon expression
+		| Bad End 
+		| error End 
+
+indexed_var:	Var '[' Idx ']'
+			{add_var_i ($1,$3);}
+		| Var '[' 'y' ']'
+			{add_var_y ($1);}
+		| Var '[' 'y' Minus Idx ']'
+			{add_var_y_i ($1,$5);}

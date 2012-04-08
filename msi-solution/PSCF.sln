@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Public Sector Credit Framework v1.0", "msi-project\msi-project.vdproj", "{0F78E46D-9D05-4890-BA81-C05606F7FDB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F78E46D-9D05-4890-BA81-C05606F7FDB9}.Debug|Default.ActiveCfg = Release
+		{0F78E46D-9D05-4890-BA81-C05606F7FDB9}.Debug|Default.Build.0 = Release
+		{0F78E46D-9D05-4890-BA81-C05606F7FDB9}.Release|Default.ActiveCfg = Release
+		{0F78E46D-9D05-4890-BA81-C05606F7FDB9}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
