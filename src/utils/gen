@@ -1,0 +1,4 @@
+rm lib.a
+g++ -O3 -Wall -Wextra -I../include -c *.c
+ar r lib.a *.o
+rm *.o

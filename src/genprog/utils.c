@@ -1,5 +1,5 @@
 #include <time.h>
-#include "this.h"
+#include "genprog.h"
 
 /* -------------------------------------------------- */
 
@@ -31,5 +31,5 @@ void floatise (char*& v)
     for (int i = 0;  i < len;  i++)
         if (v[i] > '9' && v[i] != '-') return;
 
-    if (!strchr (v, '.')) rw_chrcat (&v, '.');
+    if (!strchr (v, '.')) chrcat (&v, '.');
 }

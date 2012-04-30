@@ -1,0 +1,31 @@
+﻿Build started 4/30/2012 1:23:35 PM.
+     1>Project "C:\PSCF\src\pscf-solution\errmap\errmap.vcxproj" on node 3 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\errmap.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\errmap.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\errmap\main.c /TP 
+     1>cl : Command line warning D9025: overriding '/TC' with '/TP'
+         main.c
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\errmap.exe.embed.manifest.res" Debug\errmap_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\errmap.exe" /INCREMENTAL /NOLOGO /LIBPATH:Debug ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\errmap.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\errmap.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\errmap.lib" /MACHINE:X86 Debug\errmap.exe.embed.manifest.res
+         Debug\main.obj
+       Manifest:
+         Deleting file "Debug\errmap.exe.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\errmap.exe.embed.manifest" /manifest Debug\errmap.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\errmap.exe.embed.manifest.res" Debug\errmap_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\errmap.exe" /INCREMENTAL /NOLOGO /LIBPATH:Debug ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\errmap.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\errmap.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\errmap.lib" /MACHINE:X86 Debug\errmap.exe.embed.manifest.res
+         Debug\main.obj
+         errmap.vcxproj -> C:\PSCF\src\pscf-solution\errmap\..\..\..\system\bin\errmap.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\errmap.unsuccessfulbuild".
+         Touching "Debug\errmap.lastbuildstate".
+     1>Done Building Project "C:\PSCF\src\pscf-solution\errmap\errmap.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.13

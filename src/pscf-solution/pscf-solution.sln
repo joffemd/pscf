@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genprog", "genprog\genprog.vcxproj", "{DB53E95A-7258-4A7A-AE0C-36AB1439889D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB} = {7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "syncheck", "syncheck\syncheck.vcxproj", "{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB} = {7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "errmap", "errmap\errmap.vcxproj", "{88E3B4CF-DF80-4904-9F86-A6F678CCD740}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB} = {7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcxproj", "{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Public Sector Credit Framework v1.0", "..\..\msi-solution\msi-project\msi-project.vdproj", "{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB53E95A-7258-4A7A-AE0C-36AB1439889D} = {DB53E95A-7258-4A7A-AE0C-36AB1439889D}
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB} = {7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}
+		{88E3B4CF-DF80-4904-9F86-A6F678CCD740} = {88E3B4CF-DF80-4904-9F86-A6F678CCD740}
+		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5} = {C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB53E95A-7258-4A7A-AE0C-36AB1439889D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DB53E95A-7258-4A7A-AE0C-36AB1439889D}.Debug|Win32.Build.0 = Debug|Win32
+		{DB53E95A-7258-4A7A-AE0C-36AB1439889D}.Release|Win32.ActiveCfg = Release|Win32
+		{DB53E95A-7258-4A7A-AE0C-36AB1439889D}.Release|Win32.Build.0 = Release|Win32
+		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}.Debug|Win32.Build.0 = Debug|Win32
+		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}.Release|Win32.ActiveCfg = Release|Win32
+		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}.Release|Win32.Build.0 = Release|Win32
+		{88E3B4CF-DF80-4904-9F86-A6F678CCD740}.Debug|Win32.ActiveCfg = Debug|Win32
+		{88E3B4CF-DF80-4904-9F86-A6F678CCD740}.Debug|Win32.Build.0 = Debug|Win32
+		{88E3B4CF-DF80-4904-9F86-A6F678CCD740}.Release|Win32.ActiveCfg = Release|Win32
+		{88E3B4CF-DF80-4904-9F86-A6F678CCD740}.Release|Win32.Build.0 = Release|Win32
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}.Debug|Win32.Build.0 = Debug|Win32
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}.Release|Win32.ActiveCfg = Release|Win32
+		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}.Release|Win32.Build.0 = Release|Win32
+		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Debug|Win32.ActiveCfg = Debug
+		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Debug|Win32.Build.0 = Debug
+		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Release|Win32.ActiveCfg = Release
+		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Release|Win32.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

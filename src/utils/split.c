@@ -14,13 +14,13 @@
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_split_by_delimiter ("##hello#world", &list, &length, "#");	*/
+/*     split_by_delimiter ("##hello#world", &list, &length, "#");	*/
 /*									*/
 /* gives: length = 2, list[1] = "hello", list[2] = "world"		*/
 /*									*/
 /************************************************************************/
 
-void rw_split_by_delimiter (char* line, char ***words, int* n_words,
+void split_by_delimiter (char* line, char ***words, int* n_words,
 			    const char* delimiters)
 {
     const char* sep;	/* sep moves along each separator group */
@@ -30,7 +30,7 @@ void rw_split_by_delimiter (char* line, char ***words, int* n_words,
     *n_words = 0;
 
     *words = (char**) malloc (sizeof(char*));
-    if (!*words) rw_exit (7);
+    if (!*words) my_exit (7);
 
     /* assume separator at start of line */
     sep = line;
@@ -64,13 +64,13 @@ void rw_split_by_delimiter (char* line, char ***words, int* n_words,
     	*words = 
 	    (char**) realloc (*words, (size_t)(*n_words+1) * sizeof(char*));
 
-	if (!*words) rw_exit (8);
+	if (!*words) my_exit (8);
 
 	/* ... and allocate space for new word */
         (*words)[*n_words] = 
 			(char*) malloc ((size_t)(word_len+1) * sizeof(char));
 
-    	if (!(*words)[*n_words]) rw_exit (9);
+    	if (!(*words)[*n_words]) my_exit (9);
 
 	/* copy the word into the list ... */
         strncpy ((*words)[*n_words], sep, (size_t)word_len);
@@ -92,27 +92,27 @@ void rw_split_by_delimiter (char* line, char ***words, int* n_words,
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_split_line ("  \thello\n world ", &list, &length);		*/
+/*     split_line ("  \thello\n world ", &list, &length);		*/
 /*									*/
 /* gives: length = 2, list[1] = "hello", list[2] = "world"		*/
 /*									*/
 /************************************************************************/
 
-void rw_split_line (const char* line, char*** words, int* n_words)
+void split_line (const char* line, char*** words, int* n_words)
 {
-    rw_split_by_delimiter ((char*)line, words, n_words, " \t\n");
+    split_by_delimiter ((char*)line, words, n_words, " \t\n");
 }
 
 /************************************************************************/
 /*									*/
-/* splits given line into words (like rw_split_line()), but preserves	*/
+/* splits given line into words (like split_line()), but preserves	*/
 /* text in quotes as single words. Single or double quotes may be used	*/
 /* - a matching quote is needed to terminate quotation. If quotes are	*/
 /* unmatched false is returned.						*/
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*    rw_split_quoted_line ( "   one  '  two three '   four", &list,	*/
+/*    split_quoted_line ( "   one  '  two three '   four", &list,	*/
 /*							     &length);	*/
 /*									*/
 /* gives: length = 3, list[1] = "one", list[2] = "  two three ",	*/
@@ -120,7 +120,7 @@ void rw_split_line (const char* line, char*** words, int* n_words)
 /*									*/
 /************************************************************************/
 
-bool rw_split_quoted_line (const char* supplied_line, char*** words, 
+bool split_quoted_line (const char* supplied_line, char*** words, 
 			   int* n_words)
 {
     bool eol = false;
@@ -136,7 +136,7 @@ bool rw_split_quoted_line (const char* supplied_line, char*** words,
 
     /* take a copy of the line - it will be mangled */
     char* line;
-    rw_strcpy (&line, supplied_line);
+    strcpy (&line, supplied_line);
 
     char* quote_start;
     for (quote_start = unquote_start = line;;)
@@ -163,10 +163,10 @@ bool rw_split_quoted_line (const char* supplied_line, char*** words,
 	/* the string up to here now holds only unquoted words */
 
 	/* get the unquoted words so far and add them to the output list */
-	rw_split_line (unquote_start, &new_words, &n_new_words);
+	split_line (unquote_start, &new_words, &n_new_words);
 	for (int i = 1;  i <= n_new_words;  i++)
-	    rw_add_name_to_list (new_words[i], words, n_words);
-	rw_words_free (new_words, n_new_words);
+	    add_name_to_list (new_words[i], words, n_words);
+	words_free (new_words, n_new_words);
 
 	/* terminate if end of line */
 	if (eol) 
@@ -193,7 +193,7 @@ bool rw_split_quoted_line (const char* supplied_line, char*** words,
 	*quote_end = '\0';
 
 	/* add the quoted segment to the output list */
-	rw_add_name_to_list (quote_start+1, words, n_words);
+	add_name_to_list (quote_start+1, words, n_words);
 
 	/* start again with unquoted text */
         quote_start = unquote_start = quote_end + 1;
@@ -202,7 +202,7 @@ bool rw_split_quoted_line (const char* supplied_line, char*** words,
 
 /************************************************************************/
 
-bool rw_split_double_quoted_line (const char* supplied_line, char*** words,
+bool split_double_quoted_line (const char* supplied_line, char*** words,
                                   int* n_words)
 {
     bool eol = false;
@@ -218,7 +218,7 @@ bool rw_split_double_quoted_line (const char* supplied_line, char*** words,
 
     /* take a copy of the line - it will be mangled */
     char* line;
-    rw_strcpy (&line, supplied_line);
+    strcpy (&line, supplied_line);
 
     char* quote_start;
     for (quote_start = unquote_start = line;;)
@@ -245,10 +245,10 @@ bool rw_split_double_quoted_line (const char* supplied_line, char*** words,
 	/* the string up to here now holds only unquoted words */
 
 	/* get the unquoted words so far and add them to the output list */
-	rw_split_line (unquote_start, &new_words, &n_new_words);
+	split_line (unquote_start, &new_words, &n_new_words);
 	for (int i = 1;  i <= n_new_words;  i++)
-	    rw_add_name_to_list (new_words[i], words, n_words);
-	rw_words_free (new_words, n_new_words);
+	    add_name_to_list (new_words[i], words, n_words);
+	words_free (new_words, n_new_words);
 
 	/* terminate if end of line */
 	if (eol) 
@@ -275,7 +275,7 @@ bool rw_split_double_quoted_line (const char* supplied_line, char*** words,
 	*quote_end = '\0';
 
 	/* add the quoted segment to the output list */
-	rw_add_name_to_list (quote_start+1, words, n_words);
+	add_name_to_list (quote_start+1, words, n_words);
 
 	/* start again with unquoted text */
         quote_start = unquote_start = quote_end + 1;
@@ -284,7 +284,7 @@ bool rw_split_double_quoted_line (const char* supplied_line, char*** words,
 
 /* -------------------------------------------------- */
 
-void rw_split_by_delimiter_blank (char *line, char ***words,
+void split_by_delimiter_blank (char *line, char ***words,
 	 	 	 	 	  int *n_words, const char *delimiters)
 {
     const char* sep;	// sep moves along each separator group
@@ -298,7 +298,7 @@ void rw_split_by_delimiter_blank (char *line, char ***words,
     if (!*words)
     {
 	puts ("malloc fail!");
-	rw_exit (1);
+	my_exit (1);
     }
 
     // assume separator at start of line
@@ -339,7 +339,7 @@ void rw_split_by_delimiter_blank (char *line, char ***words,
 	if (!*words)
 	{
 	    puts ("realloc fail!");
-	    rw_exit (1);
+	    my_exit (1);
 	}
 
 	// ... and allocate space for new word
@@ -349,7 +349,7 @@ void rw_split_by_delimiter_blank (char *line, char ***words,
     	if (!(*words)[*n_words])
 	{
 	    puts ("malloc fail!");
-	    rw_exit (1);
+	    my_exit (1);
 	}
 
 	// copy the word into the list ...

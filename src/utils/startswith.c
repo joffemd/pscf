@@ -2,14 +2,14 @@
 
 /* -------------------------------------------------- */
 
-bool rw_starts_with (const char* s, const char* s1)
+bool starts_with (const char* s, const char* s1)
 {
     return strnequal (s, s1, strlen(s1));
 }
 
 /* -------------------------------------------------- */
 
-char* rw_line_starts_with (char* s, char* s1)
+char* line_starts_with (char* s, char* s1)
 {
     int len = strlen(s1);
 

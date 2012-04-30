@@ -15,13 +15,13 @@
 /*									*/
 /* before: length = 2, list[1] = "a", list[2] = "short"			*/
 /*									*/
-/*     rw_add_name_to_list ("set", &list, &length);			*/
+/*     add_name_to_list ("set", &list, &length);			*/
 /*									*/
 /* after: length = 3, list[1] = "a", list[2] = "short", list[3] = "set"	*/
 /*									*/
 /************************************************************************/
 
-void rw_add_name_to_list (const char* name, char*** list, int* length)
+void add_name_to_list (const char* name, char*** list, int* length)
 {
     /* either create a new list ... */
     if (*length == 0)
@@ -29,7 +29,7 @@ void rw_add_name_to_list (const char* name, char*** list, int* length)
 	/* list starts at element 1, so 2 elements (0 and 1) are needed */
         *list = (char**) malloc ((size_t)(++*length + 1) * sizeof(char*));
 
-    	if (!*list) rw_exit (1);
+    	if (!*list) my_exit (1);
     }	
 
     /* ... or append item to existing list */
@@ -38,11 +38,11 @@ void rw_add_name_to_list (const char* name, char*** list, int* length)
 	*list = 
 	    (char**) realloc (*list, (size_t)(++*length + 1) * sizeof(char*));
 
-	if (!*list) rw_exit (2);
+	if (!*list) my_exit (2);
     }
 
     /* copy in the new item */
-    rw_strcpy (&(*list)[*length], name);
+    strcpy (&(*list)[*length], name);
 }	
 
 /************************************************************************/
@@ -54,23 +54,23 @@ void rw_add_name_to_list (const char* name, char*** list, int* length)
 /*									*/
 /* before: length = 2, list[1] = "a", list[2] = "short"			*/
 /*									*/
-/*     rw_add_name_to_list_if_needed ("short", &list, &length);		*/
+/*     add_name_to_list_if_needed ("short", &list, &length);		*/
 /*									*/
 /* after: length = 2, list[1] = "a", list[2] = "short"			*/
 /*									*/
-/*     rw_add_name_to_list_if_needed ("set", &list, &length);		*/
+/*     add_name_to_list_if_needed ("set", &list, &length);		*/
 /*									*/
 /* after: length = 3, list[1] = "a", list[2] = "short", list[3] = "set"	*/
 /*									*/
 /************************************************************************/
 
-void rw_add_name_to_list_if_needed (const char* name, char*** list, int* length)
+void add_name_to_list_if_needed (const char* name, char*** list, int* length)
 {
     /* no action necessary if the string is already in the list ... */
-    if (rw_name_in_list (name, *list, *length)) return;
+    if (name_in_list (name, *list, *length)) return;
 
     /* ... otherwise add string to the list */
-    rw_add_name_to_list (name, list, length);
+    add_name_to_list (name, list, length);
 }
 
 /************************************************************************/
@@ -81,20 +81,20 @@ void rw_add_name_to_list_if_needed (const char* name, char*** list, int* length)
 /*									*/
 /* before: length = 2, list[1] = 42, list[2] = 99			*/
 /*									*/
-/*     rw_add_number_to_list (77, &list, &length);			*/
+/*     add_number_to_list (77, &list, &length);			*/
 /*									*/
 /* after: length = 3, list[1] = 42, list[2] = 99, list[3] = 99		*/
 /*									*/
 /************************************************************************/
 
-void rw_add_number_to_list (int number, int** list, int* length)
+void add_number_to_list (int number, int** list, int* length)
 {
     /* either create a new list ... */
     if (*length == 0)
     {
         *list = (int*) malloc ((size_t)(++*length + 1) * sizeof(int));
 
-    	if (!*list) rw_exit (3);
+    	if (!*list) my_exit (3);
 
 	(*list)[*length] = number;
 	return;
@@ -105,7 +105,7 @@ void rw_add_number_to_list (int number, int** list, int* length)
     {
 	*list = (int*) realloc (*list, (size_t)(++*length + 1) * sizeof(int));
 
-	if (!*list) rw_exit (4);
+	if (!*list) my_exit (4);
     }
 
     /* copy in the new number */
@@ -119,12 +119,12 @@ void rw_add_number_to_list (int number, int** list, int* length)
 /*									*/
 /* with: length = 2, list[1] = "hello", list[2] = "world"		*/
 /*									*/
-/*     rw_name_in_list ("hello", list, length) => true			*/
-/*     rw_name_in_list ("bye", list, length) => false			*/
+/*     name_in_list ("hello", list, length) => true			*/
+/*     name_in_list ("bye", list, length) => false			*/
 /*									*/
 /************************************************************************/
 
-bool rw_name_in_list (const char* name, char** list, int length)
+bool name_in_list (const char* name, char** list, int length)
 {
     for (int i = 1;  i <= length;  i++)
 	if (strequal (name, list[i] ))
@@ -142,12 +142,12 @@ bool rw_name_in_list (const char* name, char** list, int length)
 /*									*/
 /* with: length = 2, list[1] = "hello", list[2] = "world"		*/
 /*									*/
-/*     rw_position_in_name_list ("world", list, length) => 2		*/
-/*     rw_position_in_name_list ("World", list, length) => 0		*/
+/*     position_in_name_list ("world", list, length) => 2		*/
+/*     position_in_name_list ("World", list, length) => 0		*/
 /*									*/
 /************************************************************************/
 
-int rw_position_in_name_list (const char* name, char** list, int length)
+int position_in_name_list (const char* name, char** list, int length)
 {
     for (int i = 1;  i <= length;  i++)
 	if (strequal (name, list[i] ))
@@ -164,12 +164,12 @@ int rw_position_in_name_list (const char* name, char** list, int length)
 /*									*/
 /* with: length = 2, list[1] = 34, list[2] = 42				*/
 /*									*/
-/*     rw_number_in_list (42, list, length) => true			*/
-/*     rw_number_in_list (77, list, length) => false			*/
+/*     number_in_list (42, list, length) => true			*/
+/*     number_in_list (77, list, length) => false			*/
 /*									*/
 /************************************************************************/
 
-bool rw_number_in_list (int number, const int* list, int length)
+bool number_in_list (int number, const int* list, int length)
 {
     for (int i = 1;  i <= length;  i++)
 	if (number == list[i])
@@ -187,12 +187,12 @@ bool rw_number_in_list (int number, const int* list, int length)
 /*									*/
 /* with: length = 2, list[1] = 34, list[2] = 42				*/
 /*									*/
-/*     rw_position_in_number_list (42, list, length) => 2		*/
+/*     position_in_number_list (42, list, length) => 2		*/
 /*     position_in_number_list (77, list, length) => 0			*/
 /*									*/
 /************************************************************************/
 
-int rw_position_in_number_list (int number, const int* list, int length)
+int position_in_number_list (int number, const int* list, int length)
 {
     for (int i = 1;  i <= length;  i++)
 	if (number == list[i])
@@ -210,28 +210,28 @@ int rw_position_in_number_list (int number, const int* list, int length)
 /*									*/
 /* before: length = 2, list[1] = 11, list[2] = 222			*/
 /*									*/
-/*     rw_add_number_to_list_if_needed (222, &list, &length);		*/
+/*     add_number_to_list_if_needed (222, &list, &length);		*/
 /*									*/
 /* after: length = 2, list[1] = 11, list[2] = 222			*/
 /*									*/
-/*     rw_add_name_to_list_if_needed (3333, &list, &length);		*/
+/*     add_name_to_list_if_needed (3333, &list, &length);		*/
 /*									*/
 /* after: length = 3, list[1] = 11, list[2] = 222, list[3] = 3333	*/
 /*									*/
 /************************************************************************/
 
-void rw_add_number_to_list_if_needed (int number, int** list, int* length)
+void add_number_to_list_if_needed (int number, int** list, int* length)
 {
     /* no action necessary if the number is already in the list ... */
-    if (rw_number_in_list (number, *list, *length)) return;
+    if (number_in_list (number, *list, *length)) return;
 
     /* ... otherwise add number to the list */
-    rw_add_number_to_list (number, list, length);
+    add_number_to_list (number, list, length);
 }
 
 /* -------------------------------------------------- */
 
-void rw_add_name_to_counted_list (const char* name, char*** list, int** counts, 
+void add_name_to_counted_list (const char* name, char*** list, int** counts, 
 				  int* length)
 {
     int where;
@@ -245,18 +245,18 @@ void rw_add_name_to_counted_list (const char* name, char*** list, int** counts,
 
     	if (!*list ||!*counts)
     	{
-	    puts ("malloc failure in rw_add_name_to_counted_list");
-    	    rw_exit (1);
+	    puts ("malloc failure in add_name_to_counted_list");
+    	    my_exit (1);
     	}
 
 	/* copy in the new item */
-	rw_strcpy (&(*list)[1], name);
+	strcpy (&(*list)[1], name);
 	(*counts)[1] = 1;
     }	
 
 
     /* ... or append item to existing list */
-    else if (!(where = rw_position_in_name_list (name, *list, *length)))
+    else if (!(where = position_in_name_list (name, *list, *length)))
     {
 	*list = 
 	    (char**) realloc (*list, (size_t)(++*length + 1) * sizeof(char*));
@@ -265,12 +265,12 @@ void rw_add_name_to_counted_list (const char* name, char*** list, int** counts,
 
 	if (!*list)
 	{
-	    puts ("realloc failure in rw_add_name_to_counted_list");
-	    rw_exit (1);
+	    puts ("realloc failure in add_name_to_counted_list");
+	    my_exit (1);
 	}
 
 	/* copy in the new item */
-	rw_strcpy (&(*list)[*length], name);
+	strcpy (&(*list)[*length], name);
 	(*counts)[*length] = 1;
     }
 
@@ -281,14 +281,14 @@ void rw_add_name_to_counted_list (const char* name, char*** list, int** counts,
 
 /* -------------------------------------------------- */
 
-void rw_add_bool_to_list (bool bbb, bool** list, int* length)
+void add_bool_to_list (bool bbb, bool** list, int* length)
 {
     /* either create a new list ... */
     if (*length == 0)
     {
         *list = (bool*) malloc ((size_t)(++*length + 1) * sizeof(bool));
 
-    	if (!*list) rw_exit (3);
+    	if (!*list) my_exit (3);
 
 	(*list)[*length] = bbb;
 	return;
@@ -299,7 +299,7 @@ void rw_add_bool_to_list (bool bbb, bool** list, int* length)
     {
 	*list = (bool*) realloc (*list, (size_t)(++*length + 1) * sizeof(bool));
 
-	if (!*list) rw_exit (4);
+	if (!*list) my_exit (4);
     }
 
     /* copy in the new number */
@@ -314,20 +314,20 @@ void rw_add_bool_to_list (bool bbb, bool** list, int* length)
 /*									*/
 /* before: length = 2, list[0] = 42, list[1] = 99			*/
 /*									*/
-/*     rw_add_number_to_list (77, &list, &length);			*/
+/*     add_number_to_list (77, &list, &length);			*/
 /*									*/
 /* after: length = 3, list[0] = 42, list[1] = 99, list[2] = 99		*/
 /*									*/
 /************************************************************************/
 
-void rw_add_number_to_list0 (int number, int** list, int* length)
+void add_number_to_list0 (int number, int** list, int* length)
 {
     /* either create a new list ... */
     if (*length == 0)
     {
         *list = (int*) malloc ((size_t)sizeof(int));
 
-    	if (!*list) rw_exit (3);
+    	if (!*list) my_exit (3);
 
 	(*list)[(*length)++] = number;
 	return;
@@ -338,7 +338,7 @@ void rw_add_number_to_list0 (int number, int** list, int* length)
     {
 	*list = (int*) realloc (*list, (size_t)(*length + 1) * sizeof(int));
 
-	if (!*list) rw_exit (4);
+	if (!*list) my_exit (4);
     }
 
     /* copy in the new number */
@@ -353,19 +353,19 @@ void rw_add_number_to_list0 (int number, int** list, int* length)
 /*									*/
 /* before: length = 2, list[0] = "a", list[1] = "short"			*/
 /*									*/
-/*     rw_add_name_to_list0 ("set", &list, &length);			*/
+/*     add_name_to_list0 ("set", &list, &length);			*/
 /*									*/
 /* after: length = 3, list[0] = "a", list[1] = "short", list[2] = "set"	*/
 /*									*/
 /************************************************************************/
 
-void rw_add_name_to_list0 (const char* name, char*** list, int* length)
+void add_name_to_list0 (const char* name, char*** list, int* length)
 {
     /* either create a new list ... */
     if (*length == 0)
     {
         *list = (char**) malloc ((size_t)sizeof(char*));
-    	if (!*list) rw_exit (1);
+    	if (!*list) my_exit (1);
     }	
 
     /* ... or append item to existing list */
@@ -374,11 +374,11 @@ void rw_add_name_to_list0 (const char* name, char*** list, int* length)
 	*list = 
 	    (char**) realloc (*list, (size_t)(*length + 1) * sizeof(char*));
 
-	if (!*list) rw_exit (2);
+	if (!*list) my_exit (2);
     }
 
     /* copy in the new item */
-    rw_strcpy (&(*list)[(*length)++], name);
+    strcpy (&(*list)[(*length)++], name);
 }	
 
 /************************************************************************/
@@ -389,12 +389,12 @@ void rw_add_name_to_list0 (const char* name, char*** list, int* length)
 /*									*/
 /* with: length = 2, list[0] = 34, list[1] = 42				*/
 /*									*/
-/*     rw_number_in_list (42, list, length) => true			*/
-/*     rw_number_in_list (77, list, length) => false			*/
+/*     number_in_list (42, list, length) => true			*/
+/*     number_in_list (77, list, length) => false			*/
 /*									*/
 /************************************************************************/
 
-bool rw_number_in_list0 (int number, const int* list, int length)
+bool number_in_list0 (int number, const int* list, int length)
 {
     for (int i = 0;  i < length;  i++)
 	if (number == list[i])
@@ -405,7 +405,7 @@ bool rw_number_in_list0 (int number, const int* list, int length)
 
 /* -------------------------------------------------- */
 
-void rw_add_number_to_counted_list (int number, int** list, int** counts, 
+void add_number_to_counted_list (int number, int** list, int** counts, 
 				    int* length)
 {
     int where;
@@ -419,8 +419,8 @@ void rw_add_number_to_counted_list (int number, int** list, int** counts,
 
     	if (!*list ||!*counts)
     	{
-	    puts ("malloc failure in rw_add_name_to_counted_list");
-    	    rw_exit (1);
+	    puts ("malloc failure in add_name_to_counted_list");
+    	    my_exit (1);
     	}
 
 	/* copy in the new item */
@@ -429,7 +429,7 @@ void rw_add_number_to_counted_list (int number, int** list, int** counts,
     }	
 
     /* ... or append item to existing list */
-    else if (!(where = rw_position_in_number_list (number, (const int*) *list, 
+    else if (!(where = position_in_number_list (number, (const int*) *list, 
 								    *length)))
     {
 	*list = 
@@ -439,8 +439,8 @@ void rw_add_number_to_counted_list (int number, int** list, int** counts,
 
 	if (!*list)
 	{
-	    puts ("realloc failure in rw_add_name_to_counted_list");
-	    rw_exit (1);
+	    puts ("realloc failure in add_name_to_counted_list");
+	    my_exit (1);
 	}
 
 	/* copy in the new item */
@@ -455,7 +455,7 @@ void rw_add_number_to_counted_list (int number, int** list, int** counts,
 
 /* -------------------------------------------------- */
 
-int rw_number_in_list (float num, float* list, int len)
+int number_in_list (float num, float* list, int len)
 {
     for (int i = 1;  i <= len;   i++)
         if (list[i] == num)

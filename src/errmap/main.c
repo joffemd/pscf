@@ -1,4 +1,4 @@
-#include "this.h"
+#include "errmap.h"
 
 /* -------------------------------------------------- */
 
@@ -12,10 +12,10 @@ int main (int, char**)
     for (;;)
     {
         char* line;
-	rw_fgets (&line, fc);
+	fgets (&line, fc);
 	if (feof(fc)) break;
 
-	rw_add_name_to_list (line, &lines, &n_lines);
+	add_name_to_list (line, &lines, &n_lines);
 	free (line);
     }
 
@@ -27,7 +27,7 @@ int main (int, char**)
     for (;;)
     {
         char* line;
-	rw_fgets (&line, f);
+	fgets (&line, f);
 	if (feof(f)) break;
 
 	if (!strstr (line, " error: "))
@@ -38,12 +38,12 @@ int main (int, char**)
 
 	char** words;
 	int n_words;
-	rw_split_by_delimiter (line, &words, &n_words, ":");
+	split_by_delimiter (line, &words, &n_words, ":");
 
 	int num = atoi (words[2]);
 	int off = atoi (words[3]);
 
-	rw_words_free (words, n_words);
+	words_free (words, n_words);
 
 	char* message = strrchr (line, ':')+2;
 

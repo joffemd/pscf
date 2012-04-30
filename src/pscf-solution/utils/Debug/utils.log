@@ -1,0 +1,54 @@
+﻿Build started 4/30/2012 1:23:28 PM.
+     1>Project "C:\PSCF\src\pscf-solution\utils\utils.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\utils.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\utils.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\utils\atoi.c ..\..\utils\concat.c ..\..\utils\copy.c ..\..\utils\exit.c ..\..\utils\fgets.c ..\..\utils\lists.c ..\..\utils\lists2.c ..\..\utils\nwordsin.c ..\..\utils\pattern.c ..\..\utils\replace.c ..\..\utils\skipeol.c ..\..\utils\split.c ..\..\utils\startswith.c ..\..\utils\timestmp.c ..\..\utils\trim.c ..\..\utils\varargs.c ..\..\utils\wfree.c /TP /c 
+     1>cl : Command line warning D9025: overriding '/TC' with '/TP'
+         wfree.c
+         varargs.c
+         trim.c
+         timestmp.c
+         startswith.c
+         split.c
+         skipeol.c
+         replace.c
+         pattern.c
+         nwordsin.c
+         lists2.c
+         lists.c
+         fgets.c
+         exit.c
+         copy.c
+         concat.c
+         atoi.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\PSCF\src\pscf-solution\Debug\utils.lib" /NOLOGO Debug\atoi.obj
+         Debug\concat.obj
+         Debug\copy.obj
+         Debug\exit.obj
+         Debug\fgets.obj
+         Debug\lists.obj
+         Debug\lists2.obj
+         Debug\nwordsin.obj
+         Debug\pattern.obj
+         Debug\replace.obj
+         Debug\skipeol.obj
+         Debug\split.obj
+         Debug\startswith.obj
+         Debug\timestmp.obj
+         Debug\trim.obj
+         Debug\varargs.obj
+         Debug\wfree.obj
+         utils.vcxproj -> C:\PSCF\src\pscf-solution\Debug\utils.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\utils.unsuccessfulbuild".
+         Touching "Debug\utils.lastbuildstate".
+     1>Done Building Project "C:\PSCF\src\pscf-solution\utils\utils.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.46

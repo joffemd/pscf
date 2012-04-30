@@ -2,7 +2,7 @@
 
 /* -------------------------------------------------- */
 
-int rw_replace_string_in_string (char*& s, const char* old, const char* rep)
+int replace_string_in_string (char*& s, const char* old, const char* rep)
 {
     char* the_rep = (char*)rep;
     if (!rep) the_rep = (char*)"";
@@ -36,12 +36,12 @@ int rw_replace_string_in_string (char*& s, const char* old, const char* rep)
     else
     {
 	again3:
-	char* newbuf; rw_strcpy (&newbuf, "");
+	char* newbuf; strcpy (&newbuf, "");
 
-	rw_strncat (&newbuf, s, where_old - s);
-	rw_strncat (&newbuf,  the_rep, rep_len);
+	strncat (&newbuf, s, where_old - s);
+	strncat (&newbuf,  the_rep, rep_len);
 	int off = where_old -s + rep_len;
-	rw_strcat (&newbuf,  where_old+old_len);
+	strcat (&newbuf,  where_old+old_len);
 	++n_reps;
     
 	free(s); s = newbuf;
@@ -54,11 +54,11 @@ int rw_replace_string_in_string (char*& s, const char* old, const char* rep)
 
 /* -------------------------------------------------- */
 
-int rw_replace_string_in_string (char*& s, const char *old, int rep)
+int replace_string_in_string (char*& s, const char *old, int rep)
 {
     char s_rep[14];
     sprintf (s_rep, "%d", rep);
 
-    return rw_replace_string_in_string (s, old, s_rep);
+    return replace_string_in_string (s, old, s_rep);
 }
 

@@ -3,7 +3,7 @@
 
 /* -------------------------------------------------- */
  
-void rw_exit (int st)
+void my_exit (int st)
 {
     exit (st);
 }

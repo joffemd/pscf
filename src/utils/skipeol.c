@@ -2,7 +2,7 @@
 
 /* -------------------------------------------------- */
 
-void rw_skip_to_eol (FILE* f)
+void skip_to_eol (FILE* f)
 {
     int c;
 

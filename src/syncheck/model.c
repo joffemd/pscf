@@ -1,4 +1,4 @@
-#include "this.h"
+#include "syncheck.h"
 
 /* -------------------------------------------------- */
 
@@ -6,22 +6,22 @@ void do_model (FILE* f, FILE* f_out_m, int& nm)
 {
     nm = 0;
 
-    rw_skip_to_eol (f);
+    skip_to_eol (f);
 
     bool nt_found = false;
 
     for (int lnum = 1;;  lnum++)
     {
 	char* line;
-	rw_fgets_no_control_m (&line, f);
+	fgets_no_control_m (&line, f);
 	if (feof(f)) break;
 
 	char** words;
 	int n_words;
-	rw_split_by_delimiter (line, &words, &n_words, "\t");
+	split_by_delimiter (line, &words, &n_words, "\t");
 
-	if (n_words >= 1) rw_trim (words[1]);
-	if (n_words >= 2) rw_trim (words[1]);
+	if (n_words >= 1) trim (words[1]);
+	if (n_words >= 2) trim (words[1]);
 
 	if (strequal (words[1], "Number of Trials"))
 	{
@@ -36,7 +36,7 @@ void do_model (FILE* f, FILE* f_out_m, int& nm)
 	    {
 		int v;
 		bool ok;
-	        rw_atoi(words[2], &v, &ok);
+	        atoi(words[2], &v, &ok);
 
 		if (!ok || (ok && v < 0))
 		{

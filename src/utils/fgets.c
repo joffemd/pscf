@@ -6,11 +6,11 @@
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_fgets (&any_length_string, in_file);				*/
+/*     fgets (&any_length_string, in_file);				*/
 /*									*/
 /* might give: any_length_string = "hello world"			*/
 /*									*/
-/* Note: rw_fgets reads characters in "LUMP"s. This "lump" buffer	*/
+/* Note: fgets reads characters in "LUMP"s. This "lump" buffer	*/
 /* length is set to 80, so that normal lines can be read in one go.	*/
 /* Increase LUMP for efficiency's sake if input lines are known to be	*/
 /* longer.								*/
@@ -26,18 +26,18 @@
 #define check_alloc(mem)\
     if (!mem)\
     {\
-	rw_exit (5);\
+	my_exit (5);\
     }
 
 #define check_realloc(mem)\
     if (!mem)\
     {\
-	rw_exit (6);\
+	my_exit (6);\
     }
 
 /* -------------------------------------------------- */
 
-char* rw_fgets (char** string, FILE* input_file)
+char* fgets (char** string, FILE* input_file)
 {
     char buffer[LUMP+2]; /* LUMP chars + new-line + null */
     int total_length = 0;
@@ -119,9 +119,9 @@ char* rw_fgets (char** string, FILE* input_file)
 
 /* -------------------------------------------------- */
 
-void rw_fgets_no_control_m (char** string, FILE* input_file)
+void fgets_no_control_m (char** string, FILE* input_file)
 {
-    rw_fgets (string, input_file);
+    fgets (string, input_file);
 
     if (ferror (input_file) || feof (input_file)) return;
     if (!*string) return;

@@ -1,0 +1,1418 @@
+﻿Build started 4/30/2012 12:14:29 PM.
+     1>Project "C:\PSCF\src\pscf-solution\utils\utils.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\utils.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Release\utils.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\utils\atoi.c ..\..\utils\concat.c ..\..\utils\copy.c ..\..\utils\exit.c ..\..\utils\fgets.c ..\..\utils\lists.c ..\..\utils\lists2.c ..\..\utils\nwordsin.c ..\..\utils\pattern.c ..\..\utils\replace.c ..\..\utils\skipeol.c ..\..\utils\split.c ..\..\utils\startswith.c ..\..\utils\timestmp.c ..\..\utils\trim.c ..\..\utils\varargs.c ..\..\utils\wfree.c
+         atoi.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\atoi.c(28): error C2143: syntax error : missing ')' before '*'
+     1>..\..\utils\atoi.c(28): error C2081: 'bool' : name in formal parameter list illegal
+     1>..\..\utils\atoi.c(28): error C2143: syntax error : missing '{' before '*'
+     1>..\..\utils\atoi.c(28): error C2059: syntax error : ')'
+     1>..\..\utils\atoi.c(29): error C2054: expected '(' to follow 'good_conversion'
+     1>..\..\utils\atoi.c(82): error C2061: syntax error : identifier 'fussy_atoi_check'
+     1>..\..\utils\atoi.c(82): error C2059: syntax error : ';'
+     1>..\..\utils\atoi.c(82): error C2059: syntax error : 'type'
+         concat.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\concat.c(25): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'int'
+     1>..\..\utils\concat.c(25): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\concat.c(57): error C2491: 'strncat' : definition of dllimport function not allowed
+     1>..\..\utils\concat.c(63): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\concat.c(63): warning C4024: 'strncat' : different types for formal and actual parameter 1
+     1>..\..\utils\concat.c(91): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\concat.c(116): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\concat.c(120): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\concat.c(120): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\concat.c(120): warning C4024: 'strcpy' : different types for formal and actual parameter 1
+         copy.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\copy.c(23): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'int'
+     1>..\..\utils\copy.c(23): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\copy.c(46): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\copy.c(62): error C2491: 'strncpy' : definition of dllimport function not allowed
+     1>..\..\utils\copy.c(66): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\copy.c(66): warning C4024: 'strncpy' : different types for formal and actual parameter 1
+     1>..\..\utils\copy.c(90): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         exit.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+         fgets.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\fgets.c(44): error C2065: 'bool' : undeclared identifier
+     1>..\..\utils\fgets.c(44): error C2146: syntax error : missing ';' before identifier 'first_lump'
+     1>..\..\utils\fgets.c(44): error C2065: 'first_lump' : undeclared identifier
+     1>..\..\utils\fgets.c(44): error C2065: 'true' : undeclared identifier
+     1>..\..\utils\fgets.c(49): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char [82]'
+     1>..\..\utils\fgets.c(49): warning C4024: 'fgets' : different types for formal and actual parameter 1
+     1>..\..\utils\fgets.c(49): warning C4047: 'function' : 'FILE *' differs in levels of indirection from 'int'
+     1>..\..\utils\fgets.c(49): warning C4024: 'fgets' : different types for formal and actual parameter 2
+     1>..\..\utils\fgets.c(49): warning C4020: 'fgets' : too many actual parameters
+     1>..\..\utils\fgets.c(51): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\fgets.c(54): error C2065: 'bool' : undeclared identifier
+     1>..\..\utils\fgets.c(54): error C2146: syntax error : missing ';' before identifier 'finished'
+     1>..\..\utils\fgets.c(54): error C2065: 'finished' : undeclared identifier
+     1>..\..\utils\fgets.c(54): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(57): error C2065: 'first_lump' : undeclared identifier
+     1>..\..\utils\fgets.c(59): error C2065: 'finished' : undeclared identifier
+     1>..\..\utils\fgets.c(62): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(66): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\fgets.c(66): warning C4024: 'strncpy' : different types for formal and actual parameter 1
+     1>..\..\utils\fgets.c(66): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(67): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(75): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(79): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\fgets.c(79): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\fgets.c(79): warning C4024: 'strcpy' : different types for formal and actual parameter 1
+     1>..\..\utils\fgets.c(82): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(85): error C2065: 'first_lump' : undeclared identifier
+     1>..\..\utils\fgets.c(85): error C2065: 'false' : undeclared identifier
+     1>..\..\utils\fgets.c(91): error C2065: 'finished' : undeclared identifier
+     1>..\..\utils\fgets.c(95): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(99): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\fgets.c(99): warning C4024: 'strncpy' : different types for formal and actual parameter 1
+     1>..\..\utils\fgets.c(99): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(100): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(109): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\fgets.c(112): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\fgets.c(112): warning C4024: 'strcpy' : different types for formal and actual parameter 1
+     1>..\..\utils\fgets.c(114): error C2065: 'length' : undeclared identifier
+     1>..\..\utils\fgets.c(129): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\fgets.c(131): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\fgets.c(131): error C2065: 'len' : undeclared identifier
+         lists.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\lists.c(45): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists.c(70): warning C4013: 'name_in_list' undefined; assuming extern returning int
+     1>..\..\utils\lists.c(91): warning C4028: formal parameter 1 different from declaration
+     1>..\..\utils\lists.c(91): warning C4028: formal parameter 2 different from declaration
+     1>..\..\utils\lists.c(127): error C2061: syntax error : identifier 'name_in_list'
+     1>..\..\utils\lists.c(127): error C2059: syntax error : ';'
+     1>..\..\utils\lists.c(127): error C2059: syntax error : 'type'
+     1>..\..\utils\lists.c(152): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(152): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(152): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\lists.c(152): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(152): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(152): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\lists.c(152): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(152): error C2059: syntax error : ')'
+     1>..\..\utils\lists.c(153): error C2143: syntax error : missing ';' before 'if'
+     1>..\..\utils\lists.c(153): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(153): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(153): error C2065: 'true' : undeclared identifier
+     1>..\..\utils\lists.c(153): error C2065: 'false' : undeclared identifier
+     1>..\..\utils\lists.c(154): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(172): error C2061: syntax error : identifier 'number_in_list'
+     1>..\..\utils\lists.c(172): error C2059: syntax error : ';'
+     1>..\..\utils\lists.c(172): error C2059: syntax error : 'type'
+     1>..\..\utils\lists.c(197): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(197): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(197): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\lists.c(197): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(197): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(197): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\lists.c(197): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(197): error C2059: syntax error : ')'
+     1>..\..\utils\lists.c(198): error C2143: syntax error : missing ';' before 'if'
+     1>..\..\utils\lists.c(198): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(199): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(226): warning C4013: 'number_in_list' undefined; assuming extern returning int
+     1>..\..\utils\lists.c(248): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [43]'
+     1>..\..\utils\lists.c(248): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists.c(253): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists.c(268): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [44]'
+     1>..\..\utils\lists.c(268): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists.c(273): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists.c(284): error C2146: syntax error : missing ')' before identifier 'bbb'
+     1>..\..\utils\lists.c(284): error C2061: syntax error : identifier 'bbb'
+     1>..\..\utils\lists.c(284): error C2059: syntax error : ';'
+     1>..\..\utils\lists.c(284): error C2059: syntax error : ','
+     1>..\..\utils\lists.c(284): error C2059: syntax error : ')'
+     1>..\..\utils\lists.c(381): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists.c(397): error C2061: syntax error : identifier 'number_in_list0'
+     1>..\..\utils\lists.c(397): error C2059: syntax error : ';'
+     1>..\..\utils\lists.c(397): error C2059: syntax error : 'type'
+     1>..\..\utils\lists.c(422): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [43]'
+     1>..\..\utils\lists.c(422): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists.c(442): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [44]'
+     1>..\..\utils\lists.c(442): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists.c(460): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(460): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(460): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\lists.c(460): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists.c(460): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(460): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\lists.c(460): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(460): error C2059: syntax error : ')'
+     1>..\..\utils\lists.c(461): error C2143: syntax error : missing ';' before 'if'
+     1>..\..\utils\lists.c(461): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists.c(462): error C2065: 'i' : undeclared identifier
+         lists2.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\lists2.c(7): warning C4028: formal parameter 1 different from declaration
+     1>..\..\utils\lists2.c(7): warning C4028: formal parameter 2 different from declaration
+     1>..\..\utils\lists2.c(35): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists2.c(35): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists2.c(35): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\lists2.c(35): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\lists2.c(35): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists2.c(35): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\lists2.c(35): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists2.c(35): error C2059: syntax error : ')'
+     1>..\..\utils\lists2.c(36): error C2143: syntax error : missing ';' before 'if'
+     1>..\..\utils\lists2.c(36): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists2.c(37): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\lists2.c(57): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [44]'
+     1>..\..\utils\lists2.c(57): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists2.c(77): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [44]'
+     1>..\..\utils\lists2.c(77): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists2.c(95): warning C4028: formal parameter 2 different from declaration
+     1>..\..\utils\lists2.c(95): warning C4028: formal parameter 3 different from declaration
+     1>..\..\utils\lists2.c(95): warning C4028: formal parameter 4 different from declaration
+     1>..\..\utils\lists2.c(95): warning C4029: declared formal parameter list different from definition
+     1>..\..\utils\lists2.c(107): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [43]'
+     1>..\..\utils\lists2.c(107): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists2.c(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists2.c(126): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [44]'
+     1>..\..\utils\lists2.c(126): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\lists2.c(131): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\utils\lists2.c(143): error C2084: function 'void add_number_to_list(float,float **,int *)' already has a body
+                 C:\PSCF\src\include\utils.h(7) : see previous definition of 'add_number_to_list'
+     1>..\..\utils\lists2.c(169): error C2146: syntax error : missing ')' before identifier 'val'
+     1>..\..\utils\lists2.c(169): error C2061: syntax error : identifier 'val'
+     1>..\..\utils\lists2.c(169): error C2059: syntax error : ';'
+     1>..\..\utils\lists2.c(169): error C2059: syntax error : ','
+     1>..\..\utils\lists2.c(169): error C2059: syntax error : ')'
+         nwordsin.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\nwordsin.c(9): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\nwordsin.c(10): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\nwordsin.c(12): error C2065: 'words' : undeclared identifier
+     1>..\..\utils\nwordsin.c(12): warning C4047: 'function' : 'char ***' differs in levels of indirection from 'int *'
+     1>..\..\utils\nwordsin.c(12): warning C4024: 'split_by_delimiter' : different types for formal and actual parameter 2
+     1>..\..\utils\nwordsin.c(12): error C2065: 'n_words' : undeclared identifier
+     1>..\..\utils\nwordsin.c(13): error C2065: 'words' : undeclared identifier
+     1>..\..\utils\nwordsin.c(13): warning C4047: 'function' : 'char **' differs in levels of indirection from 'int'
+     1>..\..\utils\nwordsin.c(13): warning C4024: 'words_free' : different types for formal and actual parameter 1
+     1>..\..\utils\nwordsin.c(13): error C2065: 'n_words' : undeclared identifier
+     1>..\..\utils\nwordsin.c(15): error C2065: 'n_words' : undeclared identifier
+         pattern.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(10): error C2061: syntax error : identifier 'do_match'
+     1>..\..\utils\pattern.c(10): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(10): error C2059: syntax error : 'type'
+     1>..\..\utils\pattern.c(12): error C2061: syntax error : identifier 'sub_match'
+     1>..\..\utils\pattern.c(12): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(12): error C2059: syntax error : 'type'
+     1>..\..\utils\pattern.c(30): error C2061: syntax error : identifier 'pattern_check'
+     1>..\..\utils\pattern.c(30): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(30): error C2059: syntax error : 'type'
+     1>..\..\utils\pattern.c(97): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>..\..\utils\pattern.c(97): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(97): error C2059: syntax error : 'type'
+     1>..\..\utils\pattern.c(185): error C2061: syntax error : identifier 'do_match'
+     1>..\..\utils\pattern.c(185): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(185): error C2059: syntax error : 'type'
+     1>..\..\utils\pattern.c(272): error C2065: 'bool' : undeclared identifier
+     1>..\..\utils\pattern.c(272): error C2146: syntax error : missing ';' before identifier 'in_brackets'
+     1>..\..\utils\pattern.c(272): error C2065: 'in_brackets' : undeclared identifier
+     1>..\..\utils\pattern.c(272): error C2065: 'false' : undeclared identifier
+     1>..\..\utils\pattern.c(274): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\pattern.c(274): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\pattern.c(274): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\pattern.c(274): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\pattern.c(274): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\pattern.c(274): warning C4552: '<' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\pattern.c(274): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\pattern.c(274): error C2059: syntax error : ')'
+     1>..\..\utils\pattern.c(276): error C2143: syntax error : missing ';' before 'if'
+     1>..\..\utils\pattern.c(276): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\pattern.c(279): error C2065: 'in_brackets' : undeclared identifier
+     1>..\..\utils\pattern.c(279): error C2065: 'true' : undeclared identifier
+     1>..\..\utils\pattern.c(282): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\pattern.c(283): error C2065: 'in_brackets' : undeclared identifier
+     1>..\..\utils\pattern.c(283): error C2065: 'false' : undeclared identifier
+     1>..\..\utils\pattern.c(286): error C2065: 'in_brackets' : undeclared identifier
+     1>..\..\utils\pattern.c(299): error C2061: syntax error : identifier 'sub_match'
+     1>..\..\utils\pattern.c(299): error C2059: syntax error : ';'
+     1>..\..\utils\pattern.c(299): error C2059: syntax error : 'type'
+         replace.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\replace.c(5): error C2143: syntax error : missing ')' before '&'
+     1>..\..\utils\replace.c(5): error C2143: syntax error : missing '{' before '&'
+     1>..\..\utils\replace.c(5): error C2059: syntax error : '&'
+     1>..\..\utils\replace.c(5): error C2059: syntax error : ')'
+     1>..\..\utils\replace.c(57): error C2143: syntax error : missing ')' before '&'
+     1>..\..\utils\replace.c(57): error C2143: syntax error : missing '{' before '&'
+     1>..\..\utils\replace.c(57): error C2059: syntax error : '&'
+     1>..\..\utils\replace.c(57): error C2059: syntax error : ')'
+         skipeol.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+         split.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\split.c(61): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\split.c(71): error C2065: 'word_len' : undeclared identifier
+     1>..\..\utils\split.c(76): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\split.c(76): warning C4024: 'strncpy' : different types for formal and actual parameter 1
+     1>..\..\utils\split.c(76): error C2065: 'word_len' : undeclared identifier
+     1>..\..\utils\split.c(79): error C2065: 'word_len' : undeclared identifier
+     1>..\..\utils\split.c(123): error C2061: syntax error : identifier 'split_quoted_line'
+     1>..\..\utils\split.c(123): error C2059: syntax error : ';'
+     1>..\..\utils\split.c(123): error C2059: syntax error : 'type'
+     1>..\..\utils\split.c(205): error C2061: syntax error : identifier 'split_double_quoted_line'
+     1>..\..\utils\split.c(205): error C2059: syntax error : ';'
+     1>..\..\utils\split.c(205): error C2059: syntax error : 'type'
+     1>..\..\utils\split.c(300): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [13]'
+     1>..\..\utils\split.c(300): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\split.c(341): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [14]'
+     1>..\..\utils\split.c(341): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\split.c(351): warning C4047: 'function' : 'const int' differs in levels of indirection from 'char [13]'
+     1>..\..\utils\split.c(351): warning C4024: 'puts' : different types for formal and actual parameter 1
+     1>..\..\utils\split.c(356): warning C4047: 'function' : 'char **' differs in levels of indirection from 'char *'
+     1>..\..\utils\split.c(356): warning C4024: 'strncpy' : different types for formal and actual parameter 1
+         startswith.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\startswith.c(5): error C2061: syntax error : identifier 'starts_with'
+     1>..\..\utils\startswith.c(5): error C2059: syntax error : ';'
+     1>..\..\utils\startswith.c(5): error C2059: syntax error : 'type'
+     1>..\..\utils\startswith.c(16): error C2065: 'true' : undeclared identifier
+     1>..\..\utils\startswith.c(16): error C2065: 'false' : undeclared identifier
+         timestmp.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\timestmp.c(12): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\timestmp.c(14): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(14): error C2109: subscript requires array or pointer type
+     1>..\..\utils\timestmp.c(14): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(14): error C2109: subscript requires array or pointer type
+     1>..\..\utils\timestmp.c(15): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(15): warning C4022: 'memcpy' : pointer mismatch for actual parameter 1
+     1>..\..\utils\timestmp.c(15): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(15): warning C4022: 'memcpy' : pointer mismatch for actual parameter 2
+     1>..\..\utils\timestmp.c(17): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(17): error C2109: subscript requires array or pointer type
+     1>..\..\utils\timestmp.c(19): error C2065: 'the_ctime' : undeclared identifier
+     1>..\..\utils\timestmp.c(19): warning C4047: 'return' : 'char *' differs in levels of indirection from 'int'
+         trim.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\trim.c(10): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(14): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(14): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(14): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\trim.c(14): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(14): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(14): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(14): warning C4552: '<' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\trim.c(14): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(14): error C2059: syntax error : ')'
+     1>..\..\utils\trim.c(14): error C2146: syntax error : missing ';' before identifier 's'
+     1>..\..\utils\trim.c(14): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(14): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(18): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(18): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(18): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(18): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(18): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(19): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(21): error C2065: 'len' : undeclared identifier
+     1>..\..\utils\trim.c(27): error C2084: function 'void trim(char *)' already has a body
+                 C:\PSCF\src\include\utils.h(24) : see previous definition of 'trim'
+     1>..\..\utils\trim.c(28): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(28): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(28): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\trim.c(28): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\trim.c(28): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(28): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\trim.c(28): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\trim.c(28): error C2059: syntax error : ')'
+     1>..\..\utils\trim.c(29): error C2146: syntax error : missing ';' before identifier 'trim'
+     1>..\..\utils\trim.c(29): error C2065: 'i' : undeclared identifier
+         varargs.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\varargs.c(5): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(5): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(12): warning C4392: 'int strcpy(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(12): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(20): warning C4392: 'int strcpy(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(20): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(29): warning C4392: 'int strcpy(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(29): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(39): warning C4392: 'int strcpy(char **,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(39): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(50): warning C4392: 'int strcpy(char **,const char *,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(50): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(62): warning C4392: 'int strcpy(char **,const char *,const char *,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(62): error C2169: 'strcpy' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(77): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(77): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(84): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(84): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(92): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(92): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(101): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(101): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(111): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(111): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(122): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(122): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(134): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(134): error C2169: 'strcat' : intrinsic function, cannot be defined
+     1>..\..\utils\varargs.c(147): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>..\..\utils\varargs.c(147): error C2169: 'strcat' : intrinsic function, cannot be defined
+         wfree.c
+     1>c:\pscf\src\include\general.h(37): warning C4028: formal parameter 1 different from declaration
+     1>c:\pscf\src\include\general.h(37): warning C4273: 'puts' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(291) : see previous definition of 'puts'
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(8): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(10): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(10): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(10): error C2072: 'alpha_sort_counted_list' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(10): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ','
+     1>C:\PSCF\src\include\utils.h(11): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(16): error C2143: syntax error : missing ')' before '='
+     1>C:\PSCF\src\include\utils.h(16): error C2072: 'my_exit' : initialization of a function
+     1>C:\PSCF\src\include\utils.h(16): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(18): warning C4030: first formal parameter list longer than the second list
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4028: formal parameter 2 different from declaration
+     1>C:\PSCF\src\include\utils.h(18): warning C4273: 'fgets' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(214) : see previous definition of 'fgets'
+     1>C:\PSCF\src\include\utils.h(21): error C2061: syntax error : identifier 'get_directory_contents'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(21): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(26): error C2061: syntax error : identifier 'name_in_list'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(26): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(27): error C2061: syntax error : identifier 'number_in_list'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(27): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(32): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing ')' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2143: syntax error : missing '{' before '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : '&'
+     1>C:\PSCF\src\include\utils.h(33): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(38): warning C4391: 'void strcat(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(39): warning C4391: 'int strcat(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(39): warning C4392: 'int strcat(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(40): warning C4392: 'int strcat(char **,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(41): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(42): warning C4392: 'int strcat(char **,const char *,const char *,const char *,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(43): warning C4391: 'void strcpy(char **,const char *)' : incorrect return type for intrinsic function, expected 'char'
+     1>C:\PSCF\src\include\utils.h(44): warning C4391: 'int strcpy(char **,const char *,const char *)' : incorrect return type for intrinsic function, expected 'void'
+     1>C:\PSCF\src\include\utils.h(44): warning C4392: 'int strcpy(char **,const char *,const char *)' : incorrect number of arguments for intrinsic function, expected '2' arguments
+     1>C:\PSCF\src\include\utils.h(45): error C2061: syntax error : identifier 'string_matches_pattern'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(45): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(48): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(48): error C2040: 'strncat' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(49): warning C4028: formal parameter 1 different from declaration
+     1>C:\PSCF\src\include\utils.h(49): error C2040: 'strncpy' : 'void (char **,const char *,size_t)' differs in levels of indirection from 'void (char **,const char *,size_t)'
+     1>C:\PSCF\src\include\utils.h(67): error C2061: syntax error : identifier 'starts_with'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : ';'
+     1>C:\PSCF\src\include\utils.h(67): error C2059: syntax error : 'type'
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing ')' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2081: 'bool' : name in formal parameter list illegal
+     1>C:\PSCF\src\include\utils.h(69): error C2143: syntax error : missing '{' before '*'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ')'
+     1>C:\PSCF\src\include\utils.h(69): error C2059: syntax error : ';'
+     1>..\..\utils\wfree.c(15): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\wfree.c(15): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\wfree.c(15): error C2143: syntax error : missing ')' before 'type'
+     1>..\..\utils\wfree.c(15): error C2143: syntax error : missing ';' before 'type'
+     1>..\..\utils\wfree.c(15): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\wfree.c(15): warning C4552: '<=' : operator has no effect; expected operator with side-effect
+     1>..\..\utils\wfree.c(15): error C2065: 'i' : undeclared identifier
+     1>..\..\utils\wfree.c(15): error C2059: syntax error : ')'
+     1>..\..\utils\wfree.c(15): error C2146: syntax error : missing ';' before identifier 'free'
+     1>..\..\utils\wfree.c(15): error C2065: 'i' : undeclared identifier
+     1>Done Building Project "C:\PSCF\src\pscf-solution\utils\utils.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.85

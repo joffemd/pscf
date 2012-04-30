@@ -11,21 +11,21 @@
 /************************************************************************/
 /*									*/
 /* Acts like atoi, but doesn't accept input like "1984x". (atoi will	*/
-/* interpret this as 1984, rw_atoi will report an error.)		*/
+/* interpret this as 1984, atoi will report an error.)		*/
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_atoi ("1984", &number, &good_conversion);			*/
+/*     atoi ("1984", &number, &good_conversion);			*/
 /*									*/
 /* gives: number = 1984, good_conversion = true				*/
 /*									*/
-/*     rw_atoi ("1984x", &number, &good_conversion);			*/
+/*     atoi ("1984x", &number, &good_conversion);			*/
 /*									*/
 /* gives: number = (undefined), good_conversion = false			*/
 /*									*/
 /************************************************************************/
 
-void rw_atoi (const char* candidate, int* number, bool* good_conversion)
+void atoi (const char* candidate, int* number, bool* good_conversion)
 {
     int match_count;
     char next_character;
@@ -69,17 +69,17 @@ void rw_atoi (const char* candidate, int* number, bool* good_conversion)
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_fussy_atoi_check ("1984") => true				*/
+/*     fussy_atoi_check ("1984") => true				*/
 /*									*/
 /* gives: number = 1984, good_conversion = true				*/
 /*									*/
-/*     rw_atoi ("1984x", &number, &good_conversion);			*/
+/*     atoi ("1984x", &number, &good_conversion);			*/
 /*									*/
 /* gives: number = (undefined), good_conversion = false			*/
 /*									*/
 /************************************************************************/
 
-bool rw_fussy_atoi_check (const char* candidate_32_bit_integer)
+bool fussy_atoi_check (const char* candidate_32_bit_integer)
 {
     const char* s = candidate_32_bit_integer;
     int len;

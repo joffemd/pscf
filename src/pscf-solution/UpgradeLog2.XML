@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="pscf-solution">
+</Property><Property Name="Solution File" Value="C:\PSCF\src\pscf-solution\pscf-solution.sln">
+</Property><Property Name="User Options File" Value="C:\PSCF\src\pscf-solution\pscf-solution.suo">
+</Property><Property Name="Date" Value="Monday, April 30, 2012">
+</Property><Property Name="Time" Value="12:16 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="2" Project="" Source="pscf-solution.sln" Description="Error creating backup file: C:\PSCF\src\pscf-solution\pscf-solution.sln.old">
+</Event><Event ErrorLevel="2" Project="" Source="pscf-solution.suo" Description="Error creating backup file: C:\PSCF\src\pscf-solution\pscf-solution.suo.old">
+</Event><Event ErrorLevel="0" Project="genprog" Source="genprog\genprog.vcproj" Description="Converting project file 'C:\PSCF\src\pscf-solution\genprog\genprog.vcproj'.">
+</Event><Event ErrorLevel="1" Project="genprog" Source="genprog\genprog.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="genprog" Source="genprog\genprog.vcproj" Description="MSB8012: $(TargetPath) ('C:\PSCF\src\pscf-solution\genprog\..\..\..\system\bin\genprog.exe') does not match the Linker's OutputFile property value '..\..\..\system\bin\genprog.exe' ('C:\system\bin\genprog.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="genprog" Source="genprog\genprog.vcproj" Description="Done converting to new project file 'C:\PSCF\src\pscf-solution\genprog\genprog.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="genprog" Source="genprog\genprog.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="syncheck" Source="syncheck\syncheck.vcproj" Description="Converting project file 'C:\PSCF\src\pscf-solution\syncheck\syncheck.vcproj'.">
+</Event><Event ErrorLevel="1" Project="syncheck" Source="syncheck\syncheck.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="syncheck" Source="syncheck\syncheck.vcproj" Description="MSB8012: $(TargetPath) ('C:\PSCF\src\pscf-solution\syncheck\..\..\..\system\bin\syncheck.exe') does not match the Linker's OutputFile property value '..\..\..\system\bin\syncheck.exe' ('C:\system\bin\syncheck.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="syncheck" Source="syncheck\syncheck.vcproj" Description="Done converting to new project file 'C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="syncheck" Source="syncheck\syncheck.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="errmap" Source="errmap\errmap.vcproj" Description="Converting project file 'C:\PSCF\src\pscf-solution\errmap\errmap.vcproj'.">
+</Event><Event ErrorLevel="1" Project="errmap" Source="errmap\errmap.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="errmap" Source="errmap\errmap.vcproj" Description="MSB8012: $(TargetPath) ('C:\PSCF\src\pscf-solution\errmap\..\..\..\system\bin\errmap.exe') does not match the Linker's OutputFile property value '..\..\..\system\bin\errmap.exe' ('C:\system\bin\errmap.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="errmap" Source="errmap\errmap.vcproj" Description="Done converting to new project file 'C:\PSCF\src\pscf-solution\errmap\errmap.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="errmap" Source="errmap\errmap.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="utils" Source="utils\utils.vcproj" Description="Converting project file 'C:\PSCF\src\pscf-solution\utils\utils.vcproj'.">
+</Event><Event ErrorLevel="1" Project="utils" Source="utils\utils.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="utils" Source="utils\utils.vcproj" Description="Done converting to new project file 'C:\PSCF\src\pscf-solution\utils\utils.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="utils" Source="utils\utils.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="pscf-solution.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="pscf-solution.sln" Description="Converted">
+</Event></UpgradeLog>

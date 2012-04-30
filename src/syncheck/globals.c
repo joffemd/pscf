@@ -1,3 +1,3 @@
-#include "this.h"
+#include "syncheck.h"
 
 bool errors_from_parser;

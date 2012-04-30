@@ -1,0 +1,15 @@
+﻿Build started 4/30/2012 12:14:33 PM.
+     1>Project "C:\PSCF\src\pscf-solution\errmap\errmap.vcxproj" on node 3 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\errmap.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Release\errmap.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\errmap\main.c
+         main.c
+     1>c:\pscf\src\errmap\errmap.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+     1>Done Building Project "C:\PSCF\src\pscf-solution\errmap\errmap.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.09

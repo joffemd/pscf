@@ -1,0 +1,56 @@
+﻿Build started 4/30/2012 1:23:35 PM.
+     1>Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\syncheck.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\syncheck.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D YY_NO_UNISTD_H /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\syncheck\col.c ..\..\syncheck\globals.c ..\..\syncheck\lex.yy.c ..\..\syncheck\main.c ..\..\syncheck\model.c ..\..\syncheck\series.c ..\..\syncheck\yacc.tab.c ..\..\syncheck\yyerror.c ..\..\syncheck\yywrap.c /TP 
+     1>cl : Command line warning D9025: overriding '/TC' with '/TP'
+         yywrap.c
+         yyerror.c
+         yacc.tab.c
+         series.c
+         model.c
+         main.c
+         lex.yy.c
+         globals.c
+         col.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\syncheck.exe.embed.manifest.res" Debug\syncheck_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\syncheck.exe" /INCREMENTAL /NOLOGO ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\syncheck.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\syncheck.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\syncheck.lib" /MACHINE:X86 Debug\syncheck.exe.embed.manifest.res
+         Debug\col.obj
+         Debug\globals.obj
+         Debug\lex.yy.obj
+         Debug\main.obj
+         Debug\model.obj
+         Debug\series.obj
+         Debug\yacc.tab.obj
+         Debug\yyerror.obj
+         Debug\yywrap.obj
+       Manifest:
+         Deleting file "Debug\syncheck.exe.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\syncheck.exe.embed.manifest" /manifest Debug\syncheck.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\syncheck.exe.embed.manifest.res" Debug\syncheck_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\syncheck.exe" /INCREMENTAL /NOLOGO ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\syncheck.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\syncheck.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\syncheck.lib" /MACHINE:X86 Debug\syncheck.exe.embed.manifest.res
+         Debug\col.obj
+         Debug\globals.obj
+         Debug\lex.yy.obj
+         Debug\main.obj
+         Debug\model.obj
+         Debug\series.obj
+         Debug\yacc.tab.obj
+         Debug\yyerror.obj
+         Debug\yywrap.obj
+         syncheck.vcxproj -> C:\PSCF\src\pscf-solution\syncheck\..\..\..\system\bin\syncheck.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\syncheck.unsuccessfulbuild".
+         Touching "Debug\syncheck.lastbuildstate".
+     1>Done Building Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.39

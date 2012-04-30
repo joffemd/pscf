@@ -2,7 +2,7 @@
 
 /* -------------------------------------------------- */
 
-void rw_trim (char* s)
+void trim (char* s)
 {
     char* ss = s;
     while (*ss && (*ss==' ' || *ss=='\t' || *ss=='\n' || *ss=='\r')) ++ss;
@@ -23,8 +23,8 @@ void rw_trim (char* s)
 
 /* -------------------------------------------------- */
 
-void rw_trim (char** list, int len)
+void trim (char** list, int len)
 {
     for (int i = 1;  i <= len;  i++)
-	rw_trim (list[i]);
+	trim (list[i]);
 }

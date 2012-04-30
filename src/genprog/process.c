@@ -1,4 +1,4 @@
-#include "this.h"
+#include "genprog.h"
 
 static bool is_random (const char*);
 static void print_indent (FILE*, const char*);
@@ -16,17 +16,17 @@ void Template::process ()
         char* line = lines[iii];
 
         if (strstr (line, "$number-of-trials$"))
-	    rw_replace_string_in_string (line, "$number-of-trials$", 
+	    replace_string_in_string (line, "$number-of-trials$", 
 		number_of_trials);
 
         if (strstr (line, "$n-years$"))
-	    rw_replace_string_in_string (line, "$n-years$", projection_years);
+	    replace_string_in_string (line, "$n-years$", projection_years);
 
         if (strstr (line, "$declarations$"))
 	{
 	    for (int i = 1;  i <= n_vars;  i++)
 	    {
-	        if (rw_starts_with (vars[i], "//")) continue;
+	        if (starts_with (vars[i], "//")) continue;
 
 		print_indent ();
 
@@ -46,16 +46,16 @@ void Template::process ()
 	{
 	    for (int i = 1;  i <= n_vars;  i++)
 	    {
-		if (rw_starts_with (vars[i], "//")) continue;
+		if (starts_with (vars[i], "//")) continue;
 		if (is_random (vars[i])) continue;
 
 		print_indent ();
 
 		char* y0;
-		rw_strcpy (&y0, year_0[i]);
-		rw_trim (y0);
+		strcpy (&y0, year_0[i]);
+		trim (y0);
 
-		if (!strchr (y0, '.')) rw_strcat (&y0, ".0");
+		if (!strchr (y0, '.')) strcat (&y0, ".0");
 
 	        fprintf (f_out, "%s[0] = %s;\n", vars[i], y0);
 		++line_no;
@@ -80,11 +80,11 @@ void Template::process ()
 
 		for (int i = 1;  i <= n_vars;  i++)
 		{
-		    if (rw_starts_with (vars[i], "//")) continue;
+		    if (starts_with (vars[i], "//")) continue;
 		    if (is_random (vars[i])) continue;
 
 		    char* val;
-		    rw_strcpy (&val, years[ii][i]);
+		    strcpy (&val, years[ii][i]);
 
 		    floatise (val);
 
@@ -132,8 +132,9 @@ void Template::process ()
 	    for (int i = 1;  i <= n_vars;  i++)
 	    {
 		if (is_random (vars[i])) continue;
+		if (starts_with (vars[i], "//")) continue;
 
-		if (strequal (include_in_output[i], "Y"))
+		if (strciequal (include_in_output[i], "Y"))
 		{
 		    print_indent ();
 
@@ -149,18 +150,19 @@ void Template::process ()
         if (strstr (line, "$headers$"))
 	{
 	    char* header;
-	    rw_strcpy (&header, "");
+	    strcpy (&header, "");
 
 	    for (int i = 1;  i <= n_vars;  i++)
 	    {
 		const bool include = 
-		    strequal (include_in_output[i], "Y")
+		    (strciequal (include_in_output[i], "Y")
+		    && !starts_with (vars[i], "//"))
 		    || is_random (vars[i]); 
 
-		if (include) rw_strcat (&header, descriptions[i], "\\t");
+		if (include) strcat (&header, descriptions[i], "\\t");
 	    }
 
-	    rw_replace_string_in_string (line, "$headers$", header);
+	    replace_string_in_string (line, "$headers$", header);
 	    free (header);
 	}
 
@@ -169,24 +171,24 @@ void Template::process ()
 	    char* where_var = strstr (line, "$threshold-expression-1[");
 
 	    char* var;
-	    rw_strcpy (&var, where_var);
+	    strcpy (&var, where_var);
 	    *(strchr (var, ']')+2) = 0;
 
 	    char* idx;
-	    rw_strcpy (&idx, where_var+23);
+	    strcpy (&idx, where_var+23);
 
 	    char ind[20];
 	    sscanf (idx+1, "%[^]]", ind);
 
 	    char* expression;
-	    rw_strcpy (&expression, metrics[0].expression);
+	    strcpy (&expression, metrics[0].expression);
 
 	    char rep[20];
 	    sprintf (rep, "[%s]", ind);
 
-	    rw_replace_string_in_string (expression, "[y]", rep);
+	    replace_string_in_string (expression, "[y]", rep);
 
-	    rw_replace_string_in_string (line, var, expression);
+	    replace_string_in_string (line, var, expression);
 
 	    fprintf (f_map, "m %d %d %d [%s]\n", 
 		line_no, metrics[0].row-1, 3, metrics[0].expression);
@@ -197,24 +199,24 @@ void Template::process ()
 	char* where_var = strstr (line, "$threshold-expression-2[");
 
 	char* var;
-	rw_strcpy (&var, where_var);
+	strcpy (&var, where_var);
 	*(strchr (var, ']')+2) = 0;
 
 	char* idx;
-	    rw_strcpy (&idx, where_var+23);
+	    strcpy (&idx, where_var+23);
 
 	    char ind[20];
 	    sscanf (idx+1, "%[^]]", ind);
 
 	    char* expression;
-	    rw_strcpy (&expression, metrics[1].expression);
+	    strcpy (&expression, metrics[1].expression);
 
 	    char rep[20];
 	    sprintf (rep, "[%s]", ind);
 
-	    rw_replace_string_in_string (expression, "[y]", rep);
+	    replace_string_in_string (expression, "[y]", rep);
 
-	    rw_replace_string_in_string (line, var, expression);
+	    replace_string_in_string (line, var, expression);
 
 	    fprintf (f_map, "m %d %d %d [%s]\n", 
 		line_no, metrics[1].row-1, 3, metrics[1].expression);
@@ -225,24 +227,24 @@ void Template::process ()
 	    char* where_var = strstr (line, "$threshold-expression-3[");
 
 	    char* var;
-	    rw_strcpy (&var, where_var);
+	    strcpy (&var, where_var);
 	    *(strchr (var, ']')+2) = 0;
 
 	    char* idx;
-	    rw_strcpy (&idx, where_var+23);
+	    strcpy (&idx, where_var+23);
 
 	    char ind[20];
 	    sscanf (idx+1, "%[^]]", ind);
 
 	    char* expression;
-	    rw_strcpy (&expression, metrics[2].expression);
+	    strcpy (&expression, metrics[2].expression);
 
 	    char rep[20];
 	    sprintf (rep, "[%s]", ind);
 
-	    rw_replace_string_in_string (expression, "[y]", rep);
+	    replace_string_in_string (expression, "[y]", rep);
 
-	    rw_replace_string_in_string (line, var, expression);
+	    replace_string_in_string (line, var, expression);
 
 	    fprintf (f_map, "m %d %d %d [%s]\n", 
 		line_no, metrics[2].row-1, 3, metrics[2].expression);
@@ -253,17 +255,17 @@ void Template::process ()
 	    char* where_var = strstr (line, "$threshold-expression-4[");
 
 	    char* var;
-	    rw_strcpy (&var, where_var);
+	    strcpy (&var, where_var);
 	    *(strchr (var, ']')+2) = 0;
 
 	    char* idx;
-	    rw_strcpy (&idx, where_var+23);
+	    strcpy (&idx, where_var+23);
 
 	    char ind[20];
 	    sscanf (idx+1, "%[^]]", ind);
 
 	    char* expression;
-	    rw_strcpy (&expression, metrics[3].expression);
+	    strcpy (&expression, metrics[3].expression);
 
 	    bool bad = strequal (ind, "0") && strstr (expression, "y-");
 
@@ -274,10 +276,10 @@ void Template::process ()
 	    char rep[20];
 	    sprintf (rep, "[%s]", ind);
 
-	    rw_replace_string_in_string (expression, "[y]", rep);
+	    replace_string_in_string (expression, "[y]", rep);
 	    }
 
-	    rw_replace_string_in_string (line, var, expression);
+	    replace_string_in_string (line, var, expression);
 
 	    fprintf (f_map, "m %d %d %d [%s]\n", 
 		line_no, metrics[3].row-1, 3, metrics[3].expression);
@@ -288,17 +290,17 @@ void Template::process ()
 	    char* where_var = strstr (line, "$threshold-expression-5[");
 
 	    char* var;
-	    rw_strcpy (&var, where_var);
+	    strcpy (&var, where_var);
 	    *(strchr (var, ']')+2) = 0;
 
 	    char* idx;
-	    rw_strcpy (&idx, where_var+23);
+	    strcpy (&idx, where_var+23);
 
 	    char ind[20];
 	    sscanf (idx+1, "%[^]]", ind);
 
 	    char* expression;
-	    rw_strcpy (&expression, metrics[4].expression);
+	    strcpy (&expression, metrics[4].expression);
 
 	    bool bad = strequal (ind, "0") && strstr (expression, "y-");
 
@@ -309,10 +311,10 @@ void Template::process ()
 	    char rep[20];
 	    sprintf (rep, "[%s]", ind);
 
-	    rw_replace_string_in_string (expression, "[y]", rep);
+	    replace_string_in_string (expression, "[y]", rep);
 	    }
 
-	    rw_replace_string_in_string (line, var, expression);
+	    replace_string_in_string (line, var, expression);
 
 	    fprintf (f_map, "m %d %d %d [%s]\n", 
 		line_no, metrics[4].row-1, 3, metrics[4].expression);
@@ -320,7 +322,7 @@ void Template::process ()
 
         if (strstr (line, "$thresh-relation$"))
 	{
-	    rw_replace_string_in_string (line, "$thresh-relation$", 
+	    replace_string_in_string (line, "$thresh-relation$", 
 		metrics[0].comparison);
 	}
 
@@ -336,34 +338,34 @@ void Template::process ()
 	    char thresholdlevel[80];
 	    sprintf (thresholdlevel, "%.4f", val);
 
-	    rw_replace_string_in_string (line, "$thresholdlevel$", 
+	    replace_string_in_string (line, "$thresholdlevel$", 
 		thresholdlevel);
 	}
 
 	/*
         if (strstr (line, "$u-min-rnd$"))
-	    rw_replace_string_in_string (line, "$u-min-rnd$", u_min_rand);
+	    replace_string_in_string (line, "$u-min-rnd$", u_min_rand);
         if (strstr (line, "$u-max-rnd$"))
-	    rw_replace_string_in_string (line, "$u-max-rnd$", u_max_rand);
+	    replace_string_in_string (line, "$u-max-rnd$", u_max_rand);
 
         if (strstr (line, "$n-min-rnd$"))
-	    rw_replace_string_in_string (line, "$n-min-rnd$", n_min_rand);
+	    replace_string_in_string (line, "$n-min-rnd$", n_min_rand);
         if (strstr (line, "$n-max-rnd$"))
-	    rw_replace_string_in_string (line, "$n-max-rnd$", n_max_rand);
+	    replace_string_in_string (line, "$n-max-rnd$", n_max_rand);
         if (strstr (line, "$n-rand-mean$"))
-	    rw_replace_string_in_string (line, "$n-rand-mean$", n_rand_mean);
+	    replace_string_in_string (line, "$n-rand-mean$", n_rand_mean);
         if (strstr (line, "$n-std-or-sigma$"))
-	    rw_replace_string_in_string (line, "$n-std-or-sigma$", n_std_or_sigma);
+	    replace_string_in_string (line, "$n-std-or-sigma$", n_std_or_sigma);
 
 
         if (strstr (line, "$c-min-rnd$"))
-	    rw_replace_string_in_string (line, "$c-min-rnd$", c_min_rand);
+	    replace_string_in_string (line, "$c-min-rnd$", c_min_rand);
         if (strstr (line, "$c-max-rnd$"))
-	    rw_replace_string_in_string (line, "$c-max-rnd$", c_max_rand);
+	    replace_string_in_string (line, "$c-max-rnd$", c_max_rand);
         if (strstr (line, "$c-rand-mean$"))
-	    rw_replace_string_in_string (line, "$c-rand-mean$", c_rand_mean);
+	    replace_string_in_string (line, "$c-rand-mean$", c_rand_mean);
         if (strstr (line, "$c-std-or-sigma$"))
-	    rw_replace_string_in_string (line, "$c-std-or-sigma$", c_std_or_sigma);
+	    replace_string_in_string (line, "$c-std-or-sigma$", c_std_or_sigma);
 	*/
 
 	/*
@@ -373,23 +375,23 @@ void Template::process ()
 	    {
 		if (strstr (line, "#if-n-min-set#"))
 		{
-		    rw_replace_string_in_string (line, "#if-n-min-set#", "");
+		    replace_string_in_string (line, "#if-n-min-set#", "");
 		    if (!mins_set[i]) print_off = true;
 		}
 		if (strstr (line, "#endif-n-min-set#"))
 		{
-		    rw_replace_string_in_string (line, "#endif-n-min-set#", "");
+		    replace_string_in_string (line, "#endif-n-min-set#", "");
 		    print_off = false;
 		}
 
 		if (strstr (line, "#if-n-max-set#"))
 		{
-		    rw_replace_string_in_string (line, "#if-n-max-set#", "");
+		    replace_string_in_string (line, "#if-n-max-set#", "");
 		    if (!maxs_set[i]) print_off = true;
 		}
 		if (strstr (line, "#endif-n-max-set#"))
 		{
-		    rw_replace_string_in_string (line, "#endif-n-max-set#", "");
+		    replace_string_in_string (line, "#endif-n-max-set#", "");
 		    print_off = false;
 		}
 	    }
@@ -398,23 +400,23 @@ void Template::process ()
 	    {
 		if (strstr (line, "#if-c-min-set#"))
 		{
-		    rw_replace_string_in_string (line, "#if-c-min-set#", "");
+		    replace_string_in_string (line, "#if-c-min-set#", "");
 		    if (!mins_set[i]) print_off = true;
 		}
 		if (strstr (line, "#endif-c-min-set#"))
 		{
-		    rw_replace_string_in_string (line, "#endif-c-min-set#", "");
+		    replace_string_in_string (line, "#endif-c-min-set#", "");
 		    print_off = false;
 		}
 
 		if (strstr (line, "#if-c-max-set#"))
 		{
-		    rw_replace_string_in_string (line, "#if-c-max-set#", "");
+		    replace_string_in_string (line, "#if-c-max-set#", "");
 		    if (!maxs_set[i]) print_off = true;
 		}
 		if (strstr (line, "#endif-c-max-set#"))
 		{
-		    rw_replace_string_in_string (line, "#endif-c-max-set#", "");
+		    replace_string_in_string (line, "#endif-c-max-set#", "");
 		    print_off = false;
 		}
 	    }
@@ -422,42 +424,42 @@ void Template::process ()
 	*/
 
         if (strstr (line, "$initial-year$"))
-	    rw_replace_string_in_string (line, "$initial-year$", initial_year);
+	    replace_string_in_string (line, "$initial-year$", initial_year);
 
         if (strstr (line, "$threshold-label$"))
-	    rw_replace_string_in_string (line, "$threshold-label$", 
+	    replace_string_in_string (line, "$threshold-label$", 
 	    	threshold_label);
 
         if (strstr (line, "$government-entity$"))
-	    rw_replace_string_in_string (line, "$government-entity$", 
+	    replace_string_in_string (line, "$government-entity$", 
 		government_entity);
         if (strstr (line, "$model-description$"))
-	    rw_replace_string_in_string (line, "$model-description$", 
+	    replace_string_in_string (line, "$model-description$", 
 		model_description);
         if (strstr (line, "$currency-units-in$"))
-	    rw_replace_string_in_string (line, "$currency-units-in$", 
+	    replace_string_in_string (line, "$currency-units-in$", 
 		currency_units_in);
         if (strstr (line, "$trials$"))
-	    rw_replace_string_in_string (line, "$trials$", 
+	    replace_string_in_string (line, "$trials$", 
 		number_of_trials);
         if (strstr (line, "$run-date-time$"))
-	    rw_replace_string_in_string (line, "$run-date-time$",
-		rw_timestamp());
+	    replace_string_in_string (line, "$run-date-time$",
+		timestamp());
 
         if (strstr (line, "$metrics-1-description$"))
-	    rw_replace_string_in_string (line, "$metrics-1-description$",
+	    replace_string_in_string (line, "$metrics-1-description$",
 	        metrics[0].description);
         if (strstr (line, "$metrics-2-description$"))
-	    rw_replace_string_in_string (line, "$metrics-2-description$",
+	    replace_string_in_string (line, "$metrics-2-description$",
 	        metrics[1].description);
         if (strstr (line, "$metrics-3-description$"))
-	    rw_replace_string_in_string (line, "$metrics-3-description$",
+	    replace_string_in_string (line, "$metrics-3-description$",
 	        metrics[2].description);
         if (strstr (line, "$metrics-4-description$"))
-	    rw_replace_string_in_string (line, "$metrics-4-description$",
+	    replace_string_in_string (line, "$metrics-4-description$",
 	        metrics[3].description);
         if (strstr (line, "$metrics-5-description$"))
-	    rw_replace_string_in_string (line, "$metrics-5-description$",
+	    replace_string_in_string (line, "$metrics-5-description$",
 		metrics[4].description);
 
 	if (strstr (line, "$print-ratios("))
@@ -465,7 +467,7 @@ void Template::process ()
 	    char* where_var = strstr (line, "$print-ratios(");
 
 	    char* var;
-	    rw_strcpy (&var, where_var);
+	    strcpy (&var, where_var);
 	    *(strchr (var, ')')+2) = 0;
 
 	    int ind;
@@ -474,20 +476,21 @@ void Template::process ()
 	    char* print_condition =
 		strstr (metrics[ind-1].expression, "y-1") ? (char*)"false" : (char*)"true";
 
-	    rw_replace_string_in_string (line, var, print_condition);
+	    replace_string_in_string (line, var, print_condition);
 	}
 
 	if (strstr (line, "$if-ratio2-valid$"))
-	    rw_replace_string_in_string (line, "$if-ratio2-valid$",
+	    replace_string_in_string (line, "$if-ratio2-valid$",
 		n_metrics >= 2 ? "" : "//" );
+
 	if (strstr (line, "$if-ratio3-valid$"))
-	    rw_replace_string_in_string (line, "$if-ratio3-valid$",
+	    replace_string_in_string (line, "$if-ratio3-valid$",
 		n_metrics >= 3 ? "" : "//" );
 	if (strstr (line, "$if-ratio4-valid$"))
-	    rw_replace_string_in_string (line, "$if-ratio4-valid$",
+	    replace_string_in_string (line, "$if-ratio4-valid$",
 		n_metrics >= 4 ? "" : "//" );
 	if (strstr (line, "$if-ratio5-valid$"))
-	    rw_replace_string_in_string (line, "$if-ratio5-valid$",
+	    replace_string_in_string (line, "$if-ratio5-valid$",
 		n_metrics >= 5 ? "" : "//" );
 
 	if (strstr (line, "$random-headers$"))
@@ -515,7 +518,7 @@ void Template::process ()
 	    {
 		if (!is_random (vars[i])) continue;
 
-		if (rw_starts_with (vars[i], (char*)"unirandom"))
+		if (starts_with (vars[i], (char*)"unirandom"))
 		{
 		    print_indent ();
 		    fprintf (f_out, "        boost::uniform_real < > gen_%s (%s, %s);\n", vars[i], mins[i], maxs[i]);
@@ -535,7 +538,7 @@ void Template::process ()
 	    {
 		if (!is_random (vars[i])) continue;
 
-		if (rw_starts_with (vars[i], (char*)"normrandom"))
+		if (starts_with (vars[i], (char*)"normrandom"))
 		{
 		    print_indent ();
 		    fprintf (f_out, "        boost::normal_distribution < > gen_%s (%s, %s);\n", vars[i], means[i], std_sigmas[i]);
@@ -555,7 +558,7 @@ void Template::process ()
 	    {
 		if (!is_random (vars[i])) continue;
 
-		if (rw_starts_with (vars[i], (char*)"cauchyrandom"))
+		if (starts_with (vars[i], (char*)"cauchyrandom"))
 		{
 		    print_indent ();
 		    fprintf (f_out, "        boost::cauchy_distribution < > gen_%s (%s, %s);\n", vars[i], means[i], std_sigmas[i]);
@@ -575,7 +578,7 @@ void Template::process ()
 	    {
 		if (!is_random (vars[i])) continue;
 
-		if (rw_starts_with (vars[i], (char*)"unirandom"))
+		if (starts_with (vars[i], (char*)"unirandom"))
 		{
 		    ::print_indent (f_out, line);
 		    fprintf (f_out, "    %s[y] = rand_%s();\n", vars[i], vars[i]);
@@ -590,7 +593,7 @@ void Template::process ()
 	if (strstr (line, "$normrandom-assignments$"))
 	{
 	    for (int i = 1;  i <= n_vars;  i++)
-		if (rw_starts_with (vars[i], (char*)"normrandom"))
+		if (starts_with (vars[i], (char*)"normrandom"))
 		{
 		    ::print_indent (f_out, line);
 		    fprintf (f_out, "for (;;)\n");
@@ -628,7 +631,7 @@ void Template::process ()
 	if (strstr (line, "$cauchyrandom-assignments$"))
 	{
 	    for (int i = 1;  i <= n_vars;  i++)
-		if (rw_starts_with (vars[i], (char*)"cauchyrandom"))
+		if (starts_with (vars[i], (char*)"cauchyrandom"))
 		{
 		    ::print_indent (f_out, line);
 		    fprintf (f_out, "for (;;)\n");
@@ -703,50 +706,50 @@ void Template::process ()
 	*/
 
         if (strstr (line, "$n-ratings$"))
-	    rw_replace_string_in_string (line, "$n-ratings$", n_ratings);
+	    replace_string_in_string (line, "$n-ratings$", n_ratings);
 
         if (strstr (line, "$ratings$"))
 	{
 	    char* txt_ratings;
-	    rw_strcpy (&txt_ratings, "");
+	    strcpy (&txt_ratings, "");
 
 	    for (int i = 2;  i <= n_ratings+1;  i++)
 	    {
-		if (i > 2) rw_chrcat (&txt_ratings, ',');
-	        rw_strcat (&txt_ratings, "\"", ratings[i], "\"");
+		if (i > 2) chrcat (&txt_ratings, ',');
+	        strcat (&txt_ratings, "\"", ratings[i], "\"");
 	    }
 
-	    rw_replace_string_in_string (line, "$ratings$", txt_ratings);
+	    replace_string_in_string (line, "$ratings$", txt_ratings);
 	    free (txt_ratings);
 	}
 
         if (strstr (line, "$rating-grid$"))
 	{
 	    char* grid;
-	    rw_strcpy (&grid, "");
+	    strcpy (&grid, "");
 
 	    for (int i = 1;  i <= projection_years;  i++)
 	    {
-	        rw_chrcat (&grid, '{');
+	        chrcat (&grid, '{');
 
 		for (int j = 2;  j <= n_ratings;  j++)
 		{
-		    if (j > 2) rw_chrcat (&grid, ',');
-		    rw_strcat (&grid, ratings_grid[i][j]);
+		    if (j > 2) chrcat (&grid, ',');
+		    strcat (&grid, ratings_grid[i][j]);
 		}
 
-	        rw_chrcat (&grid, '}');
+	        chrcat (&grid, '}');
 
 		if (i < projection_years) 
-		    rw_strcat (&grid, ",\n");
+		    strcat (&grid, ",\n");
 	    }
 
-	    rw_replace_string_in_string (line, "$rating-grid$", grid);
+	    replace_string_in_string (line, "$rating-grid$", grid);
 	    free (grid);
 	}
 
         if (strstr (line, "$default-probability-code$"))
-	    rw_replace_string_in_string (line, "$default-probability-code$", 
+	    replace_string_in_string (line, "$default-probability-code$", 
 		def_prob_code);
 
 	if (!print_off) 
@@ -765,7 +768,7 @@ void Template::process ()
 
 void Template::record_indent (const char* line)
 {
-    if (!rw_n_words_in (line)) return;
+    if (!n_words_in (line)) return;
 
     indent = 0;
 
@@ -789,9 +792,9 @@ void Template::print_indent ()
 
 static bool is_random (const char* var)
 {
-    return rw_starts_with (var, "unirandom")
-	|| rw_starts_with (var, "normrandom")
-	|| rw_starts_with (var, "cauchyrandom");
+    return starts_with (var, "unirandom")
+	|| starts_with (var, "normrandom")
+	|| starts_with (var, "cauchyrandom");
 }
 
 /* -------------------------------------------------- */
@@ -806,17 +809,17 @@ static void print_indent (FILE* f_out, const char* line)
 
 static void get_title (const char* var, char*& main, char*& suffix)
 {
-    if (rw_starts_with (var, "unirandom"))
+    if (starts_with (var, "unirandom"))
     {
         main = (char*)"Uniform Random";
 	suffix = (char*)var + strlen((char*)"unirandom");
     }
-    else if (rw_starts_with (var, "normrandom"))
+    else if (starts_with (var, "normrandom"))
     {
         main = (char*)"Normal Random";
 	suffix = (char*)var + strlen((char*)"normrandom");
     }
-    else if (rw_starts_with (var, "cauchyrandom"))
+    else if (starts_with (var, "cauchyrandom"))
     {
         main = (char*)"Cauchy Random";
 	suffix = (char*)var + strlen((char*)"cauchyrandom");

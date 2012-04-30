@@ -1,4 +1,4 @@
-#include "this.h"
+#include "syncheck.h"
 #include "yy.h"
 
 static int y;
@@ -39,14 +39,14 @@ void check_col (const int _y, char** lines, const int n_lines, char** _base_vars
 
     for (int i = 2;  i <= n_lines;  i++)
     {
-	if (rw_starts_with ((char*)_base_vars[i], (char*)"//")) continue;
+	if (starts_with ((char*)_base_vars[i], (char*)"//")) continue;
 
-	while (rw_replace_string_in_string (lines[i], "\r", ""))
+	while (replace_string_in_string (lines[i], "\r", ""))
 	    ;
 
 	char* line;
-	rw_strcpy (&line, lines[i]);
-	rw_strcat (&line, "\\n");
+	strcpy (&line, lines[i]);
+	strcat (&line, "\\n");
 
 	YY_BUFFER_STATE  state_buffer;
 	state_buffer = yy_scan_string (line);
@@ -85,7 +85,7 @@ void add_var_i (const char* var, const int abs_idx)
 {
     //printf ("  {%s} {%d}\n", var, abs_idx);
 
-    if (!rw_name_in_list (var, base_vars, n_base_vars)) 
+    if (!name_in_list (var, base_vars, n_base_vars)) 
     {
 	undecs = true;
     }
@@ -104,7 +104,7 @@ void add_var_i (const char* var, const int abs_idx)
 	// ... but ok if it's above in this column
 	else 
 	{
-	    int where_var = rw_position_in_name_list (var, base_vars, n_base_vars);
+	    int where_var = position_in_name_list (var, base_vars, n_base_vars);
 
 //printf ("wv[%s]: %d, cur: %d\n", var, where_var, current_line_no);
 	    if (where_var < current_line_no)
@@ -116,8 +116,8 @@ void add_var_i (const char* var, const int abs_idx)
 	}
     }
 
-    rw_add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
-    rw_add_number_to_list_if_needed (abs_idx, &abs_idxs, &n_abs_idxs);
+    add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
+    add_number_to_list_if_needed (abs_idx, &abs_idxs, &n_abs_idxs);
 }
 
 /* -------------------------------------------------- */
@@ -126,14 +126,14 @@ void add_var_y (const char* var)
 {
     //printf ("  {%s}\n", var);
 
-    if (!rw_name_in_list (var, base_vars, n_base_vars)) 
+    if (!name_in_list (var, base_vars, n_base_vars)) 
     {
 	undecs = true;
     }
     else 
     {
 	//  only ok if it's above in this column
-	int where_var = rw_position_in_name_list (var, base_vars, n_base_vars);
+	int where_var = position_in_name_list (var, base_vars, n_base_vars);
 
 //printf ("wv[%s]: %d, cur: %d\n", var, where_var, current_line_no);
 	if (where_var < current_line_no)
@@ -144,7 +144,7 @@ void add_var_y (const char* var)
 	    self_ref = true;
     }
 
-    rw_add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
+    add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
 }
 
 /* -------------------------------------------------- */
@@ -153,7 +153,7 @@ void add_var_y_i (const char* var, const int rel_idx)
 {
     //printf ("  {%s} {%d}\n", var, rel_idx);
 
-    if (!rw_name_in_list (var, base_vars, n_base_vars)) 
+    if (!name_in_list (var, base_vars, n_base_vars)) 
     {
 	undecs = true;
     }
@@ -166,8 +166,8 @@ void add_var_y_i (const char* var, const int rel_idx)
 	}
     }
 
-    rw_add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
-    rw_add_number_to_list_if_needed (rel_idx, &rel_idxs, &n_rel_idxs);
+    add_name_to_list_if_needed (var, &seen_vars, &n_seen_vars);
+    add_number_to_list_if_needed (rel_idx, &rel_idxs, &n_rel_idxs);
 }
 
 /* -------------------------------------------------- */
@@ -176,7 +176,7 @@ void clear_new_info ()
 {
     if (n_seen_vars)
     {
-        rw_words_free (seen_vars, n_seen_vars);
+        words_free (seen_vars, n_seen_vars);
 	n_seen_vars = 0;
     }
 

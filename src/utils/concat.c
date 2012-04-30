@@ -15,17 +15,17 @@
 /*									*/
 /* before: s = "hello"							*/
 /*									*/
-/*     rw_strcat (&s, " world");					*/
+/*     strcat (&s, " world");					*/
 /*									*/
 /* after: s = "hello world"						*/
 /*									*/
 /************************************************************************/
 
-void rw_strcat (char** s1, const char* s2)
+void strcat (char** s1, const char* s2)
 {
     if (!*s1) 
     {
-	rw_strcpy (s1, s2);
+	strcpy (s1, s2);
 	return;
     }
 
@@ -33,7 +33,7 @@ void rw_strcat (char** s1, const char* s2)
 
     *s1 = (char*) realloc (*s1, (size_t)needed_length);
     
-    if (!*s1) rw_exit (13);
+    if (!*s1) my_exit (13);
 
     strcat (*s1, s2);
 }    
@@ -47,18 +47,18 @@ void rw_strcat (char** s1, const char* s2)
 /*									*/
 /* before: s = "hello"							*/
 /*									*/
-/*     rw_strncat (&s, " worldly", 6);					*/
+/*     strncat (&s, " worldly", 6);					*/
 /*									*/
 /* after: s = "hello world"						*/
 /*									*/
 /************************************************************************/
 
-void rw_strncat (char** s1, const char* s2, size_t n)
+void strncat (char** s1, const char* s2, size_t n)
 {
     int needed_length = strlen(*s1) + n + 1;
 
     *s1 = (char*) realloc (*s1, (size_t)needed_length);
-    if (!*s1) rw_exit (14);
+    if (!*s1) my_exit (14);
 
     strncat (*s1, s2, n);
 
@@ -75,20 +75,20 @@ void rw_strncat (char** s1, const char* s2, size_t n)
 /*									*/
 /* before: s = "hello worl"						*/
 /*									*/
-/*     rw_chrcat (&s, 'd');						*/
+/*     chrcat (&s, 'd');						*/
 /*									*/
 /* after: s = "hello world"						*/
 /*									*/
 /************************************************************************/
 
-void rw_chrcat (char** s, char character)
+void chrcat (char** s, char character)
 {
     char add_on_string[2];
 
     add_on_string[0] = character;
     add_on_string[1] = '\0';
 
-    rw_strcat (s, add_on_string);
+    strcat (s, add_on_string);
 }
 
 /************************************************************************/
@@ -100,20 +100,20 @@ void rw_chrcat (char** s, char character)
 /*									*/
 /* before: s = "hello l"						*/
 /*									*/
-/*     rw_numcat (&s, 42);						*/
+/*     numcat (&s, 42);						*/
 /*									*/
 /* after: s = "hello 42"						*/
 /*									*/
 /************************************************************************/
 
-void rw_numcat (char** s, int number)
+void numcat (char** s, int number)
 {
     char add_on_string[14];
 
     sprintf (add_on_string, "%d", number);
 
     if (*s)
-	rw_strcat (s, add_on_string);
+	strcat (s, add_on_string);
     else
     {
 	*s = (char*) malloc (2);

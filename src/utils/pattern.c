@@ -14,20 +14,20 @@ static bool sub_match (const char*, char*);
 /************************************************************************/
 /*									*/
 /* Checks the supplied pattern to see if it is a valid wildcard		*/
-/* expression suitable for use by rw_string_matches_pattern()		*/
+/* expression suitable for use by string_matches_pattern()		*/
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_pattern_check ("abc") => true					*/
-/*     rw_pattern_check ("abc*") => true				*/
-/*     rw_pattern_check ("abc?") => true				*/
-/*     rw_pattern_check ("[abc]") => true				*/
-/*     rw_pattern_check ("[a-c]") => true				*/
-/*     rw_pattern_check ("[a-c]f?g[a-dhk-m]") => true			*/
+/*     pattern_check ("abc") => true					*/
+/*     pattern_check ("abc*") => true				*/
+/*     pattern_check ("abc?") => true				*/
+/*     pattern_check ("[abc]") => true				*/
+/*     pattern_check ("[a-c]") => true				*/
+/*     pattern_check ("[a-c]f?g[a-dhk-m]") => true			*/
 /*									*/
 /************************************************************************/
 
-bool rw_pattern_check (const char* p)
+bool pattern_check (const char* p)
 {
     int len = strlen (p);
 
@@ -86,15 +86,15 @@ bool rw_pattern_check (const char* p)
 /*									*/
 /* Usage example:							*/
 /*									*/
-/*     rw_string_matches_pattern ("hbzykzxx", "?[a-c]**[abe-hkr-s]?*")	*/
+/*     string_matches_pattern ("hbzykzxx", "?[a-c]**[abe-hkr-s]?*")	*/
 /*     => true								*/
 /*									*/
 /* Note: the pattern should first be checked for sanity with 		*/
-/* rw_pattern_check().							*/
+/* pattern_check().							*/
 /*									*/
 /************************************************************************/
 
-bool rw_string_matches_pattern (const char* string, const char* passed_pattern)
+bool string_matches_pattern (const char* string, const char* passed_pattern)
 {
     /* is the whole pattern stars? ... */
     const char* p;
@@ -113,7 +113,7 @@ bool rw_string_matches_pattern (const char* string, const char* passed_pattern)
     if (*passed_pattern == '\\') return strequal (string, passed_pattern+1);
 
     char *pattern;
-    rw_strcpy (&pattern, passed_pattern);
+    strcpy (&pattern, passed_pattern);
 	
     /* 
     split the pattern into non-star groups, eg "?[a-c]**[abe-hkr-s]?*" 
@@ -141,7 +141,7 @@ bool rw_string_matches_pattern (const char* string, const char* passed_pattern)
 
     char** sub_pats;
     int n_sub_pats;
-    rw_split_by_delimiter (pattern, &sub_pats, &n_sub_pats, "*");
+    split_by_delimiter (pattern, &sub_pats, &n_sub_pats, "*");
 
     /* undo the star encoding */
     for (int j = 1;  j <= n_sub_pats;  j++)
@@ -169,7 +169,7 @@ bool rw_string_matches_pattern (const char* string, const char* passed_pattern)
 								star_at_end);
 
     /* free-off allocated space*/
-    rw_words_free (sub_pats, n_sub_pats);
+    words_free (sub_pats, n_sub_pats);
 
     free (pattern);
     return matched;

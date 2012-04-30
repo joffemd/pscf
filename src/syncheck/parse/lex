@@ -1,6 +1,14 @@
 %{
+
+#ifndef __GNUC__
+extern "C"
+{
+int isatty (int fd) { return 0; }
+}
+#endif
+
 #include "yacc.tab.h"
-#include "this.h"
+#include "syncheck.h"
 
 static bool debug;
 
@@ -71,7 +79,7 @@ void reset_lex ()
 -[0-9]+ {
     if (debug) printf ("F2 int [%s]\n", yytext);
     char* toreal;
-    rw_strcpy (&toreal, yytext, ".");
+    strcpy (&toreal, yytext, ".");
     yylval.r = atof(toreal); 
     free (toreal);
     return IntegerConstant;
@@ -80,7 +88,7 @@ void reset_lex ()
 [0-9]+ {
     if (debug) printf ("F2 int [%s]\n", yytext);
     char* toreal;
-    rw_strcpy (&toreal, yytext, ".");
+    strcpy (&toreal, yytext, ".");
     yylval.r = atof(toreal); 
     free (toreal);
     return IntegerConstant;
@@ -88,13 +96,13 @@ void reset_lex ()
 
 [A-Za-xz_][A-Za-z_0-9]* {
 
-    rw_strcpy (&yylval.s, yytext); 
+    strcpy (&yylval.s, yytext); 
     if (debug) printf ("G var [%s]\n", yylval.s);
     return Var;
 }
 
 [A-Za-z_][A-Za-z_0-9]+ {
-    rw_strcpy (&yylval.s, yytext); 
+    strcpy (&yylval.s, yytext); 
     if (debug) printf ("H var [%s]\n", yylval.s);
     return Var;
 }

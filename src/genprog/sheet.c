@@ -1,4 +1,4 @@
-#include "this.h"
+#include "genprog.h"
 
 /* -------------------------------------------------- */
 
@@ -19,17 +19,17 @@ void Sheet::read (const char* spec)
     for (;;)
     {
 	char* line;
-	rw_fgets_no_control_m (&line, f);
+	fgets_no_control_m (&line, f);
 	if (feof(f)) break;
 
 	++n_rows;
 
 	char** words;
 	int n_words;
-	rw_split_by_delimiter_blank (line, &words, &n_words, "\t");
+	split_by_delimiter_blank (line, &words, &n_words, "\t");
 	free (line);
 
-	rw_words_free (words, n_words);
+	words_free (words, n_words);
 
 	min_len = min (min_len, n_words);
 	max_len = max (max_len, n_words);
@@ -52,14 +52,14 @@ void Sheet::read (const char* spec)
     for (int i = 1;  i <= n_rows;  i++)
     {
 	char* line;
-	rw_fgets_no_control_m (&line, f);
+	fgets_no_control_m (&line, f);
 
 	int n_words;
-	rw_split_by_delimiter_blank (line, &data[i], &n_words, "\t");
+	split_by_delimiter_blank (line, &data[i], &n_words, "\t");
 	free (line);
 
 	for (int j = 1;  j <= n_words;  j++)
-	    rw_trim (data[i][j]);
+	    trim (data[i][j]);
     }
 
     fclose (f);
@@ -135,10 +135,10 @@ void Sheet::get_vals (const char* tag_pattern, const int value_col, char**& vals
     const int defn_col = 1;
 
     for (int i = 1;  i <= n_rows;  i++)
-	if (rw_string_matches_pattern (data[i][defn_col], tag_pattern))
+	if (string_matches_pattern (data[i][defn_col], tag_pattern))
 	{
 	    const char* val = data[i][value_col];
-	    rw_add_name_to_list (val, &vals, &n_vals);
+	    add_name_to_list (val, &vals, &n_vals);
 	}
 }
 */
@@ -152,7 +152,7 @@ void Sheet::get_col (const int source_col, char**& col, int &n_cols)
     n_cols= 0;
 
     for (int i = row_start;  i <= n_rows;  i++)
-        rw_add_name_to_list (data[i][source_col], &col, &n_cols);
+        add_name_to_list (data[i][source_col], &col, &n_cols);
 }
 
 /* -------------------------------------------------- */
@@ -164,7 +164,7 @@ void Sheet::get_col (const int source_col, double*& col, int &n_cols)
     n_cols= 0;
 
     for (int i = row_start;  i <= n_rows;  i++)
-        rw_add_number_to_list (atof(data[i][source_col]), &col, &n_cols);
+        add_number_to_list (atof(data[i][source_col]), &col, &n_cols);
 }
 
 /* -------------------------------------------------- */
@@ -178,16 +178,16 @@ void Sheet::get_col (const int source_col, char**& col, bool*& is_set)
     for (int i = row_start;  i <= n_rows;  i++)
     {
 	char* txt;
-	rw_strcpy (&txt, data[i][source_col]);
+	strcpy (&txt, data[i][source_col]);
 
-	rw_replace_string_in_string (txt, "\"", "");
-	rw_replace_string_in_string (txt, ",", "");
+	replace_string_in_string (txt, "\"", "");
+	replace_string_in_string (txt, ",", "");
 
 	bool set = *txt;
 
-        rw_add_name_to_list (data[i][source_col], &col, &col_len);
+        add_name_to_list (data[i][source_col], &col, &col_len);
 	--col_len;
-        rw_add_to_list (set, &is_set, &col_len);
+        add_to_list (set, &is_set, &col_len);
     }
 }
 
@@ -232,18 +232,18 @@ void Sheet::get_col (const int source_col, double*& col, bool*& is_set)
     for (int i = row_start;  i <= n_rows;  i++)
     {
 	char* txt;
-	rw_strcpy (&txt, data[i][source_col]);
+	strcpy (&txt, data[i][source_col]);
 
-	rw_replace_string_in_string (txt, "\"", "");
-	rw_replace_string_in_string (txt, ",", "");
+	replace_string_in_string (txt, "\"", "");
+	replace_string_in_string (txt, ",", "");
 
 	bool set = *txt;
         double val = atof (txt);
 	free (txt);
 
-        rw_add_number_to_list (val, &col, &col_len);
+        add_number_to_list (val, &col, &col_len);
 	--col_len;
-        rw_add_to_list (set, &is_set, &col_len);
+        add_to_list (set, &is_set, &col_len);
     }
 }
 
@@ -273,7 +273,7 @@ void Sheet::fill_the_blanks ()
 	    if (strequal (data[i][j], "\"\""))
 	    {
 	        free (data[i][j]);
-		rw_strcpy (&data[i][j], data[i][j-1]);
+		strcpy (&data[i][j], data[i][j-1]);
 	    }
 
 	    //printf ("%c", data[i][j][0]);

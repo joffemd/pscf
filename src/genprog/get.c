@@ -1,4 +1,4 @@
-#include "this.h"
+#include "genprog.h"
 
 /* -------------------------------------------------- */
 
@@ -31,7 +31,7 @@ void Template::get_data (Sheet& model, Sheet& series, const bool have_adjustment
     model.get_row ("Default Probability Code", 2, dpc_row);
 
     model.get_val (dpc_row+1, 2, def_prob_code);
-    rw_replace_string_in_string (def_prob_code, "~|~", "\n");
+    replace_string_in_string (def_prob_code, "~|~", "\n");
 
     series.get_col (1, vars, n_vars);
     series.get_col (2, descriptions, n_vars);
@@ -45,17 +45,21 @@ void Template::get_data (Sheet& model, Sheet& series, const bool have_adjustment
     series.get_col (11, year_0, year_0_set);
     series.get_cols (12, 12+projection_years-1, years);
 
-    for (int i = 1;  i <= n_vars;  i++) rw_trim (vars[i]);
+    for (int i = 1;  i <= n_vars;  i++) trim (vars[i]);
 
     if (have_adjustments)
     {
-        adjustments.get_col (6, adjs_F, n_adjs);
-
+	n_adjs = 0;
 	int nx;
-        adjustments.get_col (2, adjs_B, nx);
-        adjustments.get_col (3, adjs_C, nx);
-        adjustments.get_col (4, adjs_D, nx);
-        adjustments.get_col (5, adjs_E, nx);
+
+        adjustments.get_col (2, adjs_B, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (3, adjs_C, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (4, adjs_D, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (5, adjs_E, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (6, adjs_F, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (7, adjs_G, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (8, adjs_H, nx); n_adjs = max(n_adjs, nx);
+        adjustments.get_col (9, adjs_I, nx); n_adjs = max(n_adjs, nx);
     }
 
     if (have_ratingmap)

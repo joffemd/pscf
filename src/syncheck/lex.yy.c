@@ -491,8 +491,16 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "lex"
 #line 2 "lex"
+
+#ifndef __GNUC__
+extern "C"
+{
+int isatty (int fd) { return 0; }
+}
+#endif
+
 #include "yacc.tab.h"
-#include "this.h"
+#include "syncheck.h"
 
 static bool debug;
 
@@ -502,7 +510,7 @@ void reset_lex ()
 }
 
  
-#line 506 "lex.yy.c"
+#line 514 "lex.yy.c"
 
 #define INITIAL 0
 #define IDX 1
@@ -690,10 +698,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 16 "lex"
+#line 24 "lex"
 
 
-#line 697 "lex.yy.c"
+#line 705 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -778,72 +786,72 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "lex"
+#line 26 "lex"
 ;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 20 "lex"
+#line 28 "lex"
 {if (debug) printf ("A c [%c]\n", *yytext); BEGIN IDX; return *yytext;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 21 "lex"
+#line 29 "lex"
 {if (debug) printf ("A c [%c]\n", *yytext); BEGIN 0; return *yytext;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "lex"
+#line 30 "lex"
 {if (debug) printf ("B c [%c]\n", *yytext); return *yytext;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 23 "lex"
+#line 31 "lex"
 {if (debug) printf ("B c [%c]\n", *yytext); return *yytext;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "lex"
+#line 32 "lex"
 {if (debug) printf ("C c [%c]\n", *yytext); return Qm;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "lex"
+#line 33 "lex"
 {if (debug) printf ("C c [%c]\n", *yytext); return Colon;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 26 "lex"
+#line 34 "lex"
 {if (debug) printf ("D r [%c]\n", *yytext); return Lt;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 27 "lex"
+#line 35 "lex"
 {if (debug) printf ("D r [%c]\n", *yytext); return Le;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 28 "lex"
+#line 36 "lex"
 {if (debug) printf ("D r [%c]\n", *yytext); return Gt;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 29 "lex"
+#line 37 "lex"
 {if (debug) printf ("D r [%c]\n", *yytext); return Ge;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 31 "lex"
+#line 39 "lex"
 {if (debug) printf ("- e [%s]\n", yytext); return Empty;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 33 "lex"
+#line 41 "lex"
 {if (debug) printf ("- e [%s]\n", yytext); return End;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 36 "lex"
+#line 44 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("II op [%c]\n", yylval.c);
@@ -852,7 +860,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 41 "lex"
+#line 49 "lex"
 {
     yylval.d = atoi(yytext); 
     if (debug) printf ("FI int [%d]\n", yylval.d);
@@ -861,7 +869,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 47 "lex"
+#line 55 "lex"
 {
     yylval.r = atof(yytext); 
     if (debug) printf ("E real [%f]\n", yylval.r);
@@ -870,7 +878,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 53 "lex"
+#line 61 "lex"
 {
     yylval.r = atof(yytext); 
     if (debug) printf ("E real [%f]\n", yylval.r);
@@ -879,7 +887,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 59 "lex"
+#line 67 "lex"
 {
     yylval.r = atof(yytext); 
     if (debug) printf ("E real [%f]\n", yylval.r);
@@ -888,7 +896,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 65 "lex"
+#line 73 "lex"
 {
     yylval.r = atof(yytext); 
     if (debug) printf ("E real [%f]\n", yylval.r);
@@ -897,11 +905,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 71 "lex"
+#line 79 "lex"
 {
     if (debug) printf ("F2 int [%s]\n", yytext);
     char* toreal;
-    rw_strcpy (&toreal, yytext, ".");
+    strcpy (&toreal, yytext, ".");
     yylval.r = atof(toreal); 
     free (toreal);
     return IntegerConstant;
@@ -909,11 +917,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 80 "lex"
+#line 88 "lex"
 {
     if (debug) printf ("F2 int [%s]\n", yytext);
     char* toreal;
-    rw_strcpy (&toreal, yytext, ".");
+    strcpy (&toreal, yytext, ".");
     yylval.r = atof(toreal); 
     free (toreal);
     return IntegerConstant;
@@ -921,26 +929,26 @@ YY_RULE_SETUP
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 89 "lex"
+#line 97 "lex"
 {
 
-    rw_strcpy (&yylval.s, yytext); 
+    strcpy (&yylval.s, yytext); 
     if (debug) printf ("G var [%s]\n", yylval.s);
     return Var;
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 96 "lex"
+#line 104 "lex"
 {
-    rw_strcpy (&yylval.s, yytext); 
+    strcpy (&yylval.s, yytext); 
     if (debug) printf ("H var [%s]\n", yylval.s);
     return Var;
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 102 "lex"
+#line 110 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("I op [%c]\n", yylval.c);
@@ -949,7 +957,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 107 "lex"
+#line 115 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("I op [%c]\n", yylval.c);
@@ -958,7 +966,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 112 "lex"
+#line 120 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("I op [%c]\n", yylval.c);
@@ -967,7 +975,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 117 "lex"
+#line 125 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("I op [%c]\n", yylval.c);
@@ -976,7 +984,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 123 "lex"
+#line 131 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("J y [%c]\n", yylval.c);
@@ -985,7 +993,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 129 "lex"
+#line 137 "lex"
 {
     yylval.c = *yytext; 
     if (debug) printf ("J y [%c]\n", yylval.c);
@@ -994,7 +1002,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 135 "lex"
+#line 143 "lex"
 {
     yylval.c = *yytext; 
     printf ("BAD [%c]\n", *yytext);
@@ -1003,10 +1011,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 141 "lex"
+#line 149 "lex"
 ECHO;
 	YY_BREAK
-#line 1010 "lex.yy.c"
+#line 1018 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(IDX):
 	yyterminate();
@@ -2005,7 +2013,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 141 "lex"
+#line 149 "lex"
 
 
 

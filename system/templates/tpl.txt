@@ -64,10 +64,10 @@ int main(int argc, char** argv)
 	fprintf(fp,"$headers$");
 
 	fprintf(fp,"\t%s", "$metrics-1-description$");
-	fprintf(fp,"\t%s", "$metrics-2-description$");
-	fprintf(fp,"\t%s", "$metrics-3-description$");
-	fprintf(fp,"\t%s", "$metrics-4-description$");
-	fprintf(fp,"\t%s", "$metrics-5-description$");
+	$if-ratio2-valid$ fprintf(fp,"\t%s", "$metrics-2-description$");
+	$if-ratio3-valid$ fprintf(fp,"\t%s", "$metrics-3-description$");
+	$if-ratio4-valid$ fprintf(fp,"\t%s", "$metrics-4-description$");
+	$if-ratio5-valid$ fprintf(fp,"\t%s", "$metrics-5-description$");
     
 	fprintf(fp,"\t%s Flag\tCumulative %s Flag\n\n",
 	    "$threshold-label$", "$threshold-label$");
@@ -83,10 +83,10 @@ int main(int argc, char** argv)
 
         // Ratios
 	ratios[0][0] = $threshold-expression-1[0]$;
-	ratios[1][0] = $threshold-expression-2[0]$;
-	ratios[2][0] = $threshold-expression-3[0]$;
-	ratios[3][0] = $threshold-expression-4[0]$;
-	ratios[4][0] = $threshold-expression-5[0]$;
+	$if-ratio2-valid$ ratios[1][0] = $threshold-expression-2[0]$;
+	$if-ratio3-valid$ ratios[2][0] = $threshold-expression-3[0]$;
+	$if-ratio4-valid$ ratios[3][0] = $threshold-expression-4[0]$;
+	$if-ratio5-valid$ ratios[4][0] = $threshold-expression-5[0]$;
 
 	min_metric1[0] = max_metric1[0] = ratios[0][0];
 
@@ -124,10 +124,10 @@ int main(int argc, char** argv)
 
             // Ratios
 	    ratios[0][y] = $threshold-expression-1[y]$;
-	    ratios[1][y] = $threshold-expression-2[y]$;
-	    ratios[2][y] = $threshold-expression-3[y]$;
-	    ratios[3][y] = $threshold-expression-4[y]$;
-	    ratios[4][y] = $threshold-expression-5[y]$;
+	    $if-ratio2-valid$ ratios[1][y] = $threshold-expression-2[y]$;
+	    $if-ratio3-valid$ ratios[2][y] = $threshold-expression-3[y]$;
+	    $if-ratio4-valid$ ratios[3][y] = $threshold-expression-4[y]$;
+	    $if-ratio5-valid$ ratios[4][y] = $threshold-expression-5[y]$;
 
 	    cumdefaultflag[y] = cumdefaultflag[y-1];
 
@@ -173,10 +173,10 @@ int main(int argc, char** argv)
 		if(y>0)
 		{
 		    fprintf(fp,"%5.4f\t",ratios[0][y]);
-		    fprintf(fp,"%5.4f\t",ratios[1][y]);
-		    fprintf(fp,"%5.4f\t",ratios[2][y]);
-		    fprintf(fp,"%5.4f\t",ratios[3][y]);
-		    fprintf(fp,"%5.4f\t",ratios[4][y]);
+		    $if-ratio2-valid$ fprintf(fp,"%5.4f\t",ratios[1][y]);
+		    $if-ratio3-valid$ fprintf(fp,"%5.4f\t",ratios[2][y]);
+		    $if-ratio4-valid$ fprintf(fp,"%5.4f\t",ratios[3][y]);
+		    $if-ratio4-valid$ fprintf(fp,"%5.4f\t",ratios[4][y]);
 		}
 		else
 		{
@@ -185,25 +185,25 @@ int main(int argc, char** argv)
 		    else
 			fprintf(fp,"%s\t","");
 
-		    if ($print-ratios(2)$)
-			fprintf(fp,"%5.4f\t",ratios[1][0]);
-		    else
-			fprintf(fp,"%s\t","");
+		    $if-ratio2-valid$ if ($print-ratios(2)$)
+		    $if-ratio2-valid$ fprintf(fp,"%5.4f\t",ratios[1][0]);
+		    $if-ratio2-valid$ else
+		    $if-ratio2-valid$ fprintf(fp,"%s\t","");
 
-		    if ($print-ratios(3)$)
-			fprintf(fp,"%5.4f\t",ratios[2][0]);
-		    else
-			fprintf(fp,"%s\t","");
+		    $if-ratio3-valid$ if ($print-ratios(3)$)
+		    $if-ratio3-valid$ fprintf(fp,"%5.4f\t",ratios[2][0]);
+		    $if-ratio3-valid$ else
+		    $if-ratio3-valid$ fprintf(fp,"%s\t","");
 
-		    if ($print-ratios(4)$)
-			fprintf(fp,"%5.4f\t",ratios[3][0]);
-		    else
-			fprintf(fp,"%s\t","");
+		    $if-ratio4-valid$ if ($print-ratios(4)$)
+		    $if-ratio4-valid$ fprintf(fp,"%5.4f\t",ratios[3][0]);
+		    $if-ratio4-valid$ else
+		    $if-ratio4-valid$ fprintf(fp,"%s\t","");
 
-		    if ($print-ratios(5)$)
-			fprintf(fp,"%5.4f\t",ratios[4][0]);
-		    else
-			fprintf(fp,"%s\t","");
+		    $if-ratio5-valid$ if ($print-ratios(5)$)
+		    $if-ratio5-valid$ fprintf(fp,"%5.4f\t",ratios[4][0]);
+		    $if-ratio5-valid$ else
+		    $if-ratio5-valid$ fprintf(fp,"%s\t","");
 		}
 
 		fprintf(fp,"%i\t",defaultflag[y]);
@@ -216,21 +216,7 @@ int main(int argc, char** argv)
 	}
     }
 
-    if (show_projection_details)
-    {
-	fprintf(fp,"Year\t$threshold-label$ Count\t$threshold-label$ Probability\tCumulative $threshold-label$ Count\tCumulative $threshold-label$ Probablilty\n");
-
-	for(int y=0;y<$n-years$+1;y++)
-	{
-	    fprintf(fp,"%d\t",fy[y]);
-	    fprintf(fp,"%ld\t",defaultcntr[y]);
-	    fprintf(fp,"%5.4f\t", double(defaultcntr[y]) / $number-of-trials$);
-	    fprintf(fp,"%ld\t",cumdefaultcntr[y]);
-	    fprintf(fp,"%5.4f\n", double(cumdefaultcntr[y]) / $number-of-trials$);
-	}
-    }
-
-    fprintf(fr,"Year\t$threshold-label$ Count\t$threshold-label$ Probability\tCumulative $threshold-label$ Count\tCumulative $threshold-label$ Probablilty\tRating Equivalent");
+    fprintf(fr,"Year\t$threshold-label$ Count\t$threshold-label$ Probability\tCumulative $threshold-label$ Count\tCumulative $threshold-label$ Probability\tRating Equivalent");
 
     fprintf(fr,"\t\t%s\t%s\n", "Minimum $metrics-1-description$", "Maximum $metrics-1-description$");
 

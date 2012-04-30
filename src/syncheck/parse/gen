@@ -1,0 +1,6 @@
+flex lex
+mv lex.yy.c ..
+
+bison -d yacc
+mv yacc.tab.h ..
+mv yacc.tab.c ..

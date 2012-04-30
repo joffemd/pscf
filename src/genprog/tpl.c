@@ -1,4 +1,4 @@
-#include "this.h"
+#include "genprog.h"
 
 /* -------------------------------------------------- */
 
@@ -37,10 +37,10 @@ void Template::read (const char* spec)
     for (;;)
     {
 	char* line;
-	rw_fgets_no_control_m (&line, f);
+	fgets_no_control_m (&line, f);
 	if (feof(f)) break;
 
-	rw_add_name_to_list (line, &lines, &n_lines);
+	add_name_to_list (line, &lines, &n_lines);
 	free (line);
     }
 
@@ -57,17 +57,17 @@ void Template::parse_types_and_formats ()
     for (int i = 1;  i <= n_vars;  i++)
     {
 	char*& tf = types_and_formats[i];
-	rw_trim (tf);
+	trim (tf);
 
 	if (strequal (tf, "long"))
 	{
 	    free (tf);
-	    rw_strcpy (&types[i], "long");
-	    rw_strcpy (&formats[i], "%ld");
+	    strcpy (&types[i], "long");
+	    strcpy (&formats[i], "%ld");
 	}
-	else if (rw_starts_with (tf, (char*)"double"))
+	else if (starts_with (tf, (char*)"double"))
 	{
-	    rw_strcpy (&types[i], "double");
+	    strcpy (&types[i], "double");
 
 	    char* where_lb = strchr (tf, '(');
 
@@ -82,13 +82,13 @@ void Template::parse_types_and_formats ()
 		    int n, m;
 		    sscanf (where_lb+1, "%d,%d", &m, &n);
 
-		    rw_strcpy (&formats[i], "%");
-		    rw_numcat (&formats[i], m);
-		    rw_chrcat (&formats[i], '.');
-		    rw_numcat (&formats[i], n);
-		    rw_chrcat (&formats[i], 'f');
+		    strcpy (&formats[i], "%");
+		    numcat (&formats[i], m);
+		    chrcat (&formats[i], '.');
+		    numcat (&formats[i], n);
+		    chrcat (&formats[i], 'f');
 
-		    rw_trim (tf);
+		    trim (tf);
 		}
 	    }
 	}
@@ -114,12 +114,12 @@ void Template::chop_empty_vars ()
     for (int i = 1;  i <= n_vars;  i++)
     {
         char* var;
-	rw_strcpy (&var, vars[i]);
+	strcpy (&var, vars[i]);
 
-	while (rw_replace_string_in_string (var, "\"", ""))
+	while (replace_string_in_string (var, "\"", ""))
 	    ;
 
-	if (!rw_n_words_in (var))
+	if (!n_words_in (var))
 	{
 	    n_vars = i-1;
 	    free (var);

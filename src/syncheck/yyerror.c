@@ -1,4 +1,4 @@
-#include "this.h"
+#include "syncheck.h"
 
 extern char* yytext;
 

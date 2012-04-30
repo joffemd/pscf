@@ -1,6 +1,6 @@
-#include "this.h"
+#include "genprog.h"
 
-static void do_expression (FILE*, Template&, const int, const int);
+static void do_expression (FILE*, Template&, const int, const int, const int);
 static char* whats_left_of (const char*, const char*);
 static char* find_expression_for (Template&, const char*);
 
@@ -8,9 +8,7 @@ static char* find_expression_for (Template&, const char*);
 
 void Template::do_adjustments ()
 {
-    puts ("");
-
-    bool is_expression[n_adjs+1];
+    bool* is_expression = (bool*)malloc((n_adjs+1)*sizeof(bool));
     memset (is_expression, 0, (n_adjs+1)*sizeof(bool));
 
     int first_expression_at = 0;
@@ -26,29 +24,33 @@ void Template::do_adjustments ()
 
     int i_start = first_expression_at;
     int i = i_start+1;
+    int i_deps = 0;
 
     while (i <= n_adjs)
     {
+        if (!strequal (adjs_I[i], "\"\"") && !i_deps) i_deps = i;
+
         if (!strequal (adjs_B[i], "\"\""))
 	{
-	    //printf ("%d -> %d\n", i_start, i-1);
-	    do_expression (f_out, *this, i_start, i-1);
+	    do_expression (f_out, *this, i_start, i_deps, i-1);
 	    i_start = i;
+	    i_deps = 0;
 	}
 	else if (i == n_adjs)
 	{
-	    //printf ("%d -> %d\n", i_start, i);
-	    do_expression (f_out, *this, i_start, n_adjs);
+	    do_expression (f_out, *this, i_start, i_deps, n_adjs);
 	    break;
 	}
 
 	++i;
     }
+
+    free (is_expression);
 }
 
 /* -------------------------------------------------- */
 
-static void do_expression (FILE* f_out, Template& t, const int is, const int ie)
+static void do_expression (FILE* f_out, Template& t, const int is, const int id, const int ie)
 {
     fprintf (f_out, "\n");
     fprintf (f_out, "if (%s %s %s)\n", t.adjs_B[is], t.adjs_C[is], t.adjs_D[is]);
@@ -62,38 +64,49 @@ static void do_expression (FILE* f_out, Template& t, const int is, const int ie)
     else
 	fprintf (f_out, "    double adjust = %s-%s/%s;\n", 
 	    t.adjs_E[is], remains, t.adjs_D[is]);
+    fprintf (f_out, "\n");
 
     free (remains);
 
-    const int n_ways = ie-is+1;
-    fprintf (f_out, "    double share[%d];\n", n_ways);
-
     char* denominator;
-    rw_strcpy (&denominator, t.adjs_F[is]);
+    strcpy (&denominator, t.adjs_F[is]);
 
-    for (int i = is+1;  i <= ie;  i++)
-	rw_strcat (&denominator, "+", t.adjs_F[i]);
+    int ide = id ? id : ie+1;
+    for (int i = is+1;  i < ide;  i++)
+	strcat (&denominator, "+", t.adjs_F[i]);
 
-    for (int i = 0;  i < n_ways;  i++)
-	fprintf (f_out, "    share[%d]=%s/(%s);\n", i, t.adjs_F[is+i], denominator);
+    fprintf (f_out, "    double share_denom = %s;\n", denominator);
+    fprintf (f_out, "\n");
     free (denominator);
 
+    const int n_ways = ide-is;
+    fprintf (f_out, "    double share[%d];\n", n_ways);
+    fprintf (f_out, "\n");
+
     for (int i = 0;  i < n_ways;  i++)
-	fprintf (f_out, "    %s-=adjust*share[%d];\n", t.adjs_F[is+i], i);
+	fprintf (f_out, "    share[%d]=%s/share_denom;\n", i, t.adjs_F[is+i]);
+    fprintf (f_out, "\n");
+
+    for (int i = 0;  i < n_ways;  i++)
+	fprintf (f_out, 
+	    "    %s=%s-adjust*share[%d]%s%s?%s-adjust*share[%d]:%s;\n",
+	    t.adjs_F[is+i], t.adjs_F[is+i], i, t.adjs_G[is+i], t.adjs_H[is+i], 
+	    t.adjs_F[is+i], i, t.adjs_H[is+i]); 
+    fprintf (f_out, "\n");
 
     static int count;
-    /*
-    fprintf (f_out, "fprintf (f_adj, \"%c %%f -> \", %s);\n", 
-	'A'+count, t.adjs_B[is]);
-    */
     ++count;
 
     char *expression = find_expression_for (t, t.adjs_E[is]);
-    fprintf (f_out, "%s=%s;\n", t.adjs_E[is], expression);
+    fprintf (f_out, "    %s=%s;\n", t.adjs_E[is], expression);
+    fprintf (f_out, "\n");
 
-    /*
-    fprintf (f_out, "fprintf (f_adj, \"%%f\\n\", %s);\n", t.adjs_B[is]);
-    */
+    if (id)
+	for (int i = id;  i <= ie;  i++)
+	{
+	    char *expression = find_expression_for (t, t.adjs_I[i]);
+	    fprintf (f_out, "    %s=%s;\n", t.adjs_I[i], expression);
+	}
 
     fprintf (f_out, "}\n");
 }
@@ -103,11 +116,11 @@ static void do_expression (FILE* f_out, Template& t, const int is, const int ie)
 static char* whats_left_of (const char* full, const char* part)
 {
     char* remains;
-    rw_strcpy (&remains, full);
+    strcpy (&remains, full);
 
-    rw_replace_string_in_string (remains, (char*)part, (char*)"");
-    rw_replace_string_in_string (remains, "/", "");
-    rw_trim (remains);
+    replace_string_in_string (remains, (char*)part, (char*)"");
+    replace_string_in_string (remains, "/", "");
+    trim (remains);
 
     return remains;
 }
@@ -117,29 +130,24 @@ static char* whats_left_of (const char* full, const char* part)
 char *find_expression_for (Template&t, const char* var)
 {
     char* base_var;
-    rw_strcpy (&base_var, var);
+    strcpy (&base_var, var);
 
     char* where_lb = strchr (base_var, '[');
     if (where_lb)
     {
         *where_lb = 0;
-	rw_trim (base_var);
+	trim (base_var);
     }
 
-    //printf ("F: [%s]\n", base_var);
-
-    //for (int ii = 1;  ii <= projection_years;  ii++)
-    //{
-	for (int i = 1;  i <= t.n_vars;  i++)
+    for (int i = 1;  i <= t.n_vars;  i++)
+    {
+	if (strequal (t.vars[i], base_var))
 	{
-	    //printf ("  %s\n", t.vars[i]);
-	    if (strequal (t.vars[i], base_var))
-	    {
-		free (base_var);
-	        return t.years[1][i];
-	    }
+	    free (base_var);
+	    return t.years[1][i];
 	}
+    }
 
-free (base_var);
-return (char*) "vvv";
+    free (base_var);
+    return (char*) "vvv";
 }

@@ -1,0 +1,31 @@
+﻿Build started 4/30/2012 12:14:33 PM.
+     1>Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\syncheck.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Release\syncheck.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\syncheck\col.c ..\..\syncheck\globals.c ..\..\syncheck\lex.yy.c ..\..\syncheck\main.c ..\..\syncheck\model.c ..\..\syncheck\series.c ..\..\syncheck\yacc.tab.c ..\..\syncheck\yyerror.c ..\..\syncheck\yywrap.c
+         col.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         globals.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         lex.yy.c
+     1>lex(4): error C2059: syntax error : 'string'
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         main.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         model.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         series.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         yacc.tab.c
+         yyerror.c
+     1>c:\pscf\src\syncheck\syncheck.h(1): fatal error C1083: Cannot open include file: 'utils.h': No such file or directory
+         yywrap.c
+     1>..\..\syncheck\yywrap.c(10): error C2059: syntax error : 'string'
+     1>Done Building Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.18

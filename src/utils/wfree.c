@@ -1,7 +1,7 @@
 /************************************************************************/
 /*									*/
-/* Free off all the space allocated by previous rw_split_... or		*/
-/* rw_add_... routines							*/
+/* Free off all the space allocated by previous split_... or		*/
+/* add_... routines							*/
 /*									*/
 /************************************************************************/
 
@@ -10,7 +10,7 @@
 
 /* -------------------------------------------------- */
 
-void rw_words_free (char** words, int n_words)
+void words_free (char** words, int n_words)
 {
     for (int i = 1;  i <= n_words;  i++)  free (words[i]);
 
