@@ -14,7 +14,7 @@ C:\
       readme.rtf (this is the readme file that users see)
       README.txt (this file)
 
-You will find the Visual Studio 2010 solution at C:\pscf\msi-solution\pscf.sln
+You will find the Visual Studio 2010 solution at C:\PSCF\src\pscf-solution\pscf-solution.sln
 
 If you want to install the end-user application, you should run: 
 
