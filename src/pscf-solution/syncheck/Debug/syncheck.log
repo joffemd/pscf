@@ -1,11 +1,11 @@
-﻿Build started 4/30/2012 1:23:35 PM.
+﻿Build started 5/6/2012 10:52:44 AM.
      1>Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\syncheck.lastbuildstate".
        InitializeBuildStatus:
          Creating "Debug\syncheck.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D YY_NO_UNISTD_H /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\syncheck\col.c ..\..\syncheck\globals.c ..\..\syncheck\lex.yy.c ..\..\syncheck\main.c ..\..\syncheck\model.c ..\..\syncheck\series.c ..\..\syncheck\yacc.tab.c ..\..\syncheck\yyerror.c ..\..\syncheck\yywrap.c /TP 
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D YY_NO_UNISTD_H /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\syncheck\col.c ..\..\syncheck\globals.c ..\..\syncheck\lex.yy.c ..\..\syncheck\main.c ..\..\syncheck\model.c ..\..\syncheck\series.c ..\..\syncheck\yacc.tab.c ..\..\syncheck\yyerror.c ..\..\syncheck\yywrap.c /TP 
      1>cl : Command line warning D9025: overriding '/TC' with '/TP'
          yywrap.c
          yyerror.c
@@ -53,4 +53,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.39
+Time Elapsed 00:00:03.53

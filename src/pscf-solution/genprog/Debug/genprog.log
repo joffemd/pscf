@@ -1,11 +1,11 @@
-﻿Build started 4/30/2012 1:23:35 PM.
+﻿Build started 5/6/2012 10:52:44 AM.
      1>Project "C:\PSCF\src\pscf-solution\genprog\genprog.vcxproj" on node 4 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\genprog.lastbuildstate".
        InitializeBuildStatus:
          Creating "Debug\genprog.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\genprog\adjustments.c ..\..\genprog\countm.c ..\..\genprog\get.c ..\..\genprog\main.c ..\..\genprog\process.c ..\..\genprog\sheet.c ..\..\genprog\tpl.c ..\..\genprog\utils.c /TP 
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\genprog\adjustments.c ..\..\genprog\countm.c ..\..\genprog\get.c ..\..\genprog\main.c ..\..\genprog\process.c ..\..\genprog\sheet.c ..\..\genprog\tpl.c ..\..\genprog\utils.c /TP 
      1>cl : Command line warning D9025: overriding '/TC' with '/TP'
          utils.c
          tpl.c
@@ -50,4 +50,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.62
+Time Elapsed 00:00:03.77
