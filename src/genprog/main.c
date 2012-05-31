@@ -44,7 +44,12 @@ int main (int, char** argv)
     tpl.parse_types_and_formats ();
     tpl.count_randoms ();
 
+// by RW 31/05/12
+    /*
     tpl.process ();
+    */
+    tpl.process (have_adjustments);
+// end
 
     printf ("\n");
 

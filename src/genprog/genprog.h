@@ -102,7 +102,12 @@ public:
     void parse_types_and_formats ();
     void count_randoms ();
     void chop_empty_vars ();
+// by RW 31/05/12
+    /*
     void process (); 
+    */
+    void process (const bool); 
+// end
     void do_adjustments (); 
 };
 

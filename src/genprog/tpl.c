@@ -92,6 +92,13 @@ void Template::parse_types_and_formats ()
 		}
 	    }
 	}
+// by RW 31/05/12
+	else // default
+	{
+	    strcpy (&types[i], "double");
+	    strcpy (&formats[i], "%25.4f");
+	}
+// end
     }
 }
 

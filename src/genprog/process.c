@@ -6,7 +6,12 @@ static void get_title (const char*, char*&, char*&);
 
 /* -------------------------------------------------- */
 
+// by RW 31/05/12
+/*
 void Template::process ()
+*/
+void Template::process (const bool have_adjustments)
+// end
 {
     bool print_off = false;
     int line_no = 0;
@@ -694,11 +699,18 @@ void Template::process ()
 	    continue;
 	}
 
+// by RW 31/05/12
+	/*
+	do_adjustments ();
+	*/
 	if (strstr (line, "$adjustments$"))
 	{
-	    do_adjustments ();
+	    if (have_adjustments)
+		do_adjustments ();
+
 	    continue;
 	}
+// end
 
 	/*
 	if (strstr (line, "$rating-equivalent"))
