@@ -1,4 +1,4 @@
-README
+README v1.03
 
 Install the source under c:\pscf.
 
