@@ -1,0 +1,4 @@
+g++ -Ofast -Wall -Wextra -c -I../../external/boost/boost_1_48 prog.c
+
+# uses the (stripped-down) supplied Boost library to save the need to install it
+# (using a pre-compiled header doesn't seem to save much time)

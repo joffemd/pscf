@@ -1,0 +1,11 @@
+Adjustment Name	Expression to Evaluate	Relation to Threshold 	Threshold Value	Series to Adjust if Threshold is Surpassed	Distribute Adjustment to Related Series	Constraint Operator	Constraint Amount	Dependent Series
+Revenue Adjustment for Large Surplus	totrev[y]/totexp[y]	>	1.05	totrev[y]	indinctax[y]	>=	0	""
+""	""	""	""	""	corpinctax[y]	>=	0	""
+""	""	""	""	""	salestax[y]	>=	0	""
+""	""	""	""	""	""	""	""	surplus[y]
+""	""	""	""	""	""	""	""	debt[y]
+Expense Adjustment for Large Deficit	totrev[y]/totexp[y]	<	0.69	totexp[y]	health[y]	>=	0	""
+""	""	""	""	""	education[y]	>=	0	""
+""	""	""	""	""	otherprogram[y]	>=	0	""
+""	""	""	""	""	""	""	""	surplus[y]
+""	""	""	""	""	""	""	""	debt[y]

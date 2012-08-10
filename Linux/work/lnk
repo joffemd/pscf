@@ -1,0 +1,2 @@
+g++ -o prog prog.o
+rm -f prog.o
