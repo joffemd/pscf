@@ -1,0 +1,24 @@
+
+# create the "genprog" executable from source
+# (no error handling, but hopefully no errors, eiher)
+
+echo compiling utils...
+(
+    cd ../../src/utils
+    g++ -Wall -Wextra -c -O3 -I../include *.c
+    ar r lib.a *.o
+    rm *.o
+)
+
+echo compiling genrog...
+(
+    cd ../../src/genprog
+    g++ -Wall -Wextra -c -O3 -I../include *.c
+    ar r lib.a *.o
+    rm *.o
+)
+
+echo linking genrog...
+g++ -o ../bin/genprog ../../src/genprog/lib.a ../../src/utils/lib.a
+
+echo done
