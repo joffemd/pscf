@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Public Sector Credit Framework v1.0"
+"ProjectName" = "8:Public Sector Credit Framework v1.1"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -13,6 +13,12 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_0034F690C4DB4BA0A34A3B4D73020D07"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
         "Entry"
         {
         "MsmKey" = "8:_0041A5E56DEF47EBB3350EB01FC00734"
@@ -189,6 +195,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_03FA69A4A30447B7999BE0253806207A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0433A0E9AE0E4A8A8784085ABA7DA37F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -310,6 +322,12 @@
         "Entry"
         {
         "MsmKey" = "8:_05FB4CAD2A194E8CAFF9B3C77914B58E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_06067E8520ED49A6ABE606499004D448"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1119,6 +1137,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_152009DFD8BB4E739125D54551C9F52E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_157098FB397C46068D9A373EDDB05C2F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1395,6 +1419,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1BBD0A0F1AB94C33A32AD620A618634F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1BC11F22792A4419A88C9243EA7F2249"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1480,6 +1510,12 @@
         "Entry"
         {
         "MsmKey" = "8:_1D1284B750244F58AF77C9B57014A4E8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1D30AB45D74F4B3591253841B986AB28"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1743,6 +1779,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_22D8FC04D098418E8E290173A499ECFC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_22E95E53351445EE853CEF0462AD41CE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1792,6 +1834,12 @@
         "Entry"
         {
         "MsmKey" = "8:_240791AD23234AF186FB5FF81F52A4BC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2433AEAB00F649DE878ECF47F21FD950"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1912,6 +1960,12 @@
         "Entry"
         {
         "MsmKey" = "8:_26E094414A3D45DD83C88BAD69F4641F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_27269C2DDB2A4B6C9A75F3CD5CE0FF80"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2433,6 +2487,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3317137E6A6D497BB34B1A81D4E1F2CA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_332736851D124FB890CACD2791A103A7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2607,7 +2667,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3695151BE9624AA5AA1EB28DE615DB41"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_36AC31694780452EABDD3A8479CB19D5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_36B44B9928BC4D6C99DA962470024320"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2781,6 +2853,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3B2EB543B11549C68BD4CC544B94BAD2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3B34AAF6F8C34572A35E9F7F6FD4AE2D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2938,6 +3016,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3E8CDC764EB349099E1E2166B8FD3F05"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3E9C1DD45FD04EC7B3CD6869BC1CEF87"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3184,6 +3268,12 @@
         "Entry"
         {
         "MsmKey" = "8:_4330681ED6BB4358AB6C6EFA50B4376D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_434234ED34F54B639020130BADAB9E49"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3597,6 +3687,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4DC9F7E41F7B4E6CBF88A36B84AC6A22"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4DCBE17D9C534439B5963D996D87895C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3849,6 +3945,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5455E312B51848CAAE029F9B6FD262FF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5465E31F50084169AE8471F6F39C2DEB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3958,6 +4060,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5738570A94DB4E3DB183F8FE5C3A231F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_575E71C6977B48FEBF496245BC9BEB69"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4395,6 +4503,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5F6AC8A9642547E4B0884B869EBF17B6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5F9423B6D2DB45D695F817448654CF78"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4779,6 +4893,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_662589EF14974EA3BC7CCE3600FC0FBA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6636D3A37DCA4FAA9476B6114354C690"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5091,6 +5211,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6D3FB14FBF774086857409AFB37DC669"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6DC3637166E84151B4C94947E6D0AF7B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5206,6 +5332,12 @@
         "Entry"
         {
         "MsmKey" = "8:_70998C447028462CBC402A47E56DDAA5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_70D860211F1D473FB619D8A44972FE90"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5871,6 +6003,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7FA19682CFD64207A68C5CA6F8081A16"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7FA50659C34E44F09105E1EBFC802C61"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6016,6 +6154,12 @@
         "Entry"
         {
         "MsmKey" = "8:_82B716E9F46F4121AD61497CB802E659"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_82CCEC5A98F24B5A82423784D6205A34"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6172,6 +6316,12 @@
         "Entry"
         {
         "MsmKey" = "8:_86747A1949DD4C6B914DC72A8E75AB9B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_86842CE4179E4E2986803F5C21B82299"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6418,6 +6568,12 @@
         "Entry"
         {
         "MsmKey" = "8:_8B334205429048DA8C0FE1AAD7D59933"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8B3974CF46EA43CF953121177C903BB9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -7353,6 +7509,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A09DA7EB21D94F88AF7A533148CC64DC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A0C3C5C5909543429FE6506DCFADC053"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -7402,6 +7564,12 @@
         "Entry"
         {
         "MsmKey" = "8:_A27BF88F4BE742CCA70D05FC6D120A9A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A2803B53DBDD4604BFE8CDB72CFBA3C8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -7714,6 +7882,12 @@
         "Entry"
         {
         "MsmKey" = "8:_A8E74DAD1D34459D82A95A17A2C29755"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A8F69459105F447F926683B7ED18841E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -8403,6 +8577,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B6DC9A276910454E8A0FAAF72BECCAD4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B6DE12F2484D46DAAF8FEAC2A4479DAB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -8841,6 +9021,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BEE32962478541849069402FB2B6C68D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BF14035308AE4A21ACCFD2252DEC128C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -9033,6 +9219,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C2E89B2968F24B5D8C9B3490601263AB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C2F7A7C06C754BA7B6E4449BF4B08CDA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -9124,6 +9316,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C563A0DAA17F4226B333D025D7F9803A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C5883061A2D945A2BF93F6EADAD298CF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -10299,6 +10497,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DCB2D7390DB04E90AEEDD44AA0A4CA8C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DCBA35B5E5E34FD9ABA55B151F10E9CD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -10515,6 +10719,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E0F200FC809A4439AF112D6DBB2587FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E10AE47E9E97411B9ACBF4D591A32BC9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -10588,6 +10798,12 @@
         "Entry"
         {
         "MsmKey" = "8:_E2FBAD691DAD4416ADF7090D99234DAC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E2FF379FFD3D4050AE1401845855028D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -11175,6 +11391,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F02F2301A1F649B2BA763B5EF1E9D358"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F0544C5BD74841639F7310D99AD1454B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -11506,6 +11728,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F6F7B5118CA3464EB879EFF9F2C1C4A2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F73D7BAC6C6B45DB969CE0135B264619"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -11889,6 +12117,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FF1B1B8B31624963B71856EC24D42450"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FF5B96213B5A4DEEA198AFEA5F1986A2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -11925,7 +12159,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\PSCFv1_01.msi"
+        "OutputFilename" = "8:Debug\\PSCFv1_1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -12014,6 +12248,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0034F690C4DB4BA0A34A3B4D73020D07"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README.CV"
+            "TargetName" = "8:README.CV"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0041A5E56DEF47EBB3350EB01FC00734"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\lib\\libmapi32.a"
@@ -12594,6 +12848,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03FA69A4A30447B7999BE0253806207A"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\include\\pthread.h"
+            "TargetName" = "8:pthread.h"
+            "Tag" = "8:"
+            "Folder" = "8:_0061BB2712B9425D81C82C35AED30B34"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0433A0E9AE0E4A8A8784085ABA7DA37F"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\preprocessor\\facilities.hpp"
@@ -13000,6 +13274,26 @@
             "TargetName" = "8:mt_allocator.h"
             "Tag" = "8:"
             "Folder" = "8:_F376B472952A4FF4AC1EA27AF394B664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06067E8520ED49A6ABE606499004D448"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\libpthreadGC2.a"
+            "TargetName" = "8:libpthreadGC2.a"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15694,6 +15988,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_152009DFD8BB4E739125D54551C9F52E"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README.Borland"
+            "TargetName" = "8:README.Borland"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_157098FB397C46068D9A373EDDB05C2F"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\mpl\\aux_\\static_cast.hpp"
@@ -16614,6 +16928,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BBD0A0F1AB94C33A32AD620A618634F"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README.NONPORTABLE"
+            "TargetName" = "8:README.NONPORTABLE"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BC11F22792A4419A88C9243EA7F2249"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\fstream"
@@ -16900,6 +17234,26 @@
             "TargetName" = "8:unwrap.hpp"
             "Tag" = "8:"
             "Folder" = "8:_66B40F2E70C04F12BAC13387839B9747"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D30AB45D74F4B3591253841B986AB28"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVCE2.lib"
+            "TargetName" = "8:pthreadVCE2.lib"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17774,6 +18128,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22D8FC04D098418E8E290173A499ECFC"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\ANNOUNCE"
+            "TargetName" = "8:ANNOUNCE"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22E95E53351445EE853CEF0462AD41CE"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\include\\objsel.h"
@@ -17940,6 +18314,26 @@
             "TargetName" = "8:libglu32.a"
             "Tag" = "8:"
             "Folder" = "8:_45CB944201C14CBA872BB294E082D96B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2433AEAB00F649DE878ECF47F21FD950"
+            {
+            "SourcePath" = "8:..\\..\\system\\scripts\\genprog2.bat"
+            "TargetName" = "8:genprog2.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_CF9DB0043C8D404D89A62C7D16ECEDB1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -18340,6 +18734,26 @@
             "TargetName" = "8:ipexport.h"
             "Tag" = "8:"
             "Folder" = "8:_21D7B53C135244A1BCE8E63718AF3C0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_27269C2DDB2A4B6C9A75F3CD5CE0FF80"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README"
+            "TargetName" = "8:README"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -20074,6 +20488,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3317137E6A6D497BB34B1A81D4E1F2CA"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\md5.sum"
+            "TargetName" = "8:md5.sum"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_332736851D124FB890CACD2791A103A7"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\mpl\\aux_\\preprocessor\\params.hpp"
@@ -20654,12 +21088,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3695151BE9624AA5AA1EB28DE615DB41"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\include\\md5.sum"
+            "TargetName" = "8:md5.sum"
+            "Tag" = "8:"
+            "Folder" = "8:_0061BB2712B9425D81C82C35AED30B34"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36AC31694780452EABDD3A8479CB19D5"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\ext\\pb_ds\\detail\\pairing_heap_\\find_fn_imps.hpp"
             "TargetName" = "8:find_fn_imps.hpp"
             "Tag" = "8:"
             "Folder" = "8:_3EC59AA9EDE747448854E3B5094BEE3C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36B44B9928BC4D6C99DA962470024320"
+            {
+            "SourcePath" = "8:..\\..\\system\\bin\\genprog2.exe"
+            "TargetName" = "8:genprog2.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_746845ADB6CD4452815690668AA2B140"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -21234,6 +21708,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B2EB543B11549C68BD4CC544B94BAD2"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README.Watcom"
+            "TargetName" = "8:README.Watcom"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B34AAF6F8C34572A35E9F7F6FD4AE2D"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\preprocessor\\enum_shifted_params.hpp"
@@ -21760,6 +22254,26 @@
             "TargetName" = "8:array"
             "Tag" = "8:"
             "Folder" = "8:_61DE9B21CA4945C5AA17A38AABC68EAF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E9C1DD45FD04EC7B3CD6869BC1CEF87"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVCE2.dll"
+            "TargetName" = "8:pthreadVCE2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -22580,6 +23094,26 @@
             "TargetName" = "8:adl.hpp"
             "Tag" = "8:"
             "Folder" = "8:_ECCEAFC5DDE64784A52CB3FC2F647DF3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_434234ED34F54B639020130BADAB9E49"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\MAINTAINERS"
+            "TargetName" = "8:MAINTAINERS"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -23954,6 +24488,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DC9F7E41F7B4E6CBF88A36B84AC6A22"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVSE2.lib"
+            "TargetName" = "8:pthreadVSE2.lib"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DCBE17D9C534439B5963D996D87895C"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\include\\ddk\\usbioctl.h"
@@ -24794,6 +25348,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5455E312B51848CAAE029F9B6FD262FF"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\COPYING.LIB"
+            "TargetName" = "8:COPYING.LIB"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5465E31F50084169AE8471F6F39C2DEB"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\ext\\pb_ds\\detail\\thin_heap_\\trace_fn_imps.hpp"
@@ -25160,6 +25734,26 @@
             "TargetName" = "8:dvdevcod.h"
             "Tag" = "8:"
             "Folder" = "8:_21D7B53C135244A1BCE8E63718AF3C0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_575E71C6977B48FEBF496245BC9BEB69"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\md5.sum"
+            "TargetName" = "8:md5.sum"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -26614,6 +27208,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5F6AC8A9642547E4B0884B869EBF17B6"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\BUGS"
+            "TargetName" = "8:BUGS"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5F9423B6D2DB45D695F817448654CF78"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\utility\\binary.hpp"
@@ -27894,6 +28508,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_662589EF14974EA3BC7CCE3600FC0FBA"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVC2.lib"
+            "TargetName" = "8:pthreadVC2.lib"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6636D3A37DCA4FAA9476B6114354C690"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\type_traits\\detail\\ice_not.hpp"
@@ -28934,6 +29568,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6D3FB14FBF774086857409AFB37DC669"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVC2.dll"
+            "TargetName" = "8:pthreadVC2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6DC3637166E84151B4C94947E6D0AF7B"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\type_traits\\is_polymorphic.hpp"
@@ -29320,6 +29974,26 @@
             "TargetName" = "8:call_traits.hpp"
             "Tag" = "8:"
             "Folder" = "8:_FE382BBBF7C74855A0BDB223F9F22D6C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_70D860211F1D473FB619D8A44972FE90"
+            {
+            "SourcePath" = "8:..\\..\\system\\scripts\\prog2.bat"
+            "TargetName" = "8:prog2.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_CF9DB0043C8D404D89A62C7D16ECEDB1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -31534,6 +32208,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FA19682CFD64207A68C5CA6F8081A16"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\PROGRESS"
+            "TargetName" = "8:PROGRESS"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FA50659C34E44F09105E1EBFC802C61"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\ext\\pb_ds\\detail\\gp_hash_table_map_\\debug_store_hash_fn_imps.hpp"
@@ -32020,6 +32714,26 @@
             "TargetName" = "8:modified_bessel_func.tcc"
             "Tag" = "8:"
             "Folder" = "8:_61DE9B21CA4945C5AA17A38AABC68EAF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82CCEC5A98F24B5A82423784D6205A34"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\FAQ"
+            "TargetName" = "8:FAQ"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -32540,6 +33254,26 @@
             "TargetName" = "8:bdatypes.h"
             "Tag" = "8:"
             "Folder" = "8:_21D7B53C135244A1BCE8E63718AF3C0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86842CE4179E4E2986803F5C21B82299"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\WinCE-PORT"
+            "TargetName" = "8:WinCE-PORT"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -33360,6 +34094,26 @@
             "TargetName" = "8:basic_bind.hpp"
             "Tag" = "8:"
             "Folder" = "8:_66B40F2E70C04F12BAC13387839B9747"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8B3974CF46EA43CF953121177C903BB9"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\README.WinCE"
+            "TargetName" = "8:README.WinCE"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -36474,6 +37228,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A09DA7EB21D94F88AF7A533148CC64DC"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\TODO"
+            "TargetName" = "8:TODO"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0C3C5C5909543429FE6506DCFADC053"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\type_traits\\detail\\template_arity_spec.hpp"
@@ -36640,6 +37414,26 @@
             "TargetName" = "8:workaround.hpp"
             "Tag" = "8:"
             "Folder" = "8:_ECCEAFC5DDE64784A52CB3FC2F647DF3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2803B53DBDD4604BFE8CDB72CFBA3C8"
+            {
+            "SourcePath" = "8:..\\..\\system\\scripts\\compile2.bat"
+            "TargetName" = "8:compile2.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_CF9DB0043C8D404D89A62C7D16ECEDB1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -37680,6 +38474,26 @@
             "TargetName" = "8:libmsdmo.a"
             "Tag" = "8:"
             "Folder" = "8:_45CB944201C14CBA872BB294E082D96B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8F69459105F447F926683B7ED18841E"
+            {
+            "SourcePath" = "8:..\\..\\system\\templates\\tpl2.txt"
+            "TargetName" = "8:tpl2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5B584935BB2E4BB09E2FDB95C327EBC1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -39974,6 +40788,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6DC9A276910454E8A0FAAF72BECCAD4"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\include\\semaphore.h"
+            "TargetName" = "8:semaphore.h"
+            "Tag" = "8:"
+            "Folder" = "8:_0061BB2712B9425D81C82C35AED30B34"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6DE12F2484D46DAAF8FEAC2A4479DAB"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\detail\\select_type.hpp"
@@ -41434,6 +42268,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BEE32962478541849069402FB2B6C68D"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\ChangeLog"
+            "TargetName" = "8:ChangeLog"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF14035308AE4A21ACCFD2252DEC128C"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\include\\aviriff.h"
@@ -42074,6 +42928,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2E89B2968F24B5D8C9B3490601263AB"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\CONTRIBUTORS"
+            "TargetName" = "8:CONTRIBUTORS"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2F7A7C06C754BA7B6E4449BF4B08CDA"
             {
             "SourcePath" = "8:..\\..\\external\\mingw\\include\\ddk\\ntddkbd.h"
@@ -42380,6 +43254,26 @@
             "TargetName" = "8:multiway_mergesort.h"
             "Tag" = "8:"
             "Folder" = "8:_CD836D201551495890C67DD2F945BC11"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C5883061A2D945A2BF93F6EADAD298CF"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadGC2.dll"
+            "TargetName" = "8:pthreadGC2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -46294,6 +47188,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DCB2D7390DB04E90AEEDD44AA0A4CA8C"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\include\\sched.h"
+            "TargetName" = "8:sched.h"
+            "Tag" = "8:"
+            "Folder" = "8:_0061BB2712B9425D81C82C35AED30B34"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DCBA35B5E5E34FD9ABA55B151F10E9CD"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\type_traits\\is_member_object_pointer.hpp"
@@ -47014,6 +47928,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E0F200FC809A4439AF112D6DBB2587FA"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\COPYING"
+            "TargetName" = "8:COPYING"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E10AE47E9E97411B9ACBF4D591A32BC9"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\random\\random_number_generator.hpp"
@@ -47260,6 +48194,26 @@
             "TargetName" = "8:cderr.h"
             "Tag" = "8:"
             "Folder" = "8:_21D7B53C135244A1BCE8E63718AF3C0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2FF379FFD3D4050AE1401845855028D"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\NEWS"
+            "TargetName" = "8:NEWS"
+            "Tag" = "8:"
+            "Folder" = "8:_3D774EE32F6C48AC82B29E384DBB711E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -49214,6 +50168,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F02F2301A1F649B2BA763B5EF1E9D358"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadVSE2.dll"
+            "TargetName" = "8:pthreadVSE2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0544C5BD74841639F7310D99AD1454B"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\type_traits\\detail\\cv_traits_impl.hpp"
@@ -50320,6 +51294,26 @@
             "TargetName" = "8:stdio.h"
             "Tag" = "8:"
             "Folder" = "8:_D0769F32FDFD43238900E16E1DE76E4F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F73D7BAC6C6B45DB969CE0135B264619"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\libpthreadGCE2.a"
+            "TargetName" = "8:libpthreadGCE2.a"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -51594,6 +52588,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF1B1B8B31624963B71856EC24D42450"
+            {
+            "SourcePath" = "8:..\\..\\external\\pthreads-win32\\dll-latest\\lib\\pthreadGCE2.dll"
+            "TargetName" = "8:pthreadGCE2.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_17574AF23C3F4782ACBDA4CFD7418789"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF5B96213B5A4DEEA198AFEA5F1986A2"
             {
             "SourcePath" = "8:..\\..\\external\\boost\\boost_1_48\\boost\\random\\normal_distribution.hpp"
@@ -52388,6 +53402,50 @@
                                             }
                                         }
                                     }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C54F85E199774D6F8CAC7747980F8963"
+                                    {
+                                    "Name" = "8:pthreads-win32"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_CDB6FF674DE749F29DC5E5EC41B75039"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_3D774EE32F6C48AC82B29E384DBB711E"
+                                            {
+                                            "Name" = "8:dll-latest"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_105767CEFCD1401F955786D7F530A0CA"
+                                                "Folders"
+                                                {
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0061BB2712B9425D81C82C35AED30B34"
+                                                    {
+                                                    "Name" = "8:include"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "Property" = "8:_027C002002614488884387029BAFD1A8"
+                                                        "Folders"
+                                                        {
+                                                        }
+                                                    }
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_17574AF23C3F4782ACBDA4CFD7418789"
+                                                    {
+                                                    "Name" = "8:lib"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "Property" = "8:_EEB620BCAEDA406A9975C1CEBF7658F5"
+                                                        "Folders"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                     "{9EF0B969-E518-4E46-987F-47570745A589}:_D35FDB1F828E4ADE8084F2628112DF11"
                                     {
                                     "Name" = "8:mingw"
@@ -53146,16 +54204,16 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Public Sector Credit Framework v1.0"
-        "ProductCode" = "8:{0B4359B4-9DA1-43E2-ADAA-839A7668BEA2}"
-        "PackageCode" = "8:{E53068E5-7DBF-4230-B02A-5D1AD4009970}"
+        "ProductName" = "8:Public Sector Credit Framework v1.1"
+        "ProductCode" = "8:{A969E8B6-D56F-4B21-AF75-5864B880E5D1}"
+        "PackageCode" = "8:{CCE881DA-47FD-401D-BB51-0DB15EC589A0}"
         "UpgradeCode" = "8:{8309B2AA-0C5B-4F34-9446-B18A3537B547}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0"
+        "ProductVersion" = "8:1.1"
         "Manufacturer" = "8:Public Sector Credit Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -53171,7 +54229,7 @@
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:"
+        "PostBuildEvent" = "8:\"C:\\Program Files (x86)\\Windows Kits\\8.0\\bin\\x86\\signtool\" sign /f c:\\users\\marc\\downloads\\Public-Sector-Credit-Solutions-Public-Sector-Credit-Solutions.spc C:\\PSCF\\msi-solution\\msi-project\\Debug\\PSCFv1_1.msi\r\n\r\n\"C:\\Program Files (x86)\\Windows Kits\\8.0\\bin\\x86\\signtool\" timestamp /t http://tsa.starfieldtech.com C:\\PSCF\\msi-solution\\msi-project\\Debug\\PSCFv1_1.msi\r\n"
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"

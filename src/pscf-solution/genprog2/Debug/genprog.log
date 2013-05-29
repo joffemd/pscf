@@ -1,0 +1,48 @@
+﻿Build started 3/12/2013 11:57:53 AM.
+     1>Project "C:\PSCF\src\pscf-solution\genprog\genprog.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\genprog.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\genprog\adjustments.c ..\..\genprog\countm.c ..\..\genprog\get.c ..\..\genprog\main.c ..\..\genprog\process.c ..\..\genprog\sheet.c /TP 
+     1>cl : Command line warning D9025: overriding '/TC' with '/TP'
+         sheet.c
+         process.c
+         main.c
+         get.c
+         countm.c
+         adjustments.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\genprog.exe.embed.manifest.res" Debug\genprog_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\genprog.exe" /INCREMENTAL /NOLOGO ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\genprog.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\genprog.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\genprog.lib" /MACHINE:X86 Debug\genprog.exe.embed.manifest.res
+         Debug\adjustments.obj
+         Debug\countm.obj
+         Debug\get.obj
+         Debug\main.obj
+         Debug\process.obj
+         Debug\sheet.obj
+         Debug\tpl.obj
+         Debug\utils.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\genprog.exe.embed.manifest" /manifest Debug\genprog.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\genprog.exe.embed.manifest.res" Debug\genprog_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\system\bin\genprog.exe" /INCREMENTAL /NOLOGO ..\Debug\utils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\genprog.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\PSCF\system\bin\genprog.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\system\bin\genprog.lib" /MACHINE:X86 Debug\genprog.exe.embed.manifest.res
+         Debug\adjustments.obj
+         Debug\countm.obj
+         Debug\get.obj
+         Debug\main.obj
+         Debug\process.obj
+         Debug\sheet.obj
+         Debug\tpl.obj
+         Debug\utils.obj
+         genprog.vcxproj -> C:\PSCF\src\pscf-solution\genprog\..\..\..\system\bin\genprog.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\genprog.unsuccessfulbuild".
+         Touching "Debug\genprog.lastbuildstate".
+     1>Done Building Project "C:\PSCF\src\pscf-solution\genprog\genprog.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.62

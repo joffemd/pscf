@@ -1,0 +1,10 @@
+../bin/genprog\
+    ../../system/templates/tpl.txt\
+    ../../system/templates/tpl-dpc.txt\
+    A R XDP
+
+# = use adjustments, use ratingmap, don't use default probability code
+# (this is consistent with the sample input ".tab" files provdided)
+
+# "map.txt" not needed
+rm -r map.txt

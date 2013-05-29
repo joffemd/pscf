@@ -1,4 +1,4 @@
-﻿Build started 5/6/2012 10:52:38 AM.
+﻿Build started 3/12/2013 2:05:49 PM.
      1>Project "C:\PSCF\src\pscf-solution\utils\utils.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\utils.lastbuildstate".
@@ -51,4 +51,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.89
+Time Elapsed 00:00:01.49

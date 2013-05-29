@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if defined WIN32
+#if defined _WINDOWS
 #   include <windows.h>
+#   define strcasecmp _strcmpi
 #   define strncasecmp _strnicmp
 #endif
 
@@ -14,11 +15,6 @@
 
 #define strnequal(s1,s2,n)\
     (to_bool(*(s1) == *(s2) && !strncmp(s1,s2,(size_t)n)) || (n==0))
-
-#if defined WIN32
-#   define strcasecmp _strcmpi
-#   define strncasecmp _strnicmp
-#endif
 
 #define strciequal(s1,s2)	!strcasecmp(s1,s2)
 #define strcinequal(s1,s2,n)	!strncasecmp(s1,s2,n)

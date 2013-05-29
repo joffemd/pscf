@@ -1,0 +1,657 @@
+#include <boost/random.hpp>
+#include <fcntl.h>
+#include <math.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+
+#define strequal(a,b) !strcmp(a,b)
+
+using namespace std;
+
+const int n_years = $n-years$;
+const int n_trials = $n-trials$;
+const int n_threads = $n-threads$;
+const bool show_projection_details = $show-projection-details$;
+const bool show_summary = $show-summary$;
+const bool have_seed = $have-seed$;
+const int given_seed = $seed$;
+const bool non_dpc = $non-dpc$;
+
+$year-declarations$
+
+$variable-definitions$
+
+$sigma-definitions$
+
+$minima-definitions$
+
+$maxima-definitions$
+
+static bool defaultflag[n_threads][n_years+1];
+static bool cumdefaultflag[n_threads][n_years+1];
+static long defaultcntr[n_threads][n_years+1];
+static long cumdefaultcntr[n_threads][n_years+1];
+
+static long sig_defaultcntr[n_years+1];
+static long sig_cumdefaultcntr[n_years+1];
+
+static int seed;
+static double ratios[n_threads][5][n_years+1];
+
+// default probability for the current trial
+double defaultprob[n_threads][n_years+1];
+
+// cumulative default probability for the current trial - must be capped at 1
+double cumdefaultprob[n_threads][n_years+1];
+
+// default probability for the entire simulation - an average of all trial default probabilities
+double simulationdefaultprob[n_years+1];
+
+// cumulative default probability for the entire simulation - an average of all trial cumulative default probabilities
+double simulationcumdefaultprob[n_years+1];
+
+static FILE* fr;
+static FILE* fp;
+static int fy[n_years+1];
+static double min_metric1[n_years+1];
+static double max_metric1[n_years+1];
+
+static int wanted_trial;
+
+struct Args
+{ 
+    int th;
+    int read_fd;
+    int write_fd;
+};
+
+static int pipes[n_threads][2];
+static void* do_thread (void*);
+static void do_thread_body_1 (const int, boost::lagged_fibonacci1279);
+static void do_thread_body_2 (const int, const int, const int, const int);
+static void (*do_years[n_years+1])(const int, const int);
+static void sigma_inits (const int, const int);
+static void minima_inits (const int, const int);
+static void maxima_inits (const int, const int);
+static void period_0_values (const int);
+static void do_year_inits ();
+static void summations (const int, const int);
+static void update_minima (const int, const int);
+static void update_maxima (const int, const int);
+static const char* rating_equivalent (const int, const double);
+static char* timestamp ();
+
+int main ()
+{
+    seed = have_seed ? given_seed : time(0);
+
+    puts ("");
+    puts ("generation of analysis results starting...");
+
+    for(int y=0;y<n_years+1;y++)
+    {
+	for (int i = 0;  i < n_threads;  i++)
+	{
+	    sigma_inits (y,i);
+	    minima_inits (y,i);
+	    maxima_inits (y,i);
+	}
+    }
+
+    for(int y=0;y<n_years+1;y++)
+    {
+	min_metric1[y] = numeric_limits<int>::max();
+	max_metric1[y] = -numeric_limits<int>::max();
+    }
+
+    for(int y=0;y<n_years+1;y++)
+	simulationcumdefaultprob[y] = simulationdefaultprob[y] = 0;
+
+    do_year_inits ();
+
+    // create output files and write header lines
+    fr=fopen("results.tab","w");
+    fp=fopen("projection.tab","w");
+
+    fprintf(fr,"PSCF Fiscal Projection\n");
+    fprintf(fr,"Government Entity\t%s\n", "\"$government-entity$\"");
+    fprintf(fr,"Model Description\t%s\n", "\"$model-description$\"");
+    fprintf(fr,"Currency Units in\t%s\n", "\"$currency-units-in$\"");
+    fprintf(fr,"Trials\t\"%d\"\n", n_trials);
+    fprintf(fr,"Run Date/Time\t\"%s\"\n", timestamp());
+    fprintf(fr,"\n");
+
+    if (show_projection_details || show_summary)
+    {
+	fprintf(fp,"PSCF Fiscal Projection\n");
+	fprintf(fp,"Government Entity\t%s\n", "\"$government-entity$\"");
+	fprintf(fp,"Model Description\t%s\n", "\"$model-description$\"");
+	fprintf(fp,"Currency Units in\t%s\n", "\"$currency-units-in$\"");
+	fprintf(fp,"Trials\t\"%d\"\n", n_trials);
+	fprintf(fp,"Run Date/Time\t\"%s\"\n", timestamp());
+	fprintf(fp,"\n");
+
+	fprintf(fp,"Fiscal Year\t");
+
+	fprintf(fp,"$headers$");
+
+	fprintf(fp,"\t%s", "$metrics-1-description$");
+	$if-ratio2-valid$fprintf(fp,"\t%s", "$metrics-2-description$");
+	$if-ratio3-valid$fprintf(fp,"\t%s", "$metrics-3-description$");
+	$if-ratio4-valid$fprintf(fp,"\t%s", "$metrics-4-description$");
+	$if-ratio5-valid$fprintf(fp,"\t%s", "$metrics-5-description$");
+
+	const char* fmt = non_dpc
+	    ? "\t%s Flag\tCumulative %s Flag\n\n"
+	    : "\t%s Probability\tCumulative %s Probability\n\n";
+
+	fprintf(fp, fmt, "$threshold-label$", "$threshold-label$");
+    }
+
+    for (int i = 0; i < n_threads; i++) 
+        _pipe (pipes[i], 1, 0);
+
+    Args args[n_threads];
+
+    for (int i = 0; i < n_threads; i++) 
+    {
+	args[i].th = i;
+
+	int prev = i;
+	int next = i+1;
+
+	if (prev < 0) prev = n_threads - 1;
+	if (next == n_threads) next = 0;
+
+	args[i].read_fd = pipes[prev][0];
+	args[i].write_fd = pipes[next][1];
+    }
+
+    pthread_t threads[n_threads];
+
+    for (int i = 0;  i < n_threads;  i++)
+    {
+	int st = pthread_create(&threads[i], 0, do_thread, (void*)&args[i]);
+
+	if (st)
+	{
+	    printf ("error: pthread_create(): %d\n", st);
+	    exit (1);
+	}
+    }
+
+    char d;
+    write (pipes[0][1], &d, 1);
+
+    for (int i = 0;  i < n_threads;  i++)
+	pthread_join (threads[i], 0);
+
+    if (non_dpc)
+        for(int y=0;y<n_years+1;y++)
+            for (int i = 0;  i < n_threads;  i++)
+            {
+                sig_defaultcntr[y] += defaultcntr[i][y];
+                sig_cumdefaultcntr[y] += cumdefaultcntr[i][y];
+            }
+
+    if (show_summary)
+        for(int y=0;y<n_years+1;y++)
+	    for (int th = 1;  th < n_threads; th++)
+	    {
+		$sigma-combinations$
+		$min-combinations$
+		$max-combinations$
+	    }
+
+    if (non_dpc)
+    {
+	fprintf(fr,"Year\t$threshold-label$ Count\t$threshold-label$ Probability\tCumulative $threshold-label$ Count\tCumulative $threshold-label$ Probability\tRating Equivalent");
+
+	fprintf(fr,"\t\t%s\t%s\n", "Minimum $metrics-1-description$", "Maximum $metrics-1-description$");
+    }
+    else
+    {
+        fprintf(fr,"Year\t$threshold-label$ Probability\tCumulative $threshold-label$ Probablilty\tRating Equivalent");
+
+	fprintf(fr,"\t\t%s\t%s\n", "Minimum $metrics-1-description$", "Maximum $metrics-1-description$");
+    }
+
+    for(int y=0;y<n_years+1;y++)
+    {
+        fprintf(fr,"%d\t",fy[y]);
+
+	if (non_dpc)
+	{
+	    fprintf(fr,"%ld\t",sig_defaultcntr[y]);
+	    fprintf(fr,"%5.4f\t", double(sig_defaultcntr[y]) / n_trials);
+	    fprintf(fr,"%ld\t",sig_cumdefaultcntr[y]);
+	    fprintf(fr,"%5.4f\t", double(sig_cumdefaultcntr[y]) / n_trials);
+
+	    double rating = double(sig_cumdefaultcntr[y]) / n_trials;
+	    fprintf(fr,"%s", rating_equivalent(y,rating));
+
+	    fprintf(fr,"\t\t%5.4f\t%5.4f\n", min_metric1[y], max_metric1[y]);
+	}
+	else
+	{
+	    fprintf(fr,"%5.4f\t", double(simulationdefaultprob[y]) / n_trials);
+	    fprintf(fr,"%5.4f\t", double(simulationcumdefaultprob[y]) / n_trials);
+	    double rating = double(simulationcumdefaultprob[y]) / n_trials;
+	    fprintf(fr,"%s", rating_equivalent(y,rating));
+
+	    fprintf(fr,"\t\t%5.4f\t%5.4f\n", min_metric1[y], max_metric1[y]);
+
+	}
+    }
+
+    if (show_summary)
+    {
+	fprintf(fp, "Means\n");
+	fprintf(fp,"\n");
+
+	for(int y=0;y<n_years+1;y++)
+	{
+	    fprintf(fp,"%d\t",fy[y]);
+
+	    $means$;
+	}
+
+	fprintf(fp,"\n");
+	fprintf(fp,"\n");
+	fprintf(fp, "Minima\n");
+	fprintf(fp,"\n");
+
+	for(int y=0;y<n_years+1;y++)
+	{
+	    fprintf(fp,"%d\t",fy[y]);
+
+	    $minima$;
+	}
+
+	fprintf(fp,"\n");
+	fprintf(fp,"\n");
+	fprintf(fp, "Maxima\n");
+	fprintf(fp,"\n");
+
+	for(int y=0;y<n_years+1;y++)
+	{
+	    fprintf(fp,"%d\t",fy[y]);
+
+	    $maxima$;
+	}
+    }
+
+    puts ("");
+
+    if (show_projection_details || show_summary)
+	puts ("generation finished: files 'results.tab' & 'projection.tab' created");
+    else
+	puts ("generation finished: file 'results.tab' created");
+    puts ("");
+
+    return 0;
+}
+
+/* -------------------------------------------------- */
+
+static void* do_thread (void* in_args)
+{
+    Args& args = *(Args*)in_args;
+    int th = args.th;
+    int read_fd = args.read_fd;
+    int write_fd = args.write_fd;  
+
+    for (int n = th+1;  n <= n_trials;  n += n_threads)
+    {
+	boost::lagged_fibonacci1279 rng (seed*n);
+
+	do_thread_body_1 (th, rng);
+
+	if (show_projection_details) do_thread_body_2 (th, n, read_fd, write_fd);
+    }
+
+    return 0;
+}
+
+/* -------------------------------------------------- */
+
+static void do_thread_body_1 (const int th, boost::lagged_fibonacci1279 rng)
+{
+
+    // initialize period 0 values
+    fy[0] = $initial-year$;
+
+    period_0_values (th);
+
+    // Ratios
+    ratios[th][0][0] = $threshold-expression-1[0]$;
+    $if-ratio2-valid$ratios[th][1][0] = $threshold-expression-2[0]$;
+    $if-ratio3-valid$ratios[th][2][0] = $threshold-expression-3[0]$;
+    $if-ratio4-valid$ratios[th][3][0] = $threshold-expression-4[0]$;
+    $if-ratio5-valid$ratios[th][4][0] = $threshold-expression-5[0]$;
+
+    min_metric1[0] = max_metric1[0] = ratios[th][0][0];
+
+    if (non_dpc)
+    {
+	cumdefaultflag[th][0] = false;
+
+	if($threshold-expression-1[0]$ $thresh-relation$ $thresholdlevel$)
+	{
+	    defaultflag[th][0] = true;
+	    cumdefaultflag[th][0] = true;
+
+	    defaultcntr[th][0]++;
+	}
+	else
+	    defaultflag[th][0] = false;
+
+	if (cumdefaultflag[th][0]) cumdefaultcntr[th][0]++;
+    }
+    else
+    {
+	cumdefaultprob[th][0] = 0;
+
+	// user-supplied code
+	{
+	    int y = 0;
+	    $default-probability-code$
+	}
+
+	cumdefaultprob[th][0] += defaultprob[th][0];
+	if(cumdefaultprob[th][0] > 1) cumdefaultprob[th][0] = 1;
+    }
+
+    $unirandom-definitions$
+
+    $normrandom-definitions$
+
+    $cauchyrandom-definitions$
+
+    for(int y=1;y<n_years+1;y++)
+    {
+	$unirandom-assignments$
+
+	$normrandom-assignments$
+
+	$cauchyrandom-assignments$
+
+	fy[y] = fy[y-1] + 1;
+
+	do_years[y](y,th);
+
+	// Ratios
+	ratios[th][0][y] = $threshold-expression-1[y]$;
+	$if-ratio2-valid$ratios[th][1][y] = $threshold-expression-2[y]$;
+	$if-ratio3-valid$ratios[th][2][y] = $threshold-expression-3[y]$;
+	$if-ratio4-valid$ratios[th][3][y] = $threshold-expression-4[y]$;
+	$if-ratio5-valid$ratios[th][4][y] = $threshold-expression-5[y]$;
+
+	if (non_dpc)
+	{
+	    cumdefaultflag[th][y] = cumdefaultflag[th][y-1];
+
+	    if($threshold-expression-1[y]$ $thresh-relation$ $thresholdlevel$)
+	    {
+		defaultflag[th][y] = true;
+		cumdefaultflag[th][y] = true;
+
+		defaultcntr[th][y]++;
+	    }
+	    else
+		defaultflag[th][y] = false;
+
+	    if (cumdefaultflag[th][y]) cumdefaultcntr[th][y]++;
+	}
+	else
+	{
+	    cumdefaultprob[th][y] = cumdefaultprob[th][y-1];
+
+	    // user-supplied code
+	    $default-probability-code$
+
+	    simulationdefaultprob[y] += defaultprob[th][y];
+
+	    cumdefaultprob[th][y] += defaultprob[th][y];
+	    if (cumdefaultprob[th][y] > 1) cumdefaultprob[th][y] = 1;
+
+	    simulationcumdefaultprob[y] += cumdefaultprob[th][y];
+	}
+
+	$adjustments$
+
+	if (ratios[th][0][y] > max_metric1[y]) max_metric1[y] = ratios[th][0][y];
+	if (ratios[th][0][y] < min_metric1[y]) min_metric1[y] = ratios[th][0][y];
+    }
+
+    if (show_summary)
+    {
+	for(int y=0;y<n_years+1;y++)
+	{
+	    summations (y, th);
+	    update_minima (y, th);
+	    update_maxima (y, th);
+	}
+    }
+}
+
+/* -------------------------------------------------- */
+
+static void do_thread_body_2 (const int th, const int trial, const int read_fd,
+const int write_fd)
+{
+    char buf[80];
+    sprintf(buf,"Trial %8.0d\n\n",trial);
+
+    $body-2-defs$
+    char all_buf[n_years+1][80*120];
+
+    char bufr1[n_years+1][80];
+    char bufr2[n_years+1][80];
+    char bufr3[n_years+1][80];
+    char bufr4[n_years+1][80];
+    char bufr5[n_years+1][80];
+
+    char bufd1[n_years+1][80];
+    char bufd2[n_years+1][80];
+
+    for(int y=0;y<n_years+1;y++)
+    {
+	sprintf(bufy[y],"%5.0d\t",fy[y]);
+
+	if(y>0)
+	{
+	    $store-random-values$
+	}
+	else
+	{
+	    $store-y0-random-values$
+	}
+
+	sprintf (all_buf[y], 
+	$output-gen$
+	);
+
+	if(y>0)
+	{
+	    sprintf(bufr1[y],"%5.4f\t",ratios[th][0][y]);
+	    $if-ratio2-valid$sprintf(bufr2[y],"%5.4f\t",ratios[th][1][y]);
+	    $if-ratio3-valid$sprintf(bufr3[y],"%5.4f\t",ratios[th][2][y]);
+	    $if-ratio4-valid$sprintf(bufr4[y],"%5.4f\t",ratios[th][3][y]);
+	    $if-ratio4-valid$sprintf(bufr5[y],"%5.4f\t",ratios[th][4][y]);
+	}
+	else
+	{
+	    if ($print-ratios(1)$)
+		sprintf(bufr1[y],"%5.4f\t",ratios[th][0][0]);
+	    else
+		sprintf(bufr1[y],"%s\t","");
+
+	    $if-ratio2-valid$if ($print-ratios(2)$)
+	    $if-ratio2-valid$    sprintf(bufr2[y],"%5.4f\t",ratios[th][1][0]);
+	    $if-ratio2-valid$else
+	    $if-ratio2-valid$    sprintf(bufr2[y],"%s\t","");
+
+	    $if-ratio3-valid$if ($print-ratios(3)$)
+	    $if-ratio3-valid$    sprintf(bufr3[y],"%5.4f\t",ratios[th][2][0]);
+	    $if-ratio3-valid$else
+	    $if-ratio3-valid$    sprintf(bufr3[y],"%s\t","");
+
+	    $if-ratio4-valid$if ($print-ratios(4)$)
+	    $if-ratio4-valid$    sprintf(bufr4[y],"%5.4f\t",ratios[th][3][0]);
+	    $if-ratio4-valid$else
+	    $if-ratio4-valid$    sprintf(bufr4[y],"%s\t","");
+
+	    $if-ratio5-valid$if ($print-ratios(5)$)
+	    $if-ratio5-valid$    sprintf(bufr5[y],"%5.4f\t",ratios[th][4][0]);
+	    $if-ratio5-valid$else
+	    $if-ratio5-valid$    sprintf(bufr5[y],"%s\t","");
+	}
+
+	if (non_dpc)
+	{
+	    sprintf(bufd1[y],"%i\t",defaultflag[th][y]);
+	    sprintf(bufd2[y],"%i",cumdefaultflag[th][y]);
+	}
+	else
+	{
+	    sprintf(bufd1[y],"%5.4f\t",defaultprob[th][y]);
+	    sprintf(bufd2[y],"%5.4f",cumdefaultprob[th][y]);
+	}
+    }
+
+    char d;
+    int nb;
+
+    nb = read (read_fd, &d, 1);
+    //printf ("thread=%d, trial=%d\n", th, n);
+
+    fwrite (buf, strlen(buf), 1, fp);
+
+    for(int y=0;y<n_years+1;y++)
+    {
+	fwrite (bufy[y], strlen(bufy[y]), 1, fp);
+
+	$output-print$
+	fwrite (all_buf[y], strlen(all_buf[y]), 1, fp);
+
+	fwrite (bufr1[y], strlen(bufr1[y]), 1, fp);
+	fwrite (bufr2[y], strlen(bufr2[y]), 1, fp);
+	fwrite (bufr3[y], strlen(bufr3[y]), 1, fp);
+	fwrite (bufr4[y], strlen(bufr4[y]), 1, fp);
+	fwrite (bufr5[y], strlen(bufr5[y]), 1, fp);
+
+	fwrite (bufd1[y], strlen(bufd1[y]), 1, fp);
+	fwrite (bufd2[y], strlen(bufd2[y]), 1, fp);
+
+	fprintf(fp,"\n");
+    }
+
+    fprintf(fp,"\n\n");
+
+    nb = write (write_fd, &d, 1);
+}
+
+/* -------------------------------------------------- */
+
+static const char* rating_equivalent (const int year, const double rating_value)
+{
+    if (year == 0) return "N/A";
+
+    static const char* rating[$n-ratings$] = {$ratings$};
+
+    static double rating_grid[n_years][$n-ratings$] =
+    {
+	$rating-grid$
+    };
+
+    double* year_rating = rating_grid[year-1];
+
+    for (int i = 0;  i < $n-ratings$;  i++)
+        if (rating_value <= year_rating[i])
+	    return rating[i];
+
+    return "???";
+}
+
+
+/* -------------------------------------------------- */
+
+static void sigma_inits (const int y, const int th)
+{
+    $sigma-inits$
+}
+
+/* -------------------------------------------------- */
+
+static void minima_inits (const int y, const int th)
+{
+    $minima-inits$
+}
+
+/* -------------------------------------------------- */
+
+static void maxima_inits (const int y, const int th)
+{
+    $maxima-inits$
+}
+
+/* -------------------------------------------------- */
+
+static void period_0_values (int th)
+{
+    $period-0-values$
+}
+
+/* -------------------------------------------------- */
+
+$assignments$
+
+/* -------------------------------------------------- */
+
+static void summations (const int y, const int th)
+{
+    $summations$
+}
+
+/* -------------------------------------------------- */
+
+static void update_minima (const int y, const int th)
+{
+    $update-minima$
+}
+
+/* -------------------------------------------------- */
+
+static void update_maxima (const int y, const int th)
+{
+    $update-maxima$
+}
+
+/* -------------------------------------------------- */
+
+static void do_year_inits ()
+{
+    $do-year-inits$
+}
+
+/* -------------------------------------------------- */
+
+static char* timestamp ()
+{
+    time_t elapsed_secs_since_1970;
+    (void) time (&elapsed_secs_since_1970);
+
+    char* the_ctime = (char *) ctime(&elapsed_secs_since_1970);
+
+    if (the_ctime[8] == ' ') the_ctime[8] = '0';
+    memcpy (the_ctime+16, the_ctime+19, 5);
+
+    the_ctime[21] = '\0';
+
+    return the_ctime;
+}

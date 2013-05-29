@@ -1,5 +1,6 @@
+rm lib.a
 g++ -O3 -Wall -Wextra -I../include -c *.c
 ar r lib.a *.o
 rm *.o
 
-g++ -o ../../bin/genprog lib.a ../utils/lib.a
+g++ -static -o ../../system/bin/genprog lib.a ../utils/lib.a

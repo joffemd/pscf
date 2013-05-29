@@ -1,5 +1,5 @@
-﻿Build started 5/6/2012 10:52:44 AM.
-     1>Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" on node 2 (rebuild target(s)).
+﻿Build started 3/12/2013 2:05:50 PM.
+     1>Project "C:\PSCF\src\pscf-solution\syncheck\syncheck.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\syncheck.lastbuildstate".
        InitializeBuildStatus:
@@ -53,4 +53,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.53
+Time Elapsed 00:00:01.73

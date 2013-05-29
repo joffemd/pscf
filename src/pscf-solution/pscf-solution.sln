@@ -18,13 +18,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "errmap", "errmap\errmap.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcxproj", "{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Public Sector Credit Framework v1.0", "..\..\msi-solution\msi-project\msi-project.vdproj", "{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Public Sector Credit Framework v1.1", "..\..\msi-solution\msi-project\msi-project.vdproj", "{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DB53E95A-7258-4A7A-AE0C-36AB1439889D} = {DB53E95A-7258-4A7A-AE0C-36AB1439889D}
 		{7AD091A3-BD52-499F-BB7D-D53B8E85FDDB} = {7AD091A3-BD52-499F-BB7D-D53B8E85FDDB}
 		{88E3B4CF-DF80-4904-9F86-A6F678CCD740} = {88E3B4CF-DF80-4904-9F86-A6F678CCD740}
 		{C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5} = {C6286FD9-0FD7-44E3-83FE-3B05CA9BBAD5}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genprog2", "genprog2\genprog2.vcxproj", "{99B58CB5-771A-4A99-BA5D-E44CEA4E5AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Debug|Win32.Build.0 = Debug
 		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Release|Win32.ActiveCfg = Release
 		{9A6E3B5F-6290-4C15-ACE3-FFB2613B895A}.Release|Win32.Build.0 = Release
+		{99B58CB5-771A-4A99-BA5D-E44CEA4E5AFD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{99B58CB5-771A-4A99-BA5D-E44CEA4E5AFD}.Debug|Win32.Build.0 = Debug|Win32
+		{99B58CB5-771A-4A99-BA5D-E44CEA4E5AFD}.Release|Win32.ActiveCfg = Release|Win32
+		{99B58CB5-771A-4A99-BA5D-E44CEA4E5AFD}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
